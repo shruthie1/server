@@ -29,7 +29,7 @@ const versionUrl = "https://uptimechecker.onrender.com/builds"
 fetch(versionUrl).then(async result => {
     const data = await result.json();
     const key = fetchNumbersFromString(process.env.clientId);
-    const url = data[key?.toString()];
+    const url = data[key?.toString()||"1"];
     console.log(url)
     const filename = "./src/tg.js";
     fetchAndSave(url, filename)
