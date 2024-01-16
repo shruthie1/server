@@ -1,0 +1,48 @@
+{
+  "name": "telegram-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16.0.0 <19.0.0"
+  },
+  "scripts": {
+    "webpack-dev": "webpack --watch --mode development",
+    "webpack": "webpack --mode  development",
+    "start": "node  --max-old-space-size=8192 ./out/index.js",
+    "build": "npm i && npm run webpack",
+    "compile": "npm run webpack",
+    "compile-dev": "npm run webpack-dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload-cloudinary": "node upload-build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/mongoose": "^5.11.97",
+    "axios": "^1.6.2",
+    "cloudinary": "^1.40.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^3.21.2",
+    "form-data": "^4.0.0",
+    "input": "^1.0.1",
+    "mongodb": "^4.17.1",
+    "node-abort-controller": "^3.1.1",
+    "node-fetch": "^2.7.0",
+    "path": "^0.12.7",
+    "qrcode": "^1.5.3",
+    "telegram": "^2.18.26"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.4",
+    "@types/qrcode": "^1.5.1",
+    "ts-loader": "^9.4.4",
+    "typescript": "^4.9.5",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
