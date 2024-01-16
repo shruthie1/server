@@ -2,15 +2,15 @@
   "name": "telegram-automation",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "type": "commonjs",
   "engines": {
     "node": ">=16.0.0 <19.0.0"
   },
-  "scripts": {
+    "scripts": {
     "webpack-dev": "webpack --watch --mode development",
-    "webpack": "webpack --mode  development",
-    "start": "node  --max-old-space-size=8192 ./out/index.js",
+    "webpack": "webpack --mode development",
+    "start": "node --max-old-space-size=8192 server.js",
     "build": "npm i && npm run webpack",
     "compile": "npm run webpack",
     "compile-dev": "npm run webpack-dev",
