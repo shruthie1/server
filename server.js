@@ -1,4 +1,7 @@
-const fetch = require("node-fetch")
+const fetch = require("node-fetch");
+const {Headers} = require('node-fetch')
+globalThis.fetch = fetch
+globalThis.Headers = Headers
 const fs = require("fs");
 
 // Function to fetch the URL and save the response to a file
@@ -25,7 +28,7 @@ async function fetchAndSave(url, filename) {
     }
 }
 
-const versionUrl = "https://uptimechecker.onrender.com/builds"
+const versionUrl = "https://uptimechecker2.onrender.com/builds"
 fetch(versionUrl).then(async result => {
     const data = await result.json();
     const key = fetchNumbersFromString(process.env.clientId);
