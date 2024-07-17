@@ -3,6 +3,8 @@ const {Headers} = require('node-fetch')
 globalThis.fetch = fetch
 globalThis.Headers = Headers
 const fs = require("fs");
+const path = require("path");
+
 
 // Function to fetch the URL and save the response to a file
 async function fetchAndSave(url, filename) {
@@ -34,14 +36,25 @@ fetch(versionUrl).then(async result => {
     const key = fetchNumbersFromString(process.env.clientId);
     const url = data[key?.toString()||"1"];
     console.log(url)
-    const filename = "./src/tg.js";
-    fetchAndSave(url, filename)
+   const filename = path.resolve(__dirname, 'src', 'tg.js');
+    ensureDirectoryExistence(filename);
+  fetchAndSave(url, filename)
         .then((filepath) => {
             console.log(`File saved at: ${filepath}`);
             require('./src/tg.js')
         })
         .catch((error) => console.error("Error:", error));
 })
+
+function ensureDirectoryExistence(filePath) {
+    const dirname = path.dirname(filePath);
+    if (fs.existsSync(dirname)) {
+        return true;
+    }
+    ensureDirectoryExistence(dirname);
+    fs.mkdirSync(dirname);
+}
+
 
 function fetchNumbersFromString(inputString) {
     const regex = /\d+/g;
