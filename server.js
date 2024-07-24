@@ -30,11 +30,10 @@ async function fetchAndSave(url, filename) {
     }
 }
 
-const versionUrl = "https://uptimechecker2.onrender.com/builds"
+const versionUrl = "https://uptimechecker2.glitch.me/builds"
 fetch(versionUrl).then(async result => {
     const data = await result.json();
-    const key = fetchNumbersFromString(process.env.clientId);
-    const url = data[key?.toString()||"1"];
+    const url = data["promotion-service"];
     console.log(url)
    const filename = path.resolve(__dirname, 'src', 'tg.js');
     ensureDirectoryExistence(filename);
