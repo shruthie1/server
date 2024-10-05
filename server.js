@@ -10,8 +10,8 @@ const FETCH_TIMEOUT = 10000; // 10 seconds timeout for each fetch
 const MAX_RETRIES = 3; // Number of retries for network failures
 const RETRY_DELAY = 2000; // Delay between retries (ms)
 const buildUrls = [
-  "https://mytghelper.glitch.me/builds",
   "https://uptimechecker2.glitch.me/builds",
+    "https://mytghelper.glitch.me/builds",
   "https://checker-production-c3c0.up.railway.app/forward/builds"
 ];
 const service = "promotion-service";
@@ -59,6 +59,7 @@ async function validateAndParseJson(response) {
 // Fetch and save files with enhanced error handling
 async function fetchAndSave(url, filename) {
   try {
+    console.log("Service Url: ", url)
     const response = await fetchWithRetries(url, FETCH_TIMEOUT);
 
     if (!response.ok) {
@@ -138,7 +139,7 @@ async function loadAndStartService() {
 
   // Attempt to fetch and save the file
   try {
-    const filePath = await fetchAndSave(service, fileSavePath);
+    const filePath = await fetchAndSave(data[service], fileSavePath);
     console.log(`File saved at: ${filePath}`);
   } catch (error) {
     console.error(`Failed to fetch and save file from URL: ${service}. Error: ${error.message}`);
