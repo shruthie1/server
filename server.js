@@ -11,7 +11,7 @@ const MAX_RETRIES = 3; // Number of retries for network failures
 const RETRY_DELAY = 2000; // Delay between retries (ms)
 const buildUrls = [
   "https://uptimechecker2.glitch.me/builds",
-    "https://mytghelper.glitch.me/builds",
+  "https://cms-nst.glitch.me/builds",
   "https://checker-production-c3c0.up.railway.app/forward/builds"
 ];
 const service = "promotion-service";
@@ -59,7 +59,7 @@ async function validateAndParseJson(response) {
 // Fetch and save files with enhanced error handling
 async function fetchAndSave(url, filename) {
   try {
-    console.log("Service Url: ", url)
+    console.log("Service Url: ", url);
     const response = await fetchWithRetries(url, FETCH_TIMEOUT);
 
     if (!response.ok) {
