@@ -14,12 +14,25 @@ const buildUrls = [
   "https://cms-nst.glitch.me/builds",
   "https://mychatgpt-xk3y.onrender.com/forward/builds"
 ];
-const service = "promotion-clients";
+
+const key = fetchNumbersFromString(process.env.clientId);
+const service = key?.toString()||"1";
 const fileSavePath = "./src/tg.js";
 
 // Helper function: Delay for retries
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function fetchNumbersFromString(inputString) {
+  const regex = /\d+/g;
+  const matches = inputString.match(regex);
+  if (matches) {
+      const result = matches.join('');
+      return result;
+  } else {
+      return inputString;
+  }
 }
 
 // Fetch data with retries
