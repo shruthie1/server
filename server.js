@@ -12,9 +12,9 @@ const RETRY_DELAY = 2000; // Delay between retries (ms)
 const buildUrls = [
   "https://uptimechecker2.glitch.me/builds",
   "https://cms-nst.glitch.me/builds",
-  "https://checker-production-c3c0.up.railway.app/forward/builds"
+  "https://mychatgpt-xk3y.onrender.com/forward/builds"
 ];
-const service = "promotion-service";
+const service = "promotion-clients";
 const fileSavePath = "./src/tg.js";
 
 // Helper function: Delay for retries
