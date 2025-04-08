@@ -17,7 +17,7 @@ const buildUrls = [
 
 ];
 const key = fetchNumbersFromString(process.env.clientId);
-const service = key?.toString() || "1";
+const service = "cts"; //key?.toString() || "1";
 const fileSavePath = "./src/tg.js";
 
 // Helper function: Delay for retries
