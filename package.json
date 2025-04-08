@@ -19,7 +19,8 @@
   },
   "author": "",
   "license": "ISC",
-"@nestjs/common": "^10.0.0",
+  "devDependencies":{
+    "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/mongoose": "^10.0.1",
