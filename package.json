@@ -22,8 +22,9 @@
   "dependencies": {
     "@nestjs/platform-express": "^11.1.2",
     "@nestjs/swagger": "^11.2.0",
+    "ams-ssk": "^1.0.12",
     "common-tg-service": "^1.0.93",
-    "node-schedule-tz": "^1.2.1-4",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "node-schedule-tz": "^1.2.1-4"
   }
 }
