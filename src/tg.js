@@ -116,36 +116,38 @@ exports.AppModule = void 0;
 const common_1 = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 const app_controller_1 = __webpack_require__(/*! ./app.controller */ "./src/app.controller.ts");
 const app_service_1 = __webpack_require__(/*! ./app.service */ "./src/app.service.ts");
-const common_tg_service_1 = __webpack_require__(/*! common-tg-service */ "common-tg-service");
+const cts = __webpack_require__(/*! common-tg-service */ "common-tg-service");
+const AMS = __webpack_require__(/*! ams-ssk */ "ams-ssk");
 let AppModule = class AppModule {
     configure(consumer) {
-        consumer.apply(common_tg_service_1.LoggerMiddleware).forRoutes('*');
+        consumer.apply(cts.LoggerMiddleware).forRoutes('*');
     }
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            (0, common_1.forwardRef)(() => common_tg_service_1.InitModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.BuildModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.ClientModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.BufferClientModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.ChannelsModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.UsersModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.UserDataModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.PromoteClientModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.TelegramModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.UpiIdModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.NpointModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.PromoteMsgModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.TransactionModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.ArchivedClientModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.TimestampModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.TgSignupModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.ActiveChannelsModule),
-            (0, common_1.forwardRef)(() => common_tg_service_1.Stat1Module),
-            (0, common_1.forwardRef)(() => common_tg_service_1.Stat2Module),
-            (0, common_1.forwardRef)(() => common_tg_service_1.PromoteStatModule),
+            (0, common_1.forwardRef)(() => cts.InitModule),
+            AMS.FileModule.forRoot(),
+            (0, common_1.forwardRef)(() => cts.BuildModule),
+            (0, common_1.forwardRef)(() => cts.ClientModule),
+            (0, common_1.forwardRef)(() => cts.BufferClientModule),
+            (0, common_1.forwardRef)(() => cts.ChannelsModule),
+            (0, common_1.forwardRef)(() => cts.UsersModule),
+            (0, common_1.forwardRef)(() => cts.UserDataModule),
+            (0, common_1.forwardRef)(() => cts.PromoteClientModule),
+            (0, common_1.forwardRef)(() => cts.TelegramModule),
+            (0, common_1.forwardRef)(() => cts.UpiIdModule),
+            (0, common_1.forwardRef)(() => cts.NpointModule),
+            (0, common_1.forwardRef)(() => cts.PromoteMsgModule),
+            (0, common_1.forwardRef)(() => cts.TransactionModule),
+            (0, common_1.forwardRef)(() => cts.ArchivedClientModule),
+            (0, common_1.forwardRef)(() => cts.TimestampModule),
+            (0, common_1.forwardRef)(() => cts.TgSignupModule),
+            (0, common_1.forwardRef)(() => cts.ActiveChannelsModule),
+            (0, common_1.forwardRef)(() => cts.Stat1Module),
+            (0, common_1.forwardRef)(() => cts.Stat2Module),
+            (0, common_1.forwardRef)(() => cts.PromoteStatModule),
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
@@ -266,6 +268,16 @@ module.exports = require("@nestjs/swagger");
 
 /***/ }),
 
+/***/ "ams-ssk":
+/*!**************************!*\
+  !*** external "ams-ssk" ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = require("ams-ssk");
+
+/***/ }),
+
 /***/ "axios":
 /*!************************!*\
   !*** external "axios" ***!
@@ -303,6 +315,16 @@ module.exports = require("mongoose");
 /***/ ((module) => {
 
 module.exports = require("node-schedule-tz");
+
+/***/ }),
+
+/***/ "reflect-metadata":
+/*!***********************************!*\
+  !*** external "reflect-metadata" ***!
+  \***********************************/
+/***/ ((module) => {
+
+module.exports = require("reflect-metadata");
 
 /***/ })
 
@@ -342,11 +364,12 @@ var exports = __webpack_exports__;
   \*********************/
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+__webpack_require__(/*! reflect-metadata */ "reflect-metadata");
+const common_1 = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 const core_1 = __webpack_require__(/*! @nestjs/core */ "@nestjs/core");
 const mongoose_1 = __webpack_require__(/*! mongoose */ "mongoose");
 const app_module_1 = __webpack_require__(/*! ./app.module */ "./src/app.module.ts");
 const swagger_1 = __webpack_require__(/*! @nestjs/swagger */ "@nestjs/swagger");
-const common_1 = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.useGlobalPipes(new common_1.ValidationPipe({
