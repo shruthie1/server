@@ -22,7 +22,7 @@ const config = {
   FILE_SAVE_PATH: "./src/tg.js"
 };
 const key = fetchNumbersFromString(process.env.clientId);
-const service = process.env.service
+const service = process.env.serviceName || key
 
 // Validate configuration
 function validateConfig() {
