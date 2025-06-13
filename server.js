@@ -22,7 +22,7 @@ const config = {
   FILE_SAVE_PATH: "./src/tg.js"
 };
 const key = fetchNumbersFromString(process.env.clientId);
-const service = 'cms-nst'//key?.toString() || "cts";
+const service = process.env.service
 
 // Validate configuration
 function validateConfig() {
