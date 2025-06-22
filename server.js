@@ -19,12 +19,19 @@ const config = {
     "https://cms-nst.glitch.me/builds",
     "https://uptimechecker2.glitch.me/builds"
   ],
-  BASE_SAVE_DIR: "./src/services"
+  BASE_SAVE_DIR: path.resolve(process.cwd(), "./src/services")  // Make base directory absolute
 };
 
 const key = fetchNumbersFromString(process.env.clientId);
 const service = process.env.serviceName || key;
-const FILE_SAVE_PATH = path.join(config.BASE_SAVE_DIR, `${service}.js`);
+const FILE_SAVE_PATH = path.resolve(config.BASE_SAVE_DIR, `${service}.js`);  // Ensure absolute path
+
+// Debug path resolution
+console.log('Path Resolution:', {
+  cwd: process.cwd(),
+  baseSaveDir: config.BASE_SAVE_DIR,
+  fileSavePath: FILE_SAVE_PATH
+});
 
 // Validate configuration
 function validateConfig() {
@@ -277,6 +284,7 @@ async function loadAndStartService() {
   console.log(`Starting service load operation:`);
   console.log(`- Service: ${service}`);
   console.log(`- Save path: ${FILE_SAVE_PATH}`);
+  console.log(`- Current working directory: ${process.cwd()}`);
 
   // Validate configuration before starting
   try {
@@ -351,11 +359,24 @@ async function loadAndStartService() {
   // Start the service with enhanced error handling
   console.log(`Starting Service from path: ${FILE_SAVE_PATH}`);
   try {
+    // Verify file exists and is accessible
     if (!fs.existsSync(FILE_SAVE_PATH)) {
       throw new Error(`Service file does not exist at path: ${FILE_SAVE_PATH}`);
     }
 
-    require(FILE_SAVE_PATH);
+    const stats = await fs.promises.stat(FILE_SAVE_PATH);
+    if (!stats.isFile()) {
+      throw new Error(`Path exists but is not a file: ${FILE_SAVE_PATH}`);
+    }
+
+    console.log(`File exists and is accessible: ${FILE_SAVE_PATH}`);
+    console.log(`File size: ${stats.size} bytes`);
+
+    // Try to require using absolute path
+    const absolutePath = path.resolve(FILE_SAVE_PATH);
+    console.log(`Attempting to require service using absolute path: ${absolutePath}`);
+
+    require(absolutePath);
     console.log("Service initiation complete");
     serviceState.healthCheck.status = "healthy";
   } catch (error) {
@@ -363,8 +384,11 @@ async function loadAndStartService() {
     serviceState.healthCheck.status = "error";
     console.error(`Failed to start service:`, {
       path: FILE_SAVE_PATH,
+      absolutePath: path.resolve(FILE_SAVE_PATH),
       error: error.message,
-      stack: error.stack
+      stack: error.stack,
+      cwd: process.cwd(),
+      nodeModulePaths: module.paths
     });
     throw error;
   }
