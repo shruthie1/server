@@ -62,7 +62,14 @@ check_sudo() {
 validate_port() {
     local port=$1
     if ! [[ "$port" =~ ^[0-9]+$ ]] || [ "$port" -lt 1024 ] || [ "$port" -gt 65535 ]; then return 1; fi
-    if ss -tuln | grep -q ":$port "; then return 2; fi
+    # Try different commands to check port usage, continue if commands fail
+    if command -v lsof >/dev/null 2>&1; then
+        if lsof -i ":$port" >/dev/null 2>&1; then return 2; fi
+    elif command -v netstat >/dev/null 2>&1; then
+        if netstat -tuln 2>/dev/null | grep -q ":$port "; then return 2; fi
+    elif command -v ss >/dev/null 2>&1; then
+        if ss -tuln 2>/dev/null | grep -q ":$port "; then return 2; fi
+    fi
     return 0
 }
 
@@ -75,12 +82,24 @@ validate_server_name() {
 }
 
 validate_system_resources() {
-    local space=$(df -m "$(dirname "$NGINX_SITES_AVAILABLE")" | awk 'NR==2 {print $4}')
-    local mem=$(free -m | awk 'NR==2 {print $4}')
-    local pm2_count=$(pm2 list | grep -c "online" || true)
-    if [ "${space:-0}" -lt 100 ]; then return 1; fi
-    if [ "${mem:-0}" -lt 512 ]; then return 2; fi
-    if [ "${pm2_count:-0}" -gt 50 ]; then return 3; fi
+    # Check disk space if df is available
+    if command -v df >/dev/null 2>&1; then
+        local space=$(df -m "$(dirname "$NGINX_SITES_AVAILABLE")" 2>/dev/null | awk 'NR==2 {print $4}' || echo 0)
+        if [ "${space:-0}" -lt 100 ]; then return 1; fi
+    fi
+
+    # Check memory if free is available
+    if command -v free >/dev/null 2>&1; then
+        local mem=$(free -m 2>/dev/null | awk 'NR==2 {print $4}' || echo 0)
+        if [ "${mem:-0}" -lt 512 ]; then return 2; fi
+    fi
+
+    # Check PM2 processes
+    if command -v pm2 >/dev/null 2>&1; then
+        local pm2_count=$(pm2 list 2>/dev/null | grep -c "online" || echo 0)
+        if [ "${pm2_count:-0}" -gt 50 ]; then return 3; fi
+    fi
+
     return 0
 }
 

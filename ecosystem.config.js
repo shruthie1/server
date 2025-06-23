@@ -14,7 +14,7 @@ module.exports = {
       namespace: "clients"
     },
     {
-      name: "arpitha1",
+      name: "arpitha2",
       script: "server.js",
       env: {
         PORT: 4002,
