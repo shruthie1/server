@@ -77,14 +77,14 @@ validate_server_name() {
     local name=$1
     if ! echo "$name" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]$'; then return 1; fi
     if [ ${#name} -gt 255 ]; then return 2; fi
-    if grep -Rq "server_name.*$name" "$NGINX_SITES_AVAILABLE" 2>/dev/null; then return 3; fi
+    if sudo grep -Rq "server_name.*$name" "$NGINX_SITES_AVAILABLE" 2>/dev/null; then return 3; fi
     return 0
 }
 
 validate_system_resources() {
     # Check disk space if df is available
     if command -v df >/dev/null 2>&1; then
-        local space=$(df -m "$(dirname "$NGINX_SITES_AVAILABLE")" 2>/dev/null | awk 'NR==2 {print $4}' || echo 0)
+        local space=$(sudo df -m "$(dirname "$NGINX_SITES_AVAILABLE")" 2>/dev/null | awk 'NR==2 {print $4}' || echo 0)
         if [ "${space:-0}" -lt 100 ]; then return 1; fi
     fi
 
@@ -137,9 +137,12 @@ validate_system_resources || case $? in
     3) warn "Too many PM2 apps running"; exit 1 ;;
 esac
 
-sudo mkdir -p "$(dirname "$LOG_FILE")"
-sudo touch "$LOG_FILE"
-sudo chmod 644 "$LOG_FILE"
+if ! sudo mkdir -p "$(dirname "$LOG_FILE")" 2>/dev/null; then
+    warn "Failed to create log directory, using current directory"
+    LOG_FILE="./app-setup.log"
+fi
+sudo touch "$LOG_FILE" 2>/dev/null || touch "$LOG_FILE" || true
+sudo chmod 644 "$LOG_FILE" 2>/dev/null || chmod 644 "$LOG_FILE" 2>/dev/null || true
 
 # ========== Main ==========
 step "Parsing PM2 Config and Starting Apps"
@@ -185,11 +188,43 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
     fi
 
     CONF_FILE="$NGINX_SITES_AVAILABLE/${name}.conf"
+    debug "NGINX config file path: $CONF_FILE"
     if [ ! -f "$CONF_FILE" ]; then
         info "Generating NGINX config for $SERVER_NAME"
-        create_backup "$CONF_FILE"
-        echo "$NGINX_TEMPLATE" | sed "s/{{SERVER_NAME}}/$SERVER_NAME/g" | sed "s/{{PORT}}/$port/g" | sudo tee "$CONF_FILE" >/dev/null
-        sudo ln -sf "$CONF_FILE" "$NGINX_SITES_ENABLED/${name}.conf"
+        
+        debug "Creating NGINX sites directory: $(dirname "$CONF_FILE")"
+        if ! sudo mkdir -p "$(dirname "$CONF_FILE")" 2>/dev/null; then
+            warn "Failed to create NGINX sites directory. Error: $?"
+            debug "Current directory permissions: $(sudo ls -ld "$(dirname "$CONF_FILE")" 2>/dev/null || echo 'Not accessible')"
+            continue
+        fi
+        
+        debug "Attempting to create backup of existing config"
+        create_backup "$CONF_FILE" || debug "No existing config to backup"
+        
+        debug "Writing NGINX configuration template"
+        if ! echo "$NGINX_TEMPLATE" | sed "s/{{SERVER_NAME}}/$SERVER_NAME/g" | sed "s/{{PORT}}/$port/g" | sudo tee "$CONF_FILE" >/dev/null 2>&1; then
+            warn "Failed to create NGINX config file. Error: $?"
+            debug "Current file permissions: $(sudo ls -l "$CONF_FILE" 2>/dev/null || echo 'File not created')"
+            continue
+        fi
+        debug "NGINX config file created successfully"
+        
+        debug "Creating NGINX enabled sites directory"
+        if ! sudo mkdir -p "$(dirname "$NGINX_SITES_ENABLED/${name}.conf")" 2>/dev/null; then
+            warn "Failed to create NGINX enabled sites directory. Error: $?"
+            debug "Directory structure: $(sudo ls -R "$NGINX_SITES_ENABLED" 2>/dev/null || echo 'Directory not accessible')"
+            continue
+        fi
+        
+        debug "Creating symlink for NGINX config"
+        if ! sudo ln -sf "$CONF_FILE" "$NGINX_SITES_ENABLED/${name}.conf" 2>/dev/null; then
+            warn "Failed to create symlink for NGINX config. Error: $?"
+            debug "Symlink target exists: $(test -e "$NGINX_SITES_ENABLED/${name}.conf" && echo 'Yes' || echo 'No')"
+            continue
+        fi
+        debug "Symlink created successfully"
+        
         nginx_reload_needed=1
         success "Created and linked config for $SERVER_NAME"
     else
@@ -200,13 +235,22 @@ done
 # ========== NGINX Reload ==========
 if [ "${nginx_reload_needed:-0}" = 1 ]; then
     step "Reloading NGINX"
-    if sudo nginx -t && sudo systemctl reload nginx; then
-        success "NGINX reloaded"
-    else
-        warn "NGINX reload failed"
-        sudo nginx -t 2>&1 | tee -a "$LOG_FILE"
+    debug "Testing NGINX configuration"
+    if ! sudo nginx -t 2>/tmp/nginx_test.log; then
+        warn "NGINX configuration test failed"
+        debug "NGINX test output: $(cat /tmp/nginx_test.log)"
+        debug "NGINX config directory structure: $(ls -R "$NGINX_SITES_ENABLED" 2>/dev/null || echo 'Not accessible')"
         exit 1
     fi
+    
+    debug "Attempting to reload NGINX service"
+    if ! sudo systemctl reload nginx 2>/tmp/nginx_reload.log; then
+        warn "NGINX reload failed"
+        debug "NGINX reload output: $(cat /tmp/nginx_reload.log)"
+        debug "NGINX service status: $(sudo systemctl status nginx 2>&1 || echo 'Status not available')"
+        exit 1
+    fi
+    success "NGINX reloaded"
 else
     info "No NGINX reload needed"
 fi
