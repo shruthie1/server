@@ -84,8 +84,11 @@ validate_server_name() {
 validate_system_resources() {
     # Check disk space if df is available
     if command -v df >/dev/null 2>&1; then
-        local space=$(sudo df -m "$(dirname "$NGINX_SITES_AVAILABLE")" 2>/dev/null | awk 'NR==2 {print $4}' || echo 0)
-        if [ "${space:-0}" -lt 100 ]; then return 1; fi
+        local space
+        if space=$(df -m "$(dirname "$NGINX_SITES_AVAILABLE")" 2>/dev/null | awk 'NR==2 {print $4}' || echo 0) || \
+           space=$(sudo df -m "$(dirname "$NGINX_SITES_AVAILABLE")" 2>/dev/null | awk 'NR==2 {print $4}' || echo 0); then
+            if [ "${space:-0}" -lt 100 ]; then return 1; fi
+        fi
     fi
 
     # Check memory if free is available
@@ -114,17 +117,66 @@ create_backup() {
 
 issue_ssl_cert() {
     local domain=$1
-    if sudo certbot certificates | grep -q "$domain"; then
-        success "SSL already exists for $domain"
+    debug "Checking SSL certificate for $domain"
+
+    # First check if certbot is available
+    if ! command -v certbot &>/dev/null; then
+        warn "Certbot is not installed. Cannot issue SSL certificate for $domain"
+        return 1
+    fi
+
+    # Check if certificate already exists
+    if sudo certbot certificates 2>/dev/null | grep -q "Domains: $domain"; then
+        local expiry=$(sudo certbot certificates 2>/dev/null | grep -A2 "Domains: $domain" | grep "Expiry Date:" | awk '{print $(NF-1)" "$NF}')
+        success "SSL certificate already exists for $domain (Expires: $expiry)"
+        return 0
+    fi
+
+    info "Issuing new SSL certificate for $domain"
+    local temp_log="/tmp/certbot_${domain//[^a-zA-Z0-9]/_}.log"
+
+    if sudo certbot --nginx -d "$domain" --agree-tos -m "$EMAIL" --non-interactive > "$temp_log" 2>&1; then
+        success "SSL certificate successfully issued for $domain"
+        debug "$(cat "$temp_log")"
+        rm -f "$temp_log"
+        return 0
     else
-        info "Issuing SSL certificate for $domain"
-        if sudo certbot --nginx -d "$domain" --agree-tos -m "$EMAIL" --non-interactive; then
-            success "SSL issued for $domain"
-        else
-            warn "Failed to issue SSL for $domain"
+        warn "Failed to issue SSL certificate for $domain"
+        warn "Certbot output:"
+        cat "$temp_log" | tee -a "$LOG_FILE"
+        rm -f "$temp_log"
+
+        if [ -f /var/log/letsencrypt/letsencrypt.log ]; then
+            warn "Last 10 lines of Let's Encrypt log:"
             tail -n 10 /var/log/letsencrypt/letsencrypt.log | tee -a "$LOG_FILE"
         fi
+        return 1
     fi
+}
+
+check_cert_renewal() {
+    local domain=$1
+    local days_threshold=30
+
+    if ! sudo certbot certificates 2>/dev/null | grep -q "Domains: $domain"; then
+        return 0  # No certificate exists, nothing to check
+    fi
+
+    local expiry=$(sudo certbot certificates 2>/dev/null | grep -A2 "Domains: $domain" | grep "Expiry Date:" | awk '{print $(NF-1)" "$NF}')
+    local expiry_seconds=$(date -d "$expiry" +%s)
+    local now_seconds=$(date +%s)
+    local days_remaining=$(( (expiry_seconds - now_seconds) / 86400 ))
+
+    if [ "$days_remaining" -lt "$days_threshold" ]; then
+        info "Certificate for $domain expires in $days_remaining days. Attempting renewal..."
+        if sudo certbot renew --cert-name "$domain" --quiet; then
+            success "Certificate renewed for $domain"
+        else
+            warn "Failed to renew certificate for $domain"
+            return 1
+        fi
+    fi
+    return 0
 }
 
 # ========== Init ==========
@@ -191,17 +243,17 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
     debug "NGINX config file path: $CONF_FILE"
     if [ ! -f "$CONF_FILE" ]; then
         info "Generating NGINX config for $SERVER_NAME"
-        
+
         debug "Creating NGINX sites directory: $(dirname "$CONF_FILE")"
         if ! sudo mkdir -p "$(dirname "$CONF_FILE")" 2>/dev/null; then
             warn "Failed to create NGINX sites directory. Error: $?"
             debug "Current directory permissions: $(sudo ls -ld "$(dirname "$CONF_FILE")" 2>/dev/null || echo 'Not accessible')"
             continue
         fi
-        
+
         debug "Attempting to create backup of existing config"
         create_backup "$CONF_FILE" || debug "No existing config to backup"
-        
+
         debug "Writing NGINX configuration template"
         if ! echo "$NGINX_TEMPLATE" | sed "s/{{SERVER_NAME}}/$SERVER_NAME/g" | sed "s/{{PORT}}/$port/g" | sudo tee "$CONF_FILE" >/dev/null 2>&1; then
             warn "Failed to create NGINX config file. Error: $?"
@@ -209,14 +261,14 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
             continue
         fi
         debug "NGINX config file created successfully"
-        
+
         debug "Creating NGINX enabled sites directory"
         if ! sudo mkdir -p "$(dirname "$NGINX_SITES_ENABLED/${name}.conf")" 2>/dev/null; then
             warn "Failed to create NGINX enabled sites directory. Error: $?"
             debug "Directory structure: $(sudo ls -R "$NGINX_SITES_ENABLED" 2>/dev/null || echo 'Directory not accessible')"
             continue
         fi
-        
+
         debug "Creating symlink for NGINX config"
         if ! sudo ln -sf "$CONF_FILE" "$NGINX_SITES_ENABLED/${name}.conf" 2>/dev/null; then
             warn "Failed to create symlink for NGINX config. Error: $?"
@@ -224,7 +276,7 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
             continue
         fi
         debug "Symlink created successfully"
-        
+
         nginx_reload_needed=1
         success "Created and linked config for $SERVER_NAME"
     else
@@ -242,7 +294,7 @@ if [ "${nginx_reload_needed:-0}" = 1 ]; then
         debug "NGINX config directory structure: $(ls -R "$NGINX_SITES_ENABLED" 2>/dev/null || echo 'Not accessible')"
         exit 1
     fi
-    
+
     debug "Attempting to reload NGINX service"
     if ! sudo systemctl reload nginx 2>/tmp/nginx_reload.log; then
         warn "NGINX reload failed"
@@ -256,10 +308,44 @@ else
 fi
 
 # ========== SSL Automation ==========
-step "Issuing SSL Certificates"
+step "Processing SSL Certificates"
+debug "Found ${#used_server_names[@]} domains to process"
+
+ssl_success=0
+ssl_skipped=0
+ssl_failed=0
+
 for domain in "${!used_server_names[@]}"; do
-    issue_ssl_cert "$domain"
+    app_name="${used_server_names[$domain]}"
+    debug "Processing SSL for app: $app_name ($domain)"
+
+    # First try to issue/check the certificate
+    if issue_ssl_cert "$domain"; then
+        # Then check if it needs renewal
+        if check_cert_renewal "$domain"; then
+            ((ssl_success++))
+        else
+            ((ssl_failed++))
+            warn "Certificate renewal failed for $domain"
+        fi
+    else
+        ((ssl_failed++))
+        warn "Moving to next domain..."
+    fi
 done
+
+info "SSL Certificate Summary:"
+if [ $ssl_success -gt 0 ]; then
+    info "✓ Successfully processed: $ssl_success"
+else
+    warn "No certificates were successfully processed"
+fi
+if [ $ssl_failed -gt 0 ]; then
+    warn "✗ Failed: $ssl_failed"
+fi
+if [ $ssl_success -eq 0 ] && [ $ssl_failed -eq 0 ]; then
+    info "No SSL certificates were processed"
+fi
 
 # ========== Cleanup ==========
 cleanup() {
