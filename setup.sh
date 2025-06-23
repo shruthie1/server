@@ -181,6 +181,8 @@ check_cert_renewal() {
 
 # ========== Init ==========
 declare -A used_ports used_server_names
+debug "Initialized arrays: used_ports and used_server_names"
+
 check_dependencies
 check_sudo
 validate_system_resources || case $? in
@@ -309,6 +311,11 @@ fi
 
 # ========== SSL Automation ==========
 step "Processing SSL Certificates"
+if [ ${#used_server_names[@]} -eq 0 ]; then
+    info "No domains to process for SSL certificates"
+    exit 0
+fi
+
 debug "Found ${#used_server_names[@]} domains to process"
 
 ssl_success=0
