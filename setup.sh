@@ -25,6 +25,9 @@ server {
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host \$host;
         proxy_cache_bypass \$http_upgrade;
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto \$scheme;
     }
 }
 "
@@ -163,7 +166,12 @@ check_cert_renewal() {
     fi
 
     local expiry=$(sudo certbot certificates 2>/dev/null | grep -A2 "Domains: $domain" | grep "Expiry Date:" | awk '{print $(NF-1)" "$NF}')
-    local expiry_seconds=$(date -d "$expiry" +%s)
+    if [ -z "$expiry" ]; then
+        warn "Could not determine certificate expiry for $domain"
+        return 1
+    fi
+
+    local expiry_seconds=$(date -d "$expiry" +%s 2>/dev/null || echo 0)
     local now_seconds=$(date +%s)
     local days_remaining=$(( (expiry_seconds - now_seconds) / 86400 ))
 
@@ -200,28 +208,64 @@ sudo chmod 644 "$LOG_FILE" 2>/dev/null || chmod 644 "$LOG_FILE" 2>/dev/null || t
 
 # ========== Main ==========
 step "Parsing PM2 Config and Starting Apps"
-apps=$(node -p "JSON.stringify(require('./ecosystem.config.js').apps)")
 
-for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
-    app=$(echo "$apps" | jq ".[$i]")
-    name=$(echo "$app" | jq -r ".name")
-    port=$(echo "$app" | jq -r ".env.PORT")
-    script_path=$(echo "$app" | jq -r ".script")
+# Check if ecosystem.config.js exists
+if [ ! -f "./ecosystem.config.js" ]; then
+    warn "ecosystem.config.js not found in current directory"
+    exit 1
+fi
+
+apps=$(node -p "JSON.stringify(require('./ecosystem.config.js').apps)" 2>/dev/null)
+if [ $? -ne 0 ] || [ "$apps" = "undefined" ] || [ "$apps" = "null" ]; then
+    warn "Failed to parse ecosystem.config.js or no apps found"
+    exit 1
+fi
+
+app_count=$(echo "$apps" | jq length 2>/dev/null || echo 0)
+if [ "$app_count" -eq 0 ]; then
+    warn "No apps found in ecosystem.config.js"
+    exit 1
+fi
+
+debug "Found $app_count apps in ecosystem.config.js"
+
+nginx_reload_needed=0
+
+for i in $(seq 0 $((app_count - 1))); do
+    app=$(echo "$apps" | jq ".[$i]" 2>/dev/null)
+    if [ $? -ne 0 ] || [ "$app" = "null" ]; then
+        warn "Failed to parse app at index $i, skipping"
+        continue
+    fi
+
+    name=$(echo "$app" | jq -r ".name" 2>/dev/null)
+    port=$(echo "$app" | jq -r ".env.PORT" 2>/dev/null)
+    script_path=$(echo "$app" | jq -r ".script" 2>/dev/null)
 
     debug "App JSON: $app"
 
     if [ "$name" = "null" ] || [ "$port" = "null" ] || [ "$script_path" = "null" ]; then
-        warn "App missing required fields (name/port/script), skipping"
+        warn "App at index $i missing required fields (name/port/script), skipping"
+        continue
+    fi
+
+    # Check if script file exists
+    if [ ! -f "$script_path" ]; then
+        warn "Script file not found: $script_path for app $name, skipping"
         continue
     fi
 
     log "Processing App: $name on Port $port"
 
     validate_port "$port" || case $? in
-        1) warn "Invalid port: $port"; continue ;;
-        2) warn "Port already in use: $port"; continue ;;
+        1) warn "Invalid port: $port for app $name"; continue ;;
+        2) warn "Port already in use: $port for app $name"; continue ;;
     esac
-    [ -n "${used_ports[$port]:-}" ] && warn "Duplicate port $port used by ${used_ports[$port]}" && continue
+    
+    if [ -n "${used_ports[$port]:-}" ]; then
+        warn "Duplicate port $port used by ${used_ports[$port]} and $name"
+        continue
+    fi
     used_ports[$port]=$name
 
     SERVER_NAME="$name.$DOMAIN"
@@ -230,19 +274,27 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
         2) warn "Domain too long: $SERVER_NAME"; continue ;;
         3) warn "Domain $SERVER_NAME already used in NGINX"; continue ;;
     esac
-    [ -n "${used_server_names[$SERVER_NAME]:-}" ] && warn "Duplicate domain: $SERVER_NAME" && continue
+    
+    if [ -n "${used_server_names[$SERVER_NAME]:-}" ]; then
+        warn "Duplicate domain: $SERVER_NAME"
+        continue
+    fi
     used_server_names[$SERVER_NAME]=$name
 
-    if ! pm2 list | grep -qw "$name"; then
+    # Check if PM2 app is already running
+    if pm2 list 2>/dev/null | grep -qw "$name"; then
+        info "Restarting existing PM2 app: $name"
+        PORT=$port CLIENT_ID=$name pm2 restart "$name"
+        success "Restarted $name"
+    else
         info "Starting $name via PM2"
         PORT=$port CLIENT_ID=$name pm2 start "$script_path" --name "$name" --namespace clients
         success "Started $name"
-    else
-        debug "$name already running in PM2"
     fi
 
     CONF_FILE="$NGINX_SITES_AVAILABLE/${name}.conf"
     debug "NGINX config file path: $CONF_FILE"
+    
     if [ ! -f "$CONF_FILE" ]; then
         info "Generating NGINX config for $SERVER_NAME"
 
@@ -254,7 +306,7 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
         fi
 
         debug "Attempting to create backup of existing config"
-        create_backup "$CONF_FILE" || debug "No existing config to backup"
+        create_backup "$CONF_FILE" 2>/dev/null || debug "No existing config to backup"
 
         debug "Writing NGINX configuration template"
         if ! echo "$NGINX_TEMPLATE" | sed "s/{{SERVER_NAME}}/$SERVER_NAME/g" | sed "s/{{PORT}}/$port/g" | sudo tee "$CONF_FILE" >/dev/null 2>&1; then
@@ -265,7 +317,7 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
         debug "NGINX config file created successfully"
 
         debug "Creating NGINX enabled sites directory"
-        if ! sudo mkdir -p "$(dirname "$NGINX_SITES_ENABLED/${name}.conf")" 2>/dev/null; then
+        if ! sudo mkdir -p "$NGINX_SITES_ENABLED" 2>/dev/null; then
             warn "Failed to create NGINX enabled sites directory. Error: $?"
             debug "Directory structure: $(sudo ls -R "$NGINX_SITES_ENABLED" 2>/dev/null || echo 'Directory not accessible')"
             continue
@@ -287,12 +339,12 @@ for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
 done
 
 # ========== NGINX Reload ==========
-if [ "${nginx_reload_needed:-0}" = 1 ]; then
+if [ "$nginx_reload_needed" = 1 ]; then
     step "Reloading NGINX"
     debug "Testing NGINX configuration"
     if ! sudo nginx -t 2>/tmp/nginx_test.log; then
         warn "NGINX configuration test failed"
-        debug "NGINX test output: $(cat /tmp/nginx_test.log)"
+        debug "NGINX test output: $(cat /tmp/nginx_test.log 2>/dev/null || echo 'No test output')"
         debug "NGINX config directory structure: $(ls -R "$NGINX_SITES_ENABLED" 2>/dev/null || echo 'Not accessible')"
         exit 1
     fi
@@ -300,7 +352,7 @@ if [ "${nginx_reload_needed:-0}" = 1 ]; then
     debug "Attempting to reload NGINX service"
     if ! sudo systemctl reload nginx 2>/tmp/nginx_reload.log; then
         warn "NGINX reload failed"
-        debug "NGINX reload output: $(cat /tmp/nginx_reload.log)"
+        debug "NGINX reload output: $(cat /tmp/nginx_reload.log 2>/dev/null || echo 'No reload output')"
         debug "NGINX service status: $(sudo systemctl status nginx 2>&1 || echo 'Status not available')"
         exit 1
     fi
@@ -311,56 +363,63 @@ fi
 
 # ========== SSL Automation ==========
 step "Processing SSL Certificates"
-if [ ${#used_server_names[@]} -eq 0 ]; then
+
+# Check if used_server_names array has any elements
+if [ ${#used_server_names[@]:-0} -eq 0 ]; then
     info "No domains to process for SSL certificates"
-    exit 0
-fi
+else
+    debug "Found ${#used_server_names[@]} domains to process"
 
-debug "Found ${#used_server_names[@]} domains to process"
+    ssl_success=0
+    ssl_failed=0
 
-ssl_success=0
-ssl_skipped=0
-ssl_failed=0
+    for domain in "${!used_server_names[@]}"; do
+        app_name="${used_server_names[$domain]}"
+        debug "Processing SSL for app: $app_name ($domain)"
 
-for domain in "${!used_server_names[@]}"; do
-    app_name="${used_server_names[$domain]}"
-    debug "Processing SSL for app: $app_name ($domain)"
-
-    # First try to issue/check the certificate
-    if issue_ssl_cert "$domain"; then
-        # Then check if it needs renewal
-        if check_cert_renewal "$domain"; then
-            ((ssl_success++))
+        # First try to issue/check the certificate
+        if issue_ssl_cert "$domain"; then
+            # Then check if it needs renewal
+            if check_cert_renewal "$domain"; then
+                ((ssl_success++))
+            else
+                ((ssl_failed++))
+                warn "Certificate renewal failed for $domain"
+            fi
         else
             ((ssl_failed++))
-            warn "Certificate renewal failed for $domain"
+            warn "Moving to next domain..."
         fi
-    else
-        ((ssl_failed++))
-        warn "Moving to next domain..."
-    fi
-done
+    done
 
-info "SSL Certificate Summary:"
-if [ $ssl_success -gt 0 ]; then
-    info "✓ Successfully processed: $ssl_success"
-else
-    warn "No certificates were successfully processed"
-fi
-if [ $ssl_failed -gt 0 ]; then
-    warn "✗ Failed: $ssl_failed"
-fi
-if [ $ssl_success -eq 0 ] && [ $ssl_failed -eq 0 ]; then
-    info "No SSL certificates were processed"
+    info "SSL Certificate Summary:"
+    if [ $ssl_success -gt 0 ]; then
+        info "✓ Successfully processed: $ssl_success"
+    fi
+    if [ $ssl_failed -gt 0 ]; then
+        warn "✗ Failed: $ssl_failed"
+    fi
+    if [ $ssl_success -eq 0 ] && [ $ssl_failed -eq 0 ]; then
+        info "No SSL certificates were processed"
+    fi
 fi
 
 # ========== Cleanup ==========
 cleanup() {
     local code=$?
-    if [ $code -ne 0 ]; then warn "Script failed with exit code $code"; fi
+    if [ $code -ne 0 ]; then 
+        warn "Script failed with exit code $code"
+    else
+        success "Script completed successfully"
+    fi
+    # Clean up temporary files
+    rm -f /tmp/nginx_test.log /tmp/nginx_reload.log /tmp/certbot_*.log 2>/dev/null || true
     exit $code
 }
 trap cleanup EXIT
 trap 'exit 1' INT TERM
 
 step "✅ Setup Complete!"
+info "Apps processed and configured successfully"
+info "You can check PM2 status with: pm2 list"
+info "You can check NGINX status with: sudo systemctl status nginx"
