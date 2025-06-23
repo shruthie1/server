@@ -94,11 +94,11 @@ check_sudo() {
 validate_port() {
     local port=$1
     if ! [[ "$port" =~ ^[0-9]+$ ]] || [ "$port" -lt 1024 ] || [ "$port" -gt 65535 ]; then return 1; fi
-    
+
     # Check if port is in use by a non-PM2 process
     local port_in_use=false
     if command -v lsof >/dev/null 2>&1; then
-        if lsof -i ":$port" >/dev/null 2>&1; then 
+        if lsof -i ":$port" >/dev/null 2>&1; then
             # Check if it's a PM2 process
             if ! lsof -i ":$port" 2>/dev/null | grep -q "PM2"; then
                 port_in_use=true
@@ -109,14 +109,16 @@ validate_port() {
     elif command -v ss >/dev/null 2>&1; then
         if ss -tuln 2>/dev/null | grep -q ":$port "; then port_in_use=true; fi
     fi
-    
+
     if [ "$port_in_use" = true ]; then return 2; fi
     return 0
 }
 
 validate_server_name() {
     local name=$1
-    if ! echo "$name" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]
+    if ! echo "$name" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]$'; then return 1; fi
+    return 0
+}
 
 validate_system_resources() {
     # Check disk space if df is available
@@ -295,7 +297,7 @@ for i in $(seq 0 $((app_count - 1))); do
         1) warn "Invalid port: $port for app $name"; continue ;;
         2) debug "Port $port appears to be in use by non-PM2 process for app $name, will try to proceed"; ;;
     esac
-    
+
     if [ -n "${used_ports[$port]:-}" ]; then
         warn "Duplicate port $port used by ${used_ports[$port]} and $name"
         continue
@@ -303,7 +305,7 @@ for i in $(seq 0 $((app_count - 1))); do
     used_ports[$port]=$name
 
     SERVER_NAME="$name.$DOMAIN"
-    
+
     # Set flag to allow updating existing configs
     UPDATE_EXISTING=true
     validate_server_name "$SERVER_NAME" || case $? in
@@ -312,7 +314,7 @@ for i in $(seq 0 $((app_count - 1))); do
         3) debug "Domain $SERVER_NAME already exists in NGINX, will update if needed"; ;;
     esac
     UPDATE_EXISTING=false
-    
+
     if [ -n "${used_server_names[$SERVER_NAME]:-}" ]; then
         warn "Duplicate domain: $SERVER_NAME"
         continue
@@ -332,10 +334,10 @@ for i in $(seq 0 $((app_count - 1))); do
 
     CONF_FILE="$NGINX_SITES_AVAILABLE/${name}.conf"
     debug "NGINX config file path: $CONF_FILE"
-    
+
     # Always process the NGINX config (create or verify)
     config_needs_update=false
-    
+
     if [ ! -f "$CONF_FILE" ]; then
         config_needs_update=true
         info "Generating NGINX config for $SERVER_NAME"
@@ -348,7 +350,7 @@ for i in $(seq 0 $((app_count - 1))); do
             debug "NGINX config for $name already exists and is correct"
         fi
     fi
-    
+
     if [ "$config_needs_update" = true ]; then
 
         debug "Creating NGINX sites directory: $(dirname "$CONF_FILE")"
@@ -447,7 +449,7 @@ else
     # If no new domains were processed, try to get existing domains from NGINX configs
     if [ $total_domains -eq 0 ]; then
         info "No new domains processed, checking existing NGINX configurations..."
-        
+
         # Get domains from existing NGINX configs
         for conf_file in "$NGINX_SITES_AVAILABLE"/*.conf; do
             if [ -f "$conf_file" ]; then
@@ -460,14 +462,14 @@ else
                 fi
             fi
         done
-        
+
         if [ $total_domains -eq 0 ]; then
             info "No domains found to process for SSL certificates"
             step "✅ Setup Complete!"
             info "No apps were processed (they may already be configured)"
             exit 0
         fi
-        
+
         info "Found $total_domains existing domains to process for SSL"
     fi
 
@@ -505,7 +507,7 @@ fi
 # ========== Cleanup ==========
 cleanup() {
     local code=$?
-    if [ $code -ne 0 ]; then 
+    if [ $code -ne 0 ]; then
         warn "Script failed with exit code $code"
     else
         success "Script completed successfully"
@@ -706,7 +708,7 @@ for i in $(seq 0 $((app_count - 1))); do
         1) warn "Invalid port: $port for app $name"; continue ;;
         2) warn "Port already in use: $port for app $name"; continue ;;
     esac
-    
+
     if [ -n "${used_ports[$port]:-}" ]; then
         warn "Duplicate port $port used by ${used_ports[$port]} and $name"
         continue
@@ -719,7 +721,7 @@ for i in $(seq 0 $((app_count - 1))); do
         2) warn "Domain too long: $SERVER_NAME"; continue ;;
         3) warn "Domain $SERVER_NAME already used in NGINX"; continue ;;
     esac
-    
+
     if [ -n "${used_server_names[$SERVER_NAME]:-}" ]; then
         warn "Duplicate domain: $SERVER_NAME"
         continue
@@ -739,7 +741,7 @@ for i in $(seq 0 $((app_count - 1))); do
 
     CONF_FILE="$NGINX_SITES_AVAILABLE/${name}.conf"
     debug "NGINX config file path: $CONF_FILE"
-    
+
     if [ ! -f "$CONF_FILE" ]; then
         info "Generating NGINX config for $SERVER_NAME"
 
@@ -863,7 +865,7 @@ fi
 # ========== Cleanup ==========
 cleanup() {
     local code=$?
-    if [ $code -ne 0 ]; then 
+    if [ $code -ne 0 ]; then
         warn "Script failed with exit code $code"
     else
         success "Script completed successfully"
