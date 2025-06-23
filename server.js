@@ -21,8 +21,10 @@ const config = {
   ],
   BASE_SAVE_DIR: path.resolve(process.cwd(), "./src/services")  // Make base directory absolute
 };
-
 const key = fetchNumbersFromString(process.env.clientId);
+console.log("clientId:", process.env.clientId);
+console.log("serviceName:", process.env.serviceName);
+console.log("key:", key);
 const service = process.env.serviceName || key;
 const FILE_SAVE_PATH = path.resolve(config.BASE_SAVE_DIR, `${service}.js`);  // Ensure absolute path
 
