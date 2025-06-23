@@ -124,7 +124,7 @@ sudo chmod 644 "$LOG_FILE"
 
 # ========== Main ==========
 step "Parsing PM2 Config and Starting Apps"
-apps=$(node -p "require('./ecosystem.config.js').apps")
+apps=$(node -p "JSON.stringify(require('./ecosystem.config.js').apps)")
 
 for i in $(seq 0 $(($(echo "$apps" | jq length) - 1))); do
     app=$(echo "$apps" | jq ".[$i]")
