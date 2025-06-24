@@ -13,7 +13,6 @@ module.exports = {
       cron_restart: "0 1 * * *",
       restart_delay: 5000,
       namespace: "promotions"
-
     },
     {
       name: "arpitha-prom2",
@@ -28,9 +27,7 @@ module.exports = {
       cron_restart: "0 1 * * *",
       restart_delay: 5000,
       namespace: "promotions"
-
     },
-    ,
     {
       name: "shruthi-prom1",
       script: "server.js",
@@ -44,9 +41,7 @@ module.exports = {
       cron_restart: "0 1 * * *",
       restart_delay: 5000,
       namespace: "promotions"
-
     },
-    ,
     {
       name: "shruthi-prom2",
       script: "server.js",
@@ -60,9 +55,7 @@ module.exports = {
       cron_restart: "0 1 * * *",
       restart_delay: 5000,
       namespace: "promotions"
-
     },
-    ,
     {
       name: "kavya-prom1",
       script: "server.js",
@@ -76,14 +69,12 @@ module.exports = {
       cron_restart: "0 1 * * *",
       restart_delay: 5000,
       namespace: "promotions"
-
     },
-    ,
     {
       name: "kavya-prom2",
       script: "server.js",
       env: {
-        PORT: 3006,
+        PORT: 300,
         clientId: "kavya2",
         serviceName: "promotion-clients-new"
       },
@@ -92,7 +83,6 @@ module.exports = {
       cron_restart: "0 1 * * *",
       restart_delay: 5000,
       namespace: "promotions"
-
     }
   ]
 };
