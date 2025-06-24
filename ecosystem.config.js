@@ -74,7 +74,7 @@ module.exports = {
       name: "kavya-prom2",
       script: "server.js",
       env: {
-        PORT: 300,
+        PORT: 3006,
         clientId: "kavya2",
         serviceName: "promotion-clients-new"
       },
