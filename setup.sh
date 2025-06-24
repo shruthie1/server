@@ -101,7 +101,6 @@ declare -r EXIT_CONFIG_ERROR=3
 declare -r EXIT_SYSTEM_ERROR=4
 declare -r EXIT_NETWORK_ERROR=5
 declare -r EXIT_SECURITY_ERROR=6
-declare -r EXIT_SECURITY_ERROR=6
 
 # ========== Global Variables ==========
 declare -g nginx_reload_needed=0
