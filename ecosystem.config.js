@@ -35,7 +35,7 @@ module.exports = {
       name: "shruthi-prom1",
       script: "server.js",
       env: {
-        PORT: 3002,
+        PORT: 3003,
         clientId: "shruthi1",
         serviceName: "promotion-clients-new"
       },
@@ -51,7 +51,7 @@ module.exports = {
       name: "shruthi-prom2",
       script: "server.js",
       env: {
-        PORT: 3002,
+        PORT: 3004,
         clientId: "shruthi2",
         serviceName: "promotion-clients-new"
       },
@@ -67,7 +67,7 @@ module.exports = {
       name: "kavya-prom1",
       script: "server.js",
       env: {
-        PORT: 3002,
+        PORT: 3005,
         clientId: "kavya1",
         serviceName: "promotion-clients-new"
       },
@@ -83,7 +83,7 @@ module.exports = {
       name: "kavya-prom2",
       script: "server.js",
       env: {
-        PORT: 3002,
+        PORT: 3006,
         clientId: "kavya2",
         serviceName: "promotion-clients-new"
       },
