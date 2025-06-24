@@ -289,9 +289,23 @@ validate_ecosystem_file() {
         error_exit "$EXIT_CONFIG_ERROR" "Ecosystem file not found: $ECOSYSTEM_FILE"
     fi
 
-    # Validate JSON syntax
-    if ! node -pe "JSON.parse(require('fs').readFileSync('$ECOSYSTEM_FILE', 'utf8'))" &>/dev/null; then
-        error_exit "$EXIT_CONFIG_ERROR" "Invalid JSON in ecosystem file: $ECOSYSTEM_FILE"
+    # Validate PM2 ecosystem file (supports both .json and .js formats)
+    if ! node -pe "
+        try {
+            const config = require(require('path').resolve('$ECOSYSTEM_FILE'));
+            if (!config || typeof config !== 'object') {
+                throw new Error('Configuration object not found');
+            }
+            if (!config.apps || !Array.isArray(config.apps)) {
+                throw new Error('apps array not found in configuration');
+            }
+            console.log('valid');
+        } catch (err) {
+            console.error('Validation error:', err.message);
+            process.exit(1);
+        }
+    " &>/dev/null; then
+        error_exit "$EXIT_CONFIG_ERROR" "Invalid PM2 ecosystem file: $ECOSYSTEM_FILE"
     fi
 
     success "Ecosystem file validated"
@@ -376,7 +390,7 @@ get_ecosystem_apps() {
 
     node -pe "
         try {
-            const config = require('$ECOSYSTEM_FILE');
+            const config = require(require('path').resolve('$ECOSYSTEM_FILE'));
             JSON.stringify(config.apps || []);
         } catch(e) {
             console.error('Error parsing ecosystem file:', e.message);
