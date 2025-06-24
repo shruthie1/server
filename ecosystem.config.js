@@ -51,6 +51,32 @@ module.exports = {
       cron_restart: "0 1 * * *",
       restart_delay: 5000,
       namespace: "clients"
+    },
+    {
+      name: "kavya1",
+      script: "server.js",
+      env: {
+        PORT: 4005,
+        clientId: "kavya1"
+      },
+      autorestart: true,
+      max_memory_restart: "300M",
+      cron_restart: "0 1 * * *",
+      restart_delay: 5000,
+      namespace: "clients"
+    },
+    {
+      name: "kavya1",
+      script: "server.js",
+      env: {
+        PORT: 4006,
+        clientId: "kavya1"
+      },
+      autorestart: true,
+      max_memory_restart: "300M",
+      cron_restart: "0 1 * * *",
+      restart_delay: 5000,
+      namespace: "clients"
     }
   ]
 };
