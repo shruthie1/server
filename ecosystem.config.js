@@ -66,11 +66,11 @@ module.exports = {
       namespace: "clients"
     },
     {
-      name: "kavya1",
+      name: "kavya2",
       script: "server.js",
       env: {
         PORT: 4006,
-        clientId: "kavya1"
+        clientId: "kavya2"
       },
       autorestart: true,
       max_memory_restart: "300M",
