@@ -9,7 +9,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "0 2 * * *",
       restart_delay: 5000,
       namespace: "helpers"
     }
