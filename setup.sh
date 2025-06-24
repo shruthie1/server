@@ -347,8 +347,28 @@ check_app_health() {
         return 1
     fi
 
-    # Check if app is using the expected port
-    if ! pm2 show "$app_name" 2>/dev/null | grep -q "port.*$expected_port\|env.*PORT.*$expected_port"; then
+    # Check if app is using the expected port (multiple detection methods)
+    local port_detected=false
+    
+    # Method 1: Check PM2 show output for port environment variable
+    if pm2 show "$app_name" 2>/dev/null | grep -q "PORT.*$expected_port"; then
+        port_detected=true
+        debug_log "App $app_name port detected via PM2 env: $expected_port"
+    fi
+    
+    # Method 2: Check if app is actually listening on the port
+    if [ "$port_detected" = false ] && ss -tuln 2>/dev/null | grep -q ":$expected_port "; then
+        # Verify it's the right process by checking process tree
+        local pm2_pid
+        if pm2_pid=$(pm2 show "$app_name" 2>/dev/null | grep -oE 'pid[[:space:]]*:[[:space:]]*[0-9]+' | grep -oE '[0-9]+'); then
+            if [ -n "$pm2_pid" ] && pgrep -P "$pm2_pid" >/dev/null 2>&1; then
+                port_detected=true
+                debug_log "App $app_name port detected via network check: $expected_port"
+            fi
+        fi
+    fi
+    
+    if [ "$port_detected" = false ]; then
         debug_log "App $app_name is not using expected port $expected_port"
         return 2
     fi
@@ -504,10 +524,30 @@ check_ssl_certificate() {
         return 2
     fi
 
-    # Calculate days until expiry
+    # Calculate days until expiry (with better portability)
     local current_timestamp expiry_timestamp
     current_timestamp=$(date +%s)
-    expiry_timestamp=$(date -d "$expiry_date" +%s 2>/dev/null || echo "0")
+    
+    # Try GNU date first, then fall back to compatible alternatives
+    if expiry_timestamp=$(date -d "$expiry_date" +%s 2>/dev/null); then
+        debug_log "Using GNU date for timestamp conversion"
+    elif command_exists python3; then
+        expiry_timestamp=$(python3 -c "
+import datetime
+try:
+    dt = datetime.datetime.strptime('$expiry_date', '%Y-%m-%d %H:%M:%S')
+    print(int(dt.timestamp()))
+except:
+    try:
+        dt = datetime.datetime.strptime('$expiry_date', '%Y-%m-%d')
+        print(int(dt.timestamp()))
+    except:
+        print('0')
+" 2>/dev/null || echo "0")
+    else
+        warn "Cannot parse expiry date on this system - install python3 or GNU date"
+        expiry_timestamp="0"
+    fi
 
     if [ "$expiry_timestamp" -eq 0 ]; then
         warn "Invalid expiry date format for certificate $domain: $expiry_date"
@@ -590,12 +630,18 @@ diagnose_ssl_issues() {
         done
     fi
 
-    # Nginx configuration check
-    local nginx_config="$NGINX_SITES_AVAILABLE/${domain%.*}.conf"
-    if [ -f "$nginx_config" ]; then
-        if ! grep -q "server_name.*$domain" "$nginx_config"; then
-            warn "Nginx configuration may not include $domain in server_name directive"
+    # Nginx configuration check - find config that contains this domain
+    local nginx_config=""
+    for conf_file in "$NGINX_SITES_AVAILABLE"/*.conf; do
+        [ ! -f "$conf_file" ] && continue
+        if grep -q "server_name.*$domain" "$conf_file"; then
+            nginx_config="$conf_file"
+            break
         fi
+    done
+    
+    if [ -n "$nginx_config" ]; then
+        debug_log "Found nginx config for $domain: $nginx_config"
     else
         warn "Nginx configuration not found for $domain"
     fi
@@ -637,15 +683,23 @@ issue_ssl_certificate() {
             ;;
     esac
 
-    # Verify prerequisites
-    local nginx_config="$NGINX_SITES_AVAILABLE/${domain%.*}.conf"
-    local safe_nginx_config
-    safe_nginx_config=$(sanitize_path "$nginx_config")
-
-    if [ ! -f "$safe_nginx_config" ]; then
+    # Verify prerequisites - find nginx config for this domain
+    local nginx_config=""
+    for conf_file in "$NGINX_SITES_AVAILABLE"/*.conf; do
+        [ ! -f "$conf_file" ] && continue
+        if grep -q "server_name.*$domain" "$conf_file"; then
+            nginx_config="$conf_file"
+            break
+        fi
+    done
+    
+    if [ -z "$nginx_config" ]; then
         warn "Nginx configuration not found for $domain, cannot issue SSL certificate"
         return 1
     fi
+    
+    local safe_nginx_config
+    safe_nginx_config=$(sanitize_path "$nginx_config")
 
     if ! safe_sudo_execute "Testing nginx config before SSL" nginx -t; then
         warn "Nginx configuration test failed, cannot issue SSL certificate for $domain"
@@ -890,14 +944,22 @@ validate_nginx_site_configs() {
         if [ -f "$enabled_file" ]; then
             # Create a temporary test configuration to avoid injection
             local temp_test_config="/tmp/nginx_test_$$.conf"
-            echo "events{} http { include $enabled_file; }" > "$temp_test_config"
-
-            if ! safe_sudo_execute "Testing nginx config syntax for $site_name" nginx -t -c "$temp_test_config"; then
+            local safe_temp_config
+            safe_temp_config=$(sanitize_path "$temp_test_config")
+            
+            # Use safe file creation
+            if echo "events{} http { include $enabled_file; }" | safe_sudo_execute "Creating temp nginx test config" tee "$safe_temp_config" >/dev/null; then
+                if ! safe_sudo_execute "Testing nginx config syntax for $site_name" nginx -t -c "$safe_temp_config" 2>/dev/null; then
+                    invalid_configs+=("$site_name")
+                    ((config_issues++))
+                fi
+                # Clean up safely
+                safe_sudo_execute "Removing temp nginx test config" rm -f "$safe_temp_config"
+            else
+                warn "Failed to create temporary test config for $site_name"
                 invalid_configs+=("$site_name")
                 ((config_issues++))
             fi
-
-            rm -f "$temp_test_config"
         fi
     done
 
@@ -931,8 +993,18 @@ cleanup_orphaned_configs() {
 
     local ecosystem_apps_json
     ecosystem_apps_json=$(get_ecosystem_apps)
+    
+    # Skip cleanup if we can't parse ecosystem file
+    if [ "$ecosystem_apps_json" = "[]" ]; then
+        info "No ecosystem apps found, skipping orphaned config cleanup"
+        return 0
+    fi
+    
     local ecosystem_names
-    ecosystem_names=$(echo "$ecosystem_apps_json" | jq -r '.[].name' 2>/dev/null || echo "")
+    if ! ecosystem_names=$(echo "$ecosystem_apps_json" | jq -r '.[].name' 2>/dev/null); then
+        warn "Failed to parse ecosystem app names for cleanup"
+        return 1
+    fi
 
     # Clean up both available and enabled configs
     for conf_file in "$NGINX_SITES_AVAILABLE"/*.conf; do
@@ -1046,8 +1118,17 @@ process_ecosystem_apps() {
 
     local apps_json
     apps_json=$(get_ecosystem_apps)
+    
+    # Validate JSON structure
+    if [ "$apps_json" = "[]" ]; then
+        warn "No apps found in ecosystem configuration"
+        return 0
+    fi
+    
     local app_count
-    app_count=$(echo "$apps_json" | jq length)
+    if ! app_count=$(echo "$apps_json" | jq length 2>/dev/null); then
+        error_exit "$EXIT_CONFIG_ERROR" "Failed to parse ecosystem configuration JSON"
+    fi
 
     info "Found $app_count apps in ecosystem configuration"
 
@@ -1077,15 +1158,35 @@ process_single_app() {
     local index="$2"
 
     local app
-    app=$(echo "$apps_json" | jq ".[$index]")
+    if ! app=$(echo "$apps_json" | jq ".[$index]" 2>/dev/null); then
+        warn "App $index: Failed to parse app configuration"
+        return 1
+    fi
 
-    # Extract app configuration
+    # Extract app configuration with error handling
     local name port script_path client_id namespace
-    name=$(echo "$app" | jq -r ".name // empty")
-    port=$(echo "$app" | jq -r ".env.PORT // empty")
-    script_path=$(echo "$app" | jq -r ".script // empty")
-    client_id=$(echo "$app" | jq -r ".env.clientId // .env.CLIENT_ID // .name // empty")
-    namespace=$(echo "$app" | jq -r ".namespace // empty")
+    if ! name=$(echo "$app" | jq -r ".name // empty" 2>/dev/null); then
+        warn "App $index: Failed to extract name"
+        return 1
+    fi
+    
+    if ! port=$(echo "$app" | jq -r ".env.PORT // empty" 2>/dev/null); then
+        warn "App $index: Failed to extract port"
+        return 1
+    fi
+    
+    if ! script_path=$(echo "$app" | jq -r ".script // empty" 2>/dev/null); then
+        warn "App $index: Failed to extract script path"
+        return 1
+    fi
+    
+    if ! client_id=$(echo "$app" | jq -r ".env.clientId // .env.CLIENT_ID // .name // empty" 2>/dev/null); then
+        client_id="$name"  # Fallback to name
+    fi
+    
+    if ! namespace=$(echo "$app" | jq -r ".namespace // empty" 2>/dev/null); then
+        namespace=""  # Optional field
+    fi
 
     # Validate required fields
     if [ -z "$name" ] || [ "$name" = "null" ]; then
