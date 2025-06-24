@@ -154,7 +154,7 @@ restart_or_start_app() {
         success "Restarted $name"
     else
         info "Starting new app: $name"
-        PORT=$port CLIENT_ID=$client_id pm2 start "$script_path" --name "$name" --namespace clients
+        PORT=$port CLIENT_ID=$client_id pm2 start "$script_path" --name "$name" --namespace promotions
         success "Started $name"
     fi
 }
