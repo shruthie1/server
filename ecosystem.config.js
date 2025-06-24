@@ -4,7 +4,7 @@ module.exports = {
       name: "cms",
       script: "server.js",
       env: {
-        PORT: 4001,
+        PORT: 5001,
         clientId: "cms-nst"
       },
       autorestart: true,
