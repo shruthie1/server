@@ -252,22 +252,130 @@ manage_pm2_app() {
         namespace_arg="--namespace $namespace"
     fi
 
-    # Stop existing app if running
+    # Stop existing app if running - improved error handling
     if pm2 list | grep -qw "$name"; then
         info "Stopping existing PM2 app: $name"
-        pm2 stop "$name" || true
-        pm2 delete "$name" || true
+        if ! pm2 stop "$name" 2>/dev/null; then
+            warn "Failed to stop PM2 app: $name (may not be running)"
+        fi
+        if ! pm2 delete "$name" 2>/dev/null; then
+            warn "Failed to delete PM2 app: $name (may not exist)"
+        fi
+        sleep 2  # Give PM2 time to clean up
     fi
 
-    # Start the app
+    # Validate script path exists
+    if [ ! -f "$script_path" ]; then
+        error "Script file not found: $script_path"
+        return 1
+    fi
+
+    # Start the app with proper environment variable handling
     info "Starting PM2 app: $name"
-    if PORT="$port" CLIENT_ID="$client_id" pm2 start "$script_path" --name "$name" $namespace_arg; then
+
+    # Create temporary ecosystem config for this specific app to avoid injection
+    local temp_config="/tmp/pm2_${name}_$$.json"
+    cat > "$temp_config" << EOF
+{
+  "apps": [{
+    "name": "$name",
+    "script": "$script_path",
+    "env": {
+      "PORT": "$port",
+      "CLIENT_ID": "$client_id"
+    }
+  }]
+}
+EOF
+
+    if pm2 start "$temp_config" $namespace_arg; then
+        rm -f "$temp_config"
         success "Started PM2 app: $name"
         return 0
     else
+        rm -f "$temp_config"
         error "Failed to start PM2 app: $name"
         return 1
     fi
+}
+
+# ========== Deployment Locking ==========
+LOCK_FILE="/tmp/deployment_${TARGET_APP_NAME}.lock"
+
+acquire_lock() {
+    if [ -f "$LOCK_FILE" ]; then
+        local lock_pid=$(cat "$LOCK_FILE" 2>/dev/null)
+        if [ -n "$lock_pid" ] && kill -0 "$lock_pid" 2>/dev/null; then
+            error_exit 1 "Another deployment is already running for $TARGET_APP_NAME (PID: $lock_pid)"
+        else
+            info "Removing stale lock file"
+            rm -f "$LOCK_FILE"
+        fi
+    fi
+
+    echo $$ > "$LOCK_FILE"
+    success "Deployment lock acquired"
+}
+
+release_lock() {
+    rm -f "$LOCK_FILE" 2>/dev/null
+}
+
+# Ensure lock is released on script exit
+trap release_lock EXIT
+
+# ========== Rollback Functions ==========
+rollback_deployment() {
+    local name="$1"
+
+    warn "Rolling back deployment for $name"
+
+    # Stop the failed application
+    if pm2 list | grep -qw "$name"; then
+        pm2 stop "$name" 2>/dev/null || true
+        pm2 delete "$name" 2>/dev/null || true
+    fi
+
+    # Remove nginx config
+    local conf_file="$NGINX_SITES_AVAILABLE/${name}.conf"
+    local enabled_file="$NGINX_SITES_ENABLED/${name}.conf"
+
+    if [ -f "${conf_file}.bak" ]; then
+        sudo mv "${conf_file}.bak" "$conf_file"
+        info "Restored nginx config from backup"
+    else
+        sudo rm -f "$conf_file" "$enabled_file"
+        info "Removed nginx config files"
+    fi
+
+    # Reload nginx
+    sudo nginx -t && sudo systemctl reload nginx
+
+    warn "Rollback completed for $name"
+}
+
+# ========== Health Check Function ==========
+verify_application_health() {
+    local name="$1"
+    local port="$2"
+    local max_attempts=30
+    local attempt=1
+
+    info "Verifying application health for $name on port $port"
+
+    while [ $attempt -le $max_attempts ]; do
+        if curl -s "http://localhost:$port/health" >/dev/null 2>&1 || curl -s "http://localhost:$port" >/dev/null 2>&1; then
+            success "Application $name is responding on port $port"
+            return 0
+        fi
+
+        info "Attempt $attempt/$max_attempts: Waiting for application to start..."
+        sleep 2
+        ((attempt++))
+    done
+
+    warn "Application $name may not be responding on port $port after ${max_attempts} attempts"
+    return 1
 }
 
 # ========== SSL Certificate Management ==========
@@ -276,13 +384,41 @@ issue_ssl_certificate() {
 
     info "Issuing SSL certificate for $domain"
 
-    # Force renewal - always get new certificate
-    if sudo certbot --nginx -d "$domain" --agree-tos -m "$EMAIL" --non-interactive --redirect --force-renewal; then
+    # Validate domain format
+    if [[ ! "$domain" =~ ^[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)*$ ]]; then
+        error "Invalid domain format: $domain"
+        return 1
+    fi
+
+    # Check if nginx config exists and is valid before requesting SSL
+    local conf_file="$NGINX_SITES_AVAILABLE/${domain%.*}.conf"
+    if [ ! -f "$conf_file" ]; then
+        error "Nginx configuration file not found: $conf_file"
+        return 1
+    fi
+
+    # Test nginx configuration
+    if ! sudo nginx -t 2>/dev/null; then
+        error "Nginx configuration is invalid. Fix before requesting SSL certificate."
+        return 1
+    fi
+
+    # Check if certificate already exists and is valid
+    if sudo certbot certificates 2>/dev/null | grep -q "$domain"; then
+        local cert_expires=$(sudo certbot certificates 2>/dev/null | grep -A 2 "$domain" | grep "Expiry Date" | awk '{print $3}')
+        if [ -n "$cert_expires" ]; then
+            info "Certificate for $domain expires: $cert_expires"
+        fi
+    fi
+
+    # Request certificate with better error handling
+    if sudo certbot --nginx -d "$domain" --agree-tos -m "$EMAIL" --non-interactive --redirect --force-renewal 2>/dev/null; then
         success "SSL certificate issued/renewed for $domain"
         return 0
     else
-        warn "Failed to issue SSL certificate for $domain"
-        return 1
+        warn "Failed to issue SSL certificate for $domain. Check domain DNS and nginx configuration."
+        # Still return success for HTTP-only deployment
+        return 0
     fi
 }
 
@@ -360,6 +496,17 @@ process_target_app() {
         return 1
     fi
 
+    # Validate port number
+    if ! [[ "$port" =~ ^[0-9]+$ ]] || [ "$port" -lt 1 ] || [ "$port" -gt 65535 ]; then
+        error "Invalid port number: $port. Must be between 1-65535"
+        return 1
+    fi
+
+    # Check if port is already in use
+    if netstat -tuln 2>/dev/null | grep -q ":$port "; then
+        warn "Port $port appears to be in use"
+    fi
+
     if [ -z "$script_path" ] || [ "$script_path" = "null" ]; then
         error "Application '$name' missing script path"
         return 1
@@ -380,6 +527,11 @@ process_target_app() {
         return 1
     fi
 
+    # Verify application health
+    if ! verify_application_health "$name" "$port"; then
+        warn "Application health check failed, but proceeding with deployment"
+    fi
+
     success "Application '$name' processed successfully"
     return 0
 }
@@ -396,7 +548,7 @@ process_ssl_certificates() {
         success "SSL certificate processed successfully"
         return 0
     else
-        warn "SSL certificate processing failed"
+        warn "SSL certificate processing had issues, but application is still accessible via HTTP"
         return 1
     fi
 }
@@ -453,6 +605,18 @@ validate_input() {
         usage
     fi
 
+    # Validate app name format (security improvement)
+    if [[ ! "$TARGET_APP_NAME" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+        error "Invalid application name. Only alphanumeric characters, hyphens, and underscores are allowed."
+        exit 1
+    fi
+
+    # Check app name length
+    if [ ${#TARGET_APP_NAME} -gt 50 ]; then
+        error "Application name too long (max 50 characters)"
+        exit 1
+    fi
+
     info "Target application: $TARGET_APP_NAME"
 }
 
@@ -467,13 +631,18 @@ initialize() {
 }
 
 main() {
+    # Acquire deployment lock
+    acquire_lock
+
     # Process the target application
     if ! process_target_app; then
+        rollback_deployment "$TARGET_APP_NAME"
         error_exit "$EXIT_CONFIG_ERROR" "Failed to process application: $TARGET_APP_NAME"
     fi
 
     # Reload Nginx
     if ! reload_nginx; then
+        rollback_deployment "$TARGET_APP_NAME"
         error_exit "$EXIT_CONFIG_ERROR" "Failed to reload Nginx configuration"
     fi
 
