@@ -103,7 +103,7 @@ declare -r EXIT_NETWORK_ERROR=5
 declare -r EXIT_SECURITY_ERROR=6
 
 # ========== Global Variables ==========
-declare -g nginx_reload_needed=0
+declare -g nginx_reload_needed=1
 declare -gA processed_ports=()
 declare -gA processed_domains=()
 
