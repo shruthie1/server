@@ -243,6 +243,7 @@ manage_pm2_app() {
     local script_path="$3"
     local client_id="$4"
     local namespace="$5"
+    local service_name="$6"
 
     info "Managing PM2 app: $name"
 
@@ -271,7 +272,7 @@ manage_pm2_app() {
     fi
 
     # Start the app with proper environment variable handling
-    info "Starting PM2 app: $name"
+    info "Starting PM2 app: $name with service: $service_name"
 
     # Create temporary ecosystem config for this specific app to avoid injection
     local temp_config="/tmp/pm2_${name}_$$.json"
@@ -284,7 +285,7 @@ manage_pm2_app() {
       "PORT": "$port",
       "CLIENT_ID": "$client_id",
       "clientId": "$client_id",
-      "serviceName": "1"
+      "serviceName": "$service_name"
     }
   }]
 }
@@ -516,12 +517,13 @@ process_target_app() {
     info "Found application: $TARGET_APP_NAME"
 
     # Extract app configuration
-    local name port script_path client_id namespace
+    local name port script_path client_id namespace service_name
     name=$(echo "$app_json" | jq -r ".name // empty" 2>/dev/null)
     port=$(echo "$app_json" | jq -r ".env.PORT // empty" 2>/dev/null)
     script_path=$(echo "$app_json" | jq -r ".script // empty" 2>/dev/null)
     client_id=$(echo "$app_json" | jq -r ".env.clientId // .env.CLIENT_ID // .name // empty" 2>/dev/null)
     namespace=$(echo "$app_json" | jq -r ".namespace // empty" 2>/dev/null)
+    service_name=$(echo "$app_json" | jq -r ".env.serviceName // empty" 2>/dev/null)
 
     # Use name as fallback for client_id
     if [ -z "$client_id" ] || [ "$client_id" = "null" ]; then
@@ -555,13 +557,13 @@ process_target_app() {
         return 1
     fi
 
-    info "Processing app: $name (port: $port, script: $script_path)"
+    info "Processing app: $name (port: $port, script: $script_path, service: $service_name)"
 
     # Generate server name
     local server_name="$name.$DOMAIN"
 
     # Process the application
-    if ! manage_pm2_app "$name" "$port" "$script_path" "$client_id" "$namespace"; then
+    if ! manage_pm2_app "$name" "$port" "$script_path" "$client_id" "$namespace" "$service_name"; then
         return 1
     fi
 
