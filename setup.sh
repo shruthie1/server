@@ -282,7 +282,9 @@ manage_pm2_app() {
     "script": "$script_path",
     "env": {
       "PORT": "$port",
-      "CLIENT_ID": "$client_id"
+      "CLIENT_ID": "$client_id",
+      "clientId": "$client_id",
+      "serviceName": "1"
     }
   }]
 }
@@ -364,9 +366,17 @@ verify_application_health() {
     info "Verifying application health for $name on port $port"
 
     while [ $attempt -le $max_attempts ]; do
-        if curl -s "http://localhost:$port/health" >/dev/null 2>&1 || curl -s "http://localhost:$port" >/dev/null 2>&1; then
-            success "Application $name is responding on port $port"
-            return 0
+        # Check if the port is listening
+        if netstat -tuln 2>/dev/null | grep -q ":$port "; then
+            info "Port $port is listening. Testing HTTP response..."
+            if curl -s "http://localhost:$port/health" >/dev/null 2>&1 || curl -s "http://localhost:$port" >/dev/null 2>&1; then
+                success "Application $name is responding on port $port"
+                return 0
+            else
+                debug "Port $port is listening but not responding to HTTP requests"
+            fi
+        else
+            debug "Port $port is not yet listening"
         fi
 
         info "Attempt $attempt/$max_attempts: Waiting for application to start..."
@@ -374,7 +384,14 @@ verify_application_health() {
         ((attempt++))
     done
 
+    # Final diagnostic information
     warn "Application $name may not be responding on port $port after ${max_attempts} attempts"
+    info "Diagnostic information:"
+    info "PM2 status for $name:"
+    pm2 show "$name" 2>/dev/null || info "PM2 app $name not found"
+    info "Port $port listening status:"
+    netstat -tuln 2>/dev/null | grep ":$port " || info "Port $port is not listening"
+    
     return 1
 }
 
@@ -391,7 +408,9 @@ issue_ssl_certificate() {
     fi
 
     # Check if nginx config exists and is valid before requesting SSL
-    local conf_file="$NGINX_SITES_AVAILABLE/${domain%.*}.conf"
+    # Extract app name from domain (everything before the first dot)
+    local app_name="${domain%%.*}"
+    local conf_file="$NGINX_SITES_AVAILABLE/${app_name}.conf"
     if [ ! -f "$conf_file" ]; then
         error "Nginx configuration file not found: $conf_file"
         return 1
@@ -400,8 +419,13 @@ issue_ssl_certificate() {
     # Test nginx configuration
     if ! sudo nginx -t 2>/dev/null; then
         error "Nginx configuration is invalid. Fix before requesting SSL certificate."
+        sudo nginx -t  # Show the actual error
         return 1
     fi
+
+    # Additional debugging - show the actual config file content
+    info "Nginx configuration test passed. Config file content:"
+    debug "$(sudo cat "$conf_file" | head -10)"
 
     # Check if certificate already exists and is valid
     if sudo certbot certificates 2>/dev/null | grep -q "$domain"; then
@@ -409,16 +433,28 @@ issue_ssl_certificate() {
         if [ -n "$cert_expires" ]; then
             info "Certificate for $domain expires: $cert_expires"
         fi
+        
+        # Delete existing certificate to ensure clean renewal
+        info "Removing existing certificate for clean renewal"
+        sudo certbot delete --cert-name "$domain" --non-interactive 2>/dev/null || true
     fi
 
     # Request certificate with better error handling
-    if sudo certbot --nginx -d "$domain" --agree-tos -m "$EMAIL" --non-interactive --redirect --force-renewal 2>/dev/null; then
+    info "Requesting new SSL certificate for $domain"
+    if sudo certbot --nginx -d "$domain" --agree-tos -m "$EMAIL" --non-interactive --redirect 2>/dev/null; then
         success "SSL certificate issued/renewed for $domain"
         return 0
     else
         warn "Failed to issue SSL certificate for $domain. Check domain DNS and nginx configuration."
-        # Still return success for HTTP-only deployment
-        return 0
+        # Try without redirect flag
+        info "Attempting SSL certificate without redirect"
+        if sudo certbot --nginx -d "$domain" --agree-tos -m "$EMAIL" --non-interactive --no-redirect 2>/dev/null; then
+            success "SSL certificate issued for $domain (without redirect)"
+            return 0
+        else
+            warn "SSL certificate issuance failed completely. Application will be accessible via HTTP only."
+            return 1
+        fi
     fi
 }
 
@@ -433,8 +469,16 @@ create_nginx_config() {
 
     info "Creating Nginx config for $name"
 
-    # Create backup if config exists
-    create_backup "$conf_file"
+    # Remove existing configs first (as requested by user)
+    if [ -f "$conf_file" ]; then
+        info "Removing existing nginx config file: $conf_file"
+        sudo rm -f "$conf_file"
+    fi
+    
+    if [ -L "$enabled_file" ] || [ -f "$enabled_file" ]; then
+        info "Removing existing nginx enabled file: $enabled_file"
+        sudo rm -f "$enabled_file"
+    fi
 
     # Generate configuration from template
     local config_content
@@ -446,8 +490,7 @@ create_nginx_config() {
     echo "$config_content" | sudo tee "$conf_file" >/dev/null
     success "Created Nginx config file for $name"
 
-    # Create symlink (remove existing first)
-    sudo rm -f "$enabled_file"
+    # Create symlink
     sudo ln -sf "$conf_file" "$enabled_file"
     success "Created Nginx symlink for $name"
 
@@ -543,6 +586,21 @@ process_ssl_certificates() {
     # Get domain from the processed app
     local server_name="$TARGET_APP_NAME.$DOMAIN"
     info "Processing SSL certificate for: $server_name"
+
+    # Ensure nginx is reloaded with current configuration before SSL
+    if ! sudo nginx -t; then
+        error "Nginx configuration test failed. Cannot proceed with SSL certificate"
+        return 1
+    fi
+    
+    # Reload nginx to ensure current config is active
+    if ! sudo systemctl reload nginx; then
+        error "Failed to reload nginx before SSL certificate processing"
+        return 1
+    fi
+    
+    # Wait a moment for nginx to fully reload
+    sleep 2
 
     if issue_ssl_certificate "$server_name"; then
         success "SSL certificate processed successfully"
