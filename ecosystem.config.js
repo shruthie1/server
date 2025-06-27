@@ -9,9 +9,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "30 19 * * *", // 1:00 AM IST (UTC 19:30)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "arpitha2",
@@ -22,9 +26,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "5 1 * * *",
+      cron_restart: "35 19 * * *", // 1:05 AM IST (UTC 19:35)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "shruthi1",
@@ -35,9 +43,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "10 1 * * *",
+      cron_restart: "40 19 * * *", // 1:10 AM IST (UTC 19:40)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "shruthi2",
@@ -48,9 +60,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "15 1 * * *",
+      cron_restart: "45 19 * * *", // 1:15 AM IST (UTC 19:45)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "kavya1",
@@ -61,9 +77,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "20 1 * * *",
+      cron_restart: "50 19 * * *", // 1:20 AM IST (UTC 19:50)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "kavya2",
@@ -74,9 +94,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "25 1 * * *",
+      cron_restart: "55 19 * * *", // 1:25 AM IST (UTC 19:55)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "meghana1",
@@ -87,9 +111,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "30 1 * * *",
+      cron_restart: "0 20 * * *", // 1:30 AM IST (UTC 20:00)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "meghana2",
@@ -100,9 +128,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "35 1 * * *",
+      cron_restart: "5 20 * * *", // 1:35 AM IST (UTC 20:05)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "keerthi1",
@@ -113,9 +145,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "40 1 * * *",
+      cron_restart: "10 20 * * *", // 1:40 AM IST (UTC 20:10)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "keerthi2",
@@ -126,9 +162,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "45 1 * * *",
+      cron_restart: "15 20 * * *", // 1:45 AM IST (UTC 20:15)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "ramya1",
@@ -139,9 +179,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "50 1 * * *",
+      cron_restart: "20 20 * * *", // 1:50 AM IST (UTC 20:20)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "ramya2",
@@ -152,9 +196,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "55 1 * * *",
+      cron_restart: "25 20 * * *", // 1:55 AM IST (UTC 20:25)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "divya1",
@@ -165,9 +213,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "0 2 * * *",
+      cron_restart: "30 20 * * *", // 2:00 AM IST (UTC 20:30)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "divya2",
@@ -178,9 +230,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "5 2 * * *",
+      cron_restart: "35 20 * * *", // 2:05 AM IST (UTC 20:35)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "sowmya1",
@@ -191,9 +247,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "10 2 * * *",
+      cron_restart: "40 20 * * *", // 2:10 AM IST (UTC 20:40)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "sowmya2",
@@ -204,9 +264,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "15 2 * * *",
+      cron_restart: "45 20 * * *", // 2:15 AM IST (UTC 20:45)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "sneha1",
@@ -217,9 +281,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "20 2 * * *",
+      cron_restart: "50 20 * * *", // 2:20 AM IST (UTC 20:50)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "sneha2",
@@ -230,9 +298,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "25 2 * * *",
+      cron_restart: "55 20 * * *", // 2:25 AM IST (UTC 20:55)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "nidhi1",
@@ -243,9 +315,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "30 2 * * *",
+      cron_restart: "0 21 * * *", // 2:30 AM IST (UTC 21:00)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "nidhi2",
@@ -256,9 +332,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "35 2 * * *",
+      cron_restart: "5 21 * * *", // 2:35 AM IST (UTC 21:05)
       restart_delay: 5000,
-      namespace: "clients"
+      namespace: "clients",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     }
   ]
 };
