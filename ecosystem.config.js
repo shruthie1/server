@@ -10,8 +10,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "0 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -24,8 +25,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "5 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -38,8 +40,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "10 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -52,8 +55,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "15 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -66,8 +70,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "20 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -80,8 +85,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "25 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -94,8 +100,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "30 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -108,8 +115,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "35 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -122,8 +130,9 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "40 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     },
     {
@@ -136,8 +145,159 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "350M",
-      cron_restart: "0 1 * * *",
+      cron_restart: "45 3 * * *",
       restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "divya-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3011,
+        clientId: "divya1",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "50 3 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "divya-prom2",
+      script: "server.js",
+      env: {
+        PORT: 3012,
+        clientId: "divya2",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "55 3 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "sowmya-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3013,
+        clientId: "sowmya1",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "0 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "sowmya-prom2",
+      script: "server.js",
+      env: {
+        PORT: 3014,
+        clientId: "sowmya2",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "5 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "sneha-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3015,
+        clientId: "sneha1",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "10 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "sneha-prom2",
+      script: "server.js",
+      env: {
+        PORT: 3016,
+        clientId: "sneha2",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "15 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "ramya-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3017,
+        clientId: "ramya1",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "20 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "ramya-prom2",
+      script: "server.js",
+      env: {
+        PORT: 3018,
+        clientId: "ramya2",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "25 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "nidhi-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3019,
+        clientId: "nidhi1",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "30 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "nidhi-prom2",
+      script: "server.js",
+      env: {
+        PORT: 3020,
+        clientId: "nidhi2",
+        serviceName: "promotion-clients-new"
+      },
+      autorestart: true,
+      max_memory_restart: "350M",
+      cron_restart: "35 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
       namespace: "promotions"
     }
   ]
