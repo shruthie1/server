@@ -6,7 +6,7 @@ module.exports = {
       env: {
         PORT: 3001,
         clientId: "arpitha1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -21,7 +21,7 @@ module.exports = {
       env: {
         PORT: 3002,
         clientId: "arpitha2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -36,7 +36,7 @@ module.exports = {
       env: {
         PORT: 3003,
         clientId: "shruthi1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -51,7 +51,7 @@ module.exports = {
       env: {
         PORT: 3004,
         clientId: "shruthi2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -66,7 +66,7 @@ module.exports = {
       env: {
         PORT: 3005,
         clientId: "kavya1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -81,7 +81,7 @@ module.exports = {
       env: {
         PORT: 3006,
         clientId: "kavya2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -96,7 +96,7 @@ module.exports = {
       env: {
         PORT: 3007,
         clientId: "meghana1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -111,7 +111,7 @@ module.exports = {
       env: {
         PORT: 3008,
         clientId: "meghana2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -126,7 +126,7 @@ module.exports = {
       env: {
         PORT: 3009,
         clientId: "keerthi1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -141,7 +141,7 @@ module.exports = {
       env: {
         PORT: 3010,
         clientId: "keerthi2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -156,7 +156,7 @@ module.exports = {
       env: {
         PORT: 3011,
         clientId: "divya1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -171,7 +171,7 @@ module.exports = {
       env: {
         PORT: 3012,
         clientId: "divya2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -186,7 +186,7 @@ module.exports = {
       env: {
         PORT: 3013,
         clientId: "sowmya1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -201,7 +201,7 @@ module.exports = {
       env: {
         PORT: 3014,
         clientId: "sowmya2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -216,7 +216,7 @@ module.exports = {
       env: {
         PORT: 3015,
         clientId: "sneha1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -231,7 +231,7 @@ module.exports = {
       env: {
         PORT: 3016,
         clientId: "sneha2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -246,7 +246,7 @@ module.exports = {
       env: {
         PORT: 3017,
         clientId: "ramya1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -261,7 +261,7 @@ module.exports = {
       env: {
         PORT: 3018,
         clientId: "ramya2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -276,7 +276,7 @@ module.exports = {
       env: {
         PORT: 3019,
         clientId: "nidhi1",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
@@ -291,7 +291,7 @@ module.exports = {
       env: {
         PORT: 3020,
         clientId: "nidhi2",
-        serviceName: "promotion-clients-new"
+        serviceName: "promotions-new-prom-4"
       },
       autorestart: true,
       max_memory_restart: "350M",
