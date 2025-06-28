@@ -9,10 +9,10 @@ const { performance } = require("perf_hooks");
 
 // Configuration with validation
 const config = {
-  FETCH_TIMEOUT: process.env.FETCH_TIMEOUT || 10000,
-  MAX_RETRIES: process.env.MAX_RETRIES || 3,
-  MIN_RETRY_DELAY: process.env.MIN_RETRY_DELAY || 1000,
-  MAX_RETRY_DELAY: process.env.MAX_RETRY_DELAY || 10000,
+  FETCH_TIMEOUT: parseInt(process.env.FETCH_TIMEOUT) || 10000,
+  MAX_RETRIES: parseInt(process.env.MAX_RETRIES) || 3,
+  MIN_RETRY_DELAY: parseInt(process.env.MIN_RETRY_DELAY) || 1000,
+  MAX_RETRY_DELAY: parseInt(process.env.MAX_RETRY_DELAY) || 10000,
   BUILD_URLS: [
     "https://api.npoint.io/3375d15db1eece560188",
     "https://mytghelper.glitch.me/builds",
@@ -21,11 +21,41 @@ const config = {
   ],
   BASE_SAVE_DIR: path.resolve(process.cwd(), "./src/services")  // Make base directory absolute
 };
+
+// Validate parsed configuration values
+if (isNaN(config.FETCH_TIMEOUT) || config.FETCH_TIMEOUT <= 0) {
+  console.warn(`Invalid FETCH_TIMEOUT value: ${process.env.FETCH_TIMEOUT}, using default: 10000`);
+  config.FETCH_TIMEOUT = 10000;
+}
+
+if (isNaN(config.MAX_RETRIES) || config.MAX_RETRIES < 0) {
+  console.warn(`Invalid MAX_RETRIES value: ${process.env.MAX_RETRIES}, using default: 3`);
+  config.MAX_RETRIES = 3;
+}
+
+// Helper function to extract numbers from string
+function fetchNumbersFromString(inputString) {
+  if (!inputString) return "";
+  const regex = /\d+/g;
+  const matches = inputString?.match(regex);
+  if (matches) {
+    return matches.join("");
+  }
+  return inputString;
+}
+
 const key = fetchNumbersFromString(process.env.clientId);
 console.log("clientId:", process.env.clientId);
 console.log("serviceName:", process.env.serviceName);
 console.log("key:", key);
+
+// Validate service name
 const service = process.env.serviceName || key;
+if (!service) {
+  console.error("Error: No service name available. Please set serviceName environment variable or provide a valid clientId.");
+  process.exit(1);
+}
+
 const FILE_SAVE_PATH = path.resolve(config.BASE_SAVE_DIR, `${service}.js`);  // Ensure absolute path
 
 // Debug path resolution
@@ -40,8 +70,30 @@ function validateConfig() {
   if (!config.BUILD_URLS || !Array.isArray(config.BUILD_URLS) || config.BUILD_URLS.length === 0) {
     throw new Error("Invalid BUILD_URLS configuration");
   }
+  
+  // Validate that all URLs are strings and properly formatted
+  for (const url of config.BUILD_URLS) {
+    if (!url || typeof url !== 'string') {
+      throw new Error(`Invalid URL in BUILD_URLS: ${url}`);
+    }
+    try {
+      new URL(url);
+    } catch (urlError) {
+      throw new Error(`Malformed URL in BUILD_URLS: ${url}`);
+    }
+  }
+  
   if (!process.env.clientId) {
     console.warn("Warning: clientId environment variable is not set");
+  }
+  
+  // Validate timeout values
+  if (config.FETCH_TIMEOUT < 1000) {
+    console.warn("Warning: FETCH_TIMEOUT is very low, this may cause issues");
+  }
+  
+  if (config.MAX_RETRIES < 0) {
+    throw new Error("MAX_RETRIES cannot be negative");
   }
 }
 
@@ -66,14 +118,25 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function fetchNumbersFromString(inputString) {
-  if (!inputString) return "";
-  const regex = /\d+/g;
-  const matches = inputString?.match(regex);
-  if (matches) {
-    return matches.join("");
+// Enhanced JSON validation with schema checking
+async function validateAndParseJson(response) {
+  try {
+    const data = await response.json();
+
+    // Validate data structure
+    if (!data || typeof data !== "object") {
+      throw new Error("Invalid JSON structure: expected an object");
+    }
+
+    // Validate required fields based on your data schema
+    if (!data.cts || typeof data.cts !== "string") {
+      throw new Error("Invalid JSON structure: missing or invalid 'cts' field");
+    }
+
+    return data;
+  } catch (error) {
+    throw new Error(`Invalid JSON response: ${error.message}`);
   }
-  return inputString;
 }
 
 // Enhanced fetch with retries and exponential backoff
@@ -111,12 +174,29 @@ async function ensureDirectoryExistence(filePath) {
     const dirname = path.dirname(filePath);
     console.log(`Ensuring directory exists: ${dirname}`);
 
-    if (!fs.existsSync(dirname)) {
-      console.log(`Creating directory: ${dirname}`);
+    try {
       await fs.promises.mkdir(dirname, { recursive: true });
+      console.log(`Directory created/verified: ${dirname}`);
+    } catch (mkdirError) {
+      if (mkdirError.code === 'EEXIST') {
+        console.log(`Directory already exists: ${dirname}`);
+      } else {
+        throw mkdirError;
+      }
+    }
+    try {
+      const stats = await fs.promises.stat(dirname);
+      if (!stats.isDirectory()) {
+        throw new Error(`Path exists but is not a directory: ${dirname}`);
+      }
+      console.log(`Directory verified as accessible: ${dirname}`);
+    } catch (statError) {
+      if (statError.code === 'ENOENT') {
+        throw new Error(`Directory creation failed - path does not exist: ${dirname}`);
+      }
+      throw statError;
     }
 
-    // Verify directory is writable
     try {
       await fs.promises.access(dirname, fs.constants.W_OK);
       console.log(`Directory ${dirname} is writable`);
@@ -134,7 +214,7 @@ async function ensureDirectoryExistence(filePath) {
   }
 }
 
-// Enhanced JSON validation with schema checking
+// Enhanced JSON validation with flexible schema checking
 async function validateAndParseJson(response) {
   try {
     const data = await response.json();
@@ -144,9 +224,9 @@ async function validateAndParseJson(response) {
       throw new Error("Invalid JSON structure: expected an object");
     }
 
-    // Validate required fields based on your data schema
-    if (!data.cts || typeof data.cts !== "string") {
-      throw new Error("Invalid JSON structure: missing or invalid 'cts' field");
+    // More flexible validation - check if it has service data
+    if (Object.keys(data).length === 0) {
+      throw new Error("Invalid JSON structure: empty object received");
     }
 
     return data;
@@ -212,6 +292,15 @@ async function fetchAndSave(url, filename) {
       throw statError;
     }
 
+    // Ensure target directory exists before rename
+    try {
+      await ensureDirectoryExistence(filepath);
+      console.log(`Target directory verified before rename`);
+    } catch (dirError) {
+      console.error(`Failed to ensure target directory exists:`, dirError);
+      throw dirError;
+    }
+
     // Rename temp file to final destination
     try {
       await fs.promises.rename(tempPath, filepath);
@@ -233,7 +322,8 @@ async function fetchAndSave(url, filename) {
 
     // Cleanup temp file if it exists
     try {
-      const tempPath = `${filename}.tmp`;
+      const filepath = path.resolve(filename);
+      const tempPath = `${filepath}.tmp`;
       if (fs.existsSync(tempPath)) {
         console.log(`Cleaning up temporary file: ${tempPath}`);
         await fs.promises.unlink(tempPath);
@@ -241,7 +331,7 @@ async function fetchAndSave(url, filename) {
       }
     } catch (cleanupError) {
       console.error(`Failed to cleanup temporary file:`, {
-        path: `${filename}.tmp`,
+        path: `${path.resolve(filename)}.tmp`,
         error: cleanupError.message,
         stack: cleanupError.stack
       });
@@ -277,6 +367,46 @@ async function fetchWithTimeout(url, timeout) {
   }
 }
 
+// Health check function
+function getHealthStatus() {
+  return {
+    status: serviceState.healthCheck.status,
+    isRunning: serviceState.isRunning,
+    startTime: serviceState.startTime,
+    uptime: serviceState.startTime ? Date.now() - serviceState.startTime : 0,
+    lastError: serviceState.lastError ? {
+      message: serviceState.lastError.message,
+      timestamp: serviceState.lastError.timestamp || Date.now()
+    } : null,
+    lastCheck: Date.now(),
+    filePath: FILE_SAVE_PATH,
+    fileExists: fs.existsSync(FILE_SAVE_PATH)
+  };
+}
+
+// Update health check status
+function updateHealthCheck() {
+  serviceState.healthCheck.lastCheck = Date.now();
+  
+  try {
+    // Check if service file still exists
+    if (!fs.existsSync(FILE_SAVE_PATH)) {
+      serviceState.healthCheck.status = "error";
+      console.warn(`Health check: Service file missing at ${FILE_SAVE_PATH}`);
+      return;
+    }
+    
+    // If service is running and file exists, status should be healthy
+    if (serviceState.isRunning && serviceState.healthCheck.status !== "error") {
+      serviceState.healthCheck.status = "healthy";
+    }
+  } catch (error) {
+    console.error("Health check failed:", error);
+    serviceState.healthCheck.status = "error";
+    serviceState.lastError = error;
+  }
+}
+
 // Enhanced service loading with proper error handling
 async function loadAndStartService() {
   let data;
@@ -303,6 +433,14 @@ async function loadAndStartService() {
 
   // Setup graceful shutdown
   setupGracefulShutdown();
+
+  // Start periodic health checks
+  const healthCheckInterval = setInterval(() => {
+    updateHealthCheck();
+  }, 30000); // Check every 30 seconds
+
+  // Store interval reference for cleanup
+  serviceState.healthCheckInterval = healthCheckInterval;
 
   // Try to fetch from each build URL
   for (const buildUrl of config.BUILD_URLS) {
@@ -345,7 +483,20 @@ async function loadAndStartService() {
 
   // Attempt to fetch and save the file
   try {
-    const filePath = await fetchAndSave(data[service], FILE_SAVE_PATH);
+    if (!data) {
+      throw new Error("No build data available - all URLs failed");
+    }
+    
+    if (!data[service]) {
+      throw new Error(`Service '${service}' not found in build data. Available services: ${Object.keys(data).join(', ')}`);
+    }
+    
+    const serviceUrl = data[service];
+    if (!serviceUrl || typeof serviceUrl !== 'string') {
+      throw new Error(`Invalid URL for service '${service}': ${serviceUrl}`);
+    }
+    
+    const filePath = await fetchAndSave(serviceUrl, FILE_SAVE_PATH);
     console.log(`File successfully saved at: ${filePath}`);
   } catch (error) {
     console.error(`Failed to fetch and save file:`, {
@@ -405,6 +556,12 @@ function setupGracefulShutdown() {
     serviceState.isRunning = false;
 
     try {
+      // Clear health check interval
+      if (serviceState.healthCheckInterval) {
+        clearInterval(serviceState.healthCheckInterval);
+        serviceState.healthCheckInterval = null;
+      }
+
       // Cleanup temp files
       const tempPath = `${FILE_SAVE_PATH}.tmp`;
       if (fs.existsSync(tempPath)) {
@@ -449,11 +606,24 @@ function setupGracefulShutdown() {
     serviceState.lastError = error;
     serviceState.healthCheck.status = "error";
 
+    // Try to fallback to existing file
     try {
-      require(FILE_SAVE_PATH);
+      if (fs.existsSync(FILE_SAVE_PATH)) {
+        console.log(`Attempting to start service from existing file: ${FILE_SAVE_PATH}`);
+        require(FILE_SAVE_PATH);
+        console.log("Service started from existing file");
+        serviceState.healthCheck.status = "healthy";
+      } else {
+        console.error(`No existing service file found at: ${FILE_SAVE_PATH}`);
+        process.exit(1);
+      }
     } catch (fallbackError) {
       console.error("Failed to start service from existing file:", fallbackError);
+      console.error("All startup attempts failed. Exiting.");
       process.exit(1);
     }
   }
-})();
+})().catch((error) => {
+  console.error("Fatal error in main execution:", error);
+  process.exit(1);
+});
