@@ -853,7 +853,5 @@ function formatDuration(ms) {
   process.exit(1);
 });
 
-// Periodic garbage collection and logging
-setInterval(() => {
-  monitorAndCleanup().catch(console.error);
-}, config.GC_CHECK_INTERVAL);
+// Note: Periodic garbage collection is already handled by initializeGarbageCollection()
+// The setInterval for GC monitoring is managed in startGarbageCollectionMonitoring()
