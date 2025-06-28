@@ -7,31 +7,46 @@ const fs = require("fs");
 const path = require("path");
 const { performance } = require("perf_hooks");
 
-// Configuration with validation
+// Garbage Collection and Memory Monitoring
+let gcMetrics = {
+  totalCollections: 0,
+  totalTimeSpent: 0,
+  memoryFreed: 0,
+  lastCleanupTime: Date.now(),
+  intervalChecks: 0,
+  thresholdBreaches: 0
+};
+
+// Configuration Constants (moved from environment variables)
 const config = {
-  FETCH_TIMEOUT: parseInt(process.env.FETCH_TIMEOUT) || 10000,
-  MAX_RETRIES: parseInt(process.env.MAX_RETRIES) || 3,
-  MIN_RETRY_DELAY: parseInt(process.env.MIN_RETRY_DELAY) || 1000,
-  MAX_RETRY_DELAY: parseInt(process.env.MAX_RETRY_DELAY) || 10000,
+  // Network and Fetch Configuration
+  FETCH_TIMEOUT: 10000,                    // 10 seconds timeout for fetch requests
+  MAX_RETRIES: 3,                          // Maximum number of retry attempts
+  MIN_RETRY_DELAY: 1000,                   // Minimum delay between retries (1 second)
+  MAX_RETRY_DELAY: 10000,                  // Maximum delay between retries (10 seconds)
+  
+  // Garbage Collection Configuration
+  GC_CHECK_INTERVAL: 30000,                // Memory check interval (30 seconds)
+  MEMORY_THRESHOLD_MB: 100,                // Memory threshold in MB (100MB)
+  HEAP_THRESHOLD_PERCENT: 80,              // Heap usage threshold percentage (80%)
+  FORCE_GC_ENABLED: false,                 // Enable manual garbage collection
+  GC_METRICS_LOG_INTERVAL: 300000,         // Metrics logging interval (5 minutes)
+  
+  // Service Configuration
+  CLIENT_ID: process.env.clientId || 'cms-nst',
+  SERVICE_NAME: process.env.serviceName || null,
+  
+  // Build URLs for service discovery
   BUILD_URLS: [
     "https://api.npoint.io/3375d15db1eece560188",
     "https://mytghelper.glitch.me/builds",
     "https://cms-nst.glitch.me/builds",
     "https://uptimechecker2.glitch.me/builds"
   ],
+  
+  // File System Configuration
   BASE_SAVE_DIR: path.resolve(process.cwd(), "./src/services")  // Make base directory absolute
 };
-
-// Validate parsed configuration values
-if (isNaN(config.FETCH_TIMEOUT) || config.FETCH_TIMEOUT <= 0) {
-  console.warn(`Invalid FETCH_TIMEOUT value: ${process.env.FETCH_TIMEOUT}, using default: 10000`);
-  config.FETCH_TIMEOUT = 10000;
-}
-
-if (isNaN(config.MAX_RETRIES) || config.MAX_RETRIES < 0) {
-  console.warn(`Invalid MAX_RETRIES value: ${process.env.MAX_RETRIES}, using default: 3`);
-  config.MAX_RETRIES = 3;
-}
 
 // Helper function to extract numbers from string
 function fetchNumbersFromString(inputString) {
@@ -44,14 +59,14 @@ function fetchNumbersFromString(inputString) {
   return inputString;
 }
 
-const key = fetchNumbersFromString(process.env.clientId);
-console.log("clientId:", process.env.clientId);
-console.log("serviceName:", process.env.serviceName);
+const key = fetchNumbersFromString(config.CLIENT_ID);
+console.log("clientId:", config.CLIENT_ID);
+console.log("serviceName:", config.SERVICE_NAME);
 console.log("key:", key);
 
 // Validate service name
-const service = process.env.serviceName || key;
-if (!service) {
+const service = config.SERVICE_NAME || key;
+if (!service || service === 'default-client') {
   console.error("Error: No service name available. Please set serviceName environment variable or provide a valid clientId.");
   process.exit(1);
 }
@@ -83,8 +98,8 @@ function validateConfig() {
     }
   }
   
-  if (!process.env.clientId) {
-    console.warn("Warning: clientId environment variable is not set");
+  if (!config.CLIENT_ID || config.CLIENT_ID === 'default-client') {
+    console.warn("Warning: CLIENT_ID is using default value or not properly configured");
   }
   
   // Validate timeout values
@@ -95,6 +110,25 @@ function validateConfig() {
   if (config.MAX_RETRIES < 0) {
     throw new Error("MAX_RETRIES cannot be negative");
   }
+  
+  // Validate GC configuration
+  if (config.GC_CHECK_INTERVAL < 5000) {
+    console.warn("Warning: GC_CHECK_INTERVAL is very low, this may cause performance issues");
+  }
+  
+  if (config.MEMORY_THRESHOLD_MB < 10) {
+    console.warn("Warning: MEMORY_THRESHOLD_MB is very low, this may cause frequent GC");
+  }
+  
+  if (config.HEAP_THRESHOLD_PERCENT < 50 || config.HEAP_THRESHOLD_PERCENT > 95) {
+    console.warn("Warning: HEAP_THRESHOLD_PERCENT should typically be between 50-95%");
+  }
+  
+  console.log('Configuration loaded with constants:');
+  console.log(`- GC Check Interval: ${config.GC_CHECK_INTERVAL}ms`);
+  console.log(`- Memory Threshold: ${config.MEMORY_THRESHOLD_MB}MB`);
+  console.log(`- Heap Threshold: ${config.HEAP_THRESHOLD_PERCENT}%`);
+  console.log(`- Force GC: ${config.FORCE_GC_ENABLED}`);
 }
 
 
@@ -377,6 +411,10 @@ async function loadAndStartService() {
     console.error(`Configuration validation failed:`, configError);
     throw configError;
   }
+
+  // Initialize garbage collection monitoring
+  initializeGarbageCollection();
+
   // Setup graceful shutdown
   setupGracefulShutdown();
 
@@ -486,6 +524,9 @@ function setupGracefulShutdown() {
   const cleanup = async () => {
     console.log("\nInitiating graceful shutdown...");
 
+    // Stop garbage collection monitoring
+    stopGarbageCollectionMonitoring();
+
     try {
       const tempPath = `${FILE_SAVE_PATH}.tmp`;
       if (fs.existsSync(tempPath)) {
@@ -494,6 +535,9 @@ function setupGracefulShutdown() {
     } catch (error) {
       console.error("Error during cleanup:", error);
     }
+
+    // Print final GC metrics
+    printGarbageCollectionMetrics(true);
 
     console.log("Shutdown complete");
     process.exit(0);
@@ -518,6 +562,268 @@ function setupGracefulShutdown() {
   });
 }
 
+// Garbage Collection Functions
+let gcInterval = null;
+let metricsInterval = null;
+
+/**
+ * Initialize garbage collection monitoring system
+ */
+function initializeGarbageCollection() {
+  console.log('Initializing garbage collection monitoring system...');
+  
+  // Log initial memory state
+  const initialMemory = process.memoryUsage();
+  console.log('Initial Memory Usage:', formatMemoryUsage(initialMemory));
+  
+  // Start periodic memory monitoring
+  startGarbageCollectionMonitoring();
+  
+  // Start periodic metrics logging
+  startMetricsLogging();
+  
+  console.log(`GC monitoring initialized with ${config.GC_CHECK_INTERVAL}ms interval`);
+  console.log(`Memory threshold: ${config.MEMORY_THRESHOLD_MB}MB`);
+  console.log(`Heap threshold: ${config.HEAP_THRESHOLD_PERCENT}%`);
+  console.log(`Force GC enabled: ${config.FORCE_GC_ENABLED}`);
+}
+
+/**
+ * Start the garbage collection monitoring interval
+ */
+function startGarbageCollectionMonitoring() {
+  if (gcInterval) {
+    clearInterval(gcInterval);
+  }
+  
+  gcInterval = setInterval(() => {
+    checkMemoryAndCleanup();
+  }, config.GC_CHECK_INTERVAL);
+  
+  console.log(`Started GC monitoring with ${config.GC_CHECK_INTERVAL}ms interval`);
+}
+
+/**
+ * Stop the garbage collection monitoring
+ */
+function stopGarbageCollectionMonitoring() {
+  if (gcInterval) {
+    clearInterval(gcInterval);
+    gcInterval = null;
+    console.log('Stopped GC monitoring');
+  }
+  
+  if (metricsInterval) {
+    clearInterval(metricsInterval);
+    metricsInterval = null;
+    console.log('Stopped metrics logging');
+  }
+}
+
+/**
+ * Start periodic metrics logging
+ */
+function startMetricsLogging() {
+  if (metricsInterval) {
+    clearInterval(metricsInterval);
+  }
+  
+  metricsInterval = setInterval(() => {
+    printGarbageCollectionMetrics();
+  }, config.GC_METRICS_LOG_INTERVAL);
+  
+  console.log(`Started metrics logging with ${config.GC_METRICS_LOG_INTERVAL}ms interval`);
+}
+
+/**
+ * Check memory usage and perform cleanup if thresholds are exceeded
+ */
+function checkMemoryAndCleanup() {
+  gcMetrics.intervalChecks++;
+  const memoryBefore = process.memoryUsage();
+  const heapUsedMB = memoryBefore.heapUsed / 1024 / 1024;
+  const heapTotalMB = memoryBefore.heapTotal / 1024 / 1024;
+  const heapUsagePercent = (memoryBefore.heapUsed / memoryBefore.heapTotal) * 100;
+  
+  let shouldCleanup = false;
+  let cleanupReason = '';
+  
+  // Check memory thresholds
+  if (heapUsedMB > config.MEMORY_THRESHOLD_MB) {
+    shouldCleanup = true;
+    cleanupReason += `Heap usage (${heapUsedMB.toFixed(2)}MB) exceeds threshold (${config.MEMORY_THRESHOLD_MB}MB). `;
+  }
+  
+  if (heapUsagePercent > config.HEAP_THRESHOLD_PERCENT) {
+    shouldCleanup = true;
+    cleanupReason += `Heap usage percentage (${heapUsagePercent.toFixed(2)}%) exceeds threshold (${config.HEAP_THRESHOLD_PERCENT}%). `;
+  }
+  
+  if (shouldCleanup) {
+    gcMetrics.thresholdBreaches++;
+    console.log(`🧹 Memory threshold exceeded: ${cleanupReason.trim()}`);
+    performGarbageCollection(memoryBefore);
+  } else {
+    // Log periodic status
+    if (gcMetrics.intervalChecks % 10 === 0) {
+      console.log(`📊 Memory check #${gcMetrics.intervalChecks}: Heap ${heapUsedMB.toFixed(2)}MB (${heapUsagePercent.toFixed(1)}%) - OK`);
+    }
+  }
+}
+
+/**
+ * Perform garbage collection and track metrics
+ */
+function performGarbageCollection(memoryBefore) {
+  const startTime = performance.now();
+  
+  try {
+    // Manual garbage collection if enabled and available
+    if (config.FORCE_GC_ENABLED && global.gc) {
+      console.log('🔄 Forcing garbage collection...');
+      global.gc();
+    } else if (config.FORCE_GC_ENABLED) {
+      console.warn('⚠️  Force GC enabled but global.gc() not available. Run with --expose-gc flag.');
+    }
+    
+    // Clear any cached modules or temporary data
+    clearTemporaryData();
+    
+    const endTime = performance.now();
+    const memoryAfter = process.memoryUsage();
+    const timeSpent = endTime - startTime;
+    
+    // Calculate memory freed
+    const memoryFreed = memoryBefore.heapUsed - memoryAfter.heapUsed;
+    
+    // Update metrics
+    gcMetrics.totalCollections++;
+    gcMetrics.totalTimeSpent += timeSpent;
+    gcMetrics.memoryFreed += memoryFreed;
+    gcMetrics.lastCleanupTime = Date.now();
+    
+    // Log cleanup results
+    console.log('✅ Garbage collection completed:');
+    console.log(`   📈 Memory freed: ${formatBytes(memoryFreed)}`);
+    console.log(`   ⏱️  Time spent: ${timeSpent.toFixed(2)}ms`);
+    console.log(`   📊 Before: ${formatMemoryUsage(memoryBefore, true)}`);
+    console.log(`   📊 After:  ${formatMemoryUsage(memoryAfter, true)}`);
+    
+  } catch (error) {
+    console.error('❌ Error during garbage collection:', error);
+  }
+}
+
+/**
+ * Clear temporary data and cached objects
+ */
+function clearTemporaryData() {
+  try {
+    // Clear require cache for non-core modules (be careful with this)
+    // Uncomment only if you know what you're doing
+    // Object.keys(require.cache).forEach(key => {
+    //   if (key.includes('node_modules') && !key.includes('core')) {
+    //     delete require.cache[key];
+    //   }
+    // });
+    
+    // Clear any global temporary variables you might have
+    if (global.tempData) {
+      global.tempData = null;
+    }
+    
+    // Force garbage collection on large objects
+    if (global.largeObjects) {
+      global.largeObjects = null;
+    }
+    
+    console.log('🧹 Temporary data cleared');
+  } catch (error) {
+    console.error('❌ Error clearing temporary data:', error);
+  }
+}
+
+/**
+ * Print comprehensive garbage collection metrics
+ */
+function printGarbageCollectionMetrics(isFinal = false) {
+  const uptime = process.uptime() * 1000; // Convert to milliseconds
+  const currentMemory = process.memoryUsage();
+  const avgCollectionTime = gcMetrics.totalCollections > 0 ? gcMetrics.totalTimeSpent / gcMetrics.totalCollections : 0;
+  const collectionsPerHour = gcMetrics.totalCollections / (uptime / 3600000);
+  const memoryFreedPerHour = gcMetrics.memoryFreed / (uptime / 3600000);
+  
+  console.log('\n' + '='.repeat(80));
+  console.log(`📊 GARBAGE COLLECTION METRICS ${isFinal ? '(FINAL)' : ''}`);
+  console.log('='.repeat(80));
+  console.log(`🕐 Uptime: ${formatDuration(uptime)}`);
+  console.log(`🔍 Interval checks performed: ${gcMetrics.intervalChecks}`);
+  console.log(`⚠️  Threshold breaches: ${gcMetrics.thresholdBreaches}`);
+  console.log(`🧹 Total garbage collections: ${gcMetrics.totalCollections}`);
+  console.log(`⏱️  Total time spent in GC: ${gcMetrics.totalTimeSpent.toFixed(2)}ms`);
+  console.log(`📈 Total memory freed: ${formatBytes(gcMetrics.memoryFreed)}`);
+  console.log(`⌀ Average collection time: ${avgCollectionTime.toFixed(2)}ms`);
+  console.log(`📊 Collections per hour: ${collectionsPerHour.toFixed(2)}`);
+  console.log(`📈 Memory freed per hour: ${formatBytes(memoryFreedPerHour)}`);
+  console.log(`🕒 Last cleanup: ${gcMetrics.lastCleanupTime ? new Date(gcMetrics.lastCleanupTime).toLocaleString() : 'Never'}`);
+  console.log('\n📊 CURRENT MEMORY USAGE:');
+  console.log(formatMemoryUsage(currentMemory));
+  console.log('='.repeat(80) + '\n');
+}
+
+/**
+ * Format memory usage object for display
+ */
+function formatMemoryUsage(memUsage, compact = false) {
+  const rss = memUsage.rss / 1024 / 1024;
+  const heapTotal = memUsage.heapTotal / 1024 / 1024;
+  const heapUsed = memUsage.heapUsed / 1024 / 1024;
+  const external = memUsage.external / 1024 / 1024;
+  const heapPercent = (heapUsed / heapTotal) * 100;
+  
+  if (compact) {
+    return `RSS: ${rss.toFixed(2)}MB, Heap: ${heapUsed.toFixed(2)}MB/${heapTotal.toFixed(2)}MB (${heapPercent.toFixed(1)}%), External: ${external.toFixed(2)}MB`;
+  }
+  
+  return `   💾 RSS: ${rss.toFixed(2)}MB\n` +
+         `   🏠 Heap Total: ${heapTotal.toFixed(2)}MB\n` +
+         `   📊 Heap Used: ${heapUsed.toFixed(2)}MB (${heapPercent.toFixed(1)}%)\n` +
+         `   🔗 External: ${external.toFixed(2)}MB\n` +
+         `   📦 Array Buffers: ${(memUsage.arrayBuffers / 1024 / 1024).toFixed(2)}MB`;
+}
+
+/**
+ * Format bytes in human-readable format
+ */
+function formatBytes(bytes) {
+  if (bytes === 0) return '0 Bytes';
+  
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(Math.abs(bytes)) / Math.log(k));
+  
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+
+/**
+ * Format duration in human-readable format
+ */
+function formatDuration(ms) {
+  const seconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  
+  if (days > 0) {
+    return `${days}d ${hours % 24}h ${minutes % 60}m ${seconds % 60}s`;
+  } else if (hours > 0) {
+    return `${hours}h ${minutes % 60}m ${seconds % 60}s`;
+  } else if (minutes > 0) {
+    return `${minutes}m ${seconds % 60}s`;
+  } else {
+    return `${seconds}s`;
+  }
+}
 (async () => {
   try {
     console.log("Starting...");
@@ -546,3 +852,8 @@ function setupGracefulShutdown() {
   console.error("Fatal error in main execution:", error);
   process.exit(1);
 });
+
+// Periodic garbage collection and logging
+setInterval(() => {
+  monitorAndCleanup().catch(console.error);
+}, config.GC_CHECK_INTERVAL);
