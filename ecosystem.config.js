@@ -3,6 +3,7 @@ module.exports = {
     {
       name: "arpitha-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3001,
         clientId: "arpitha1",
@@ -18,6 +19,7 @@ module.exports = {
     {
       name: "shruthi-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3003,
         clientId: "shruthi1",
@@ -33,6 +35,7 @@ module.exports = {
     {
       name: "kavya-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3005,
         clientId: "kavya1",
@@ -48,6 +51,7 @@ module.exports = {
     {
       name: "meghana-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3007,
         clientId: "meghana1",
@@ -63,6 +67,7 @@ module.exports = {
     {
       name: "keerthi-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3009,
         clientId: "keerthi1",
@@ -78,6 +83,7 @@ module.exports = {
     {
       name: "divya-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3011,
         clientId: "divya1",
@@ -93,6 +99,7 @@ module.exports = {
     {
       name: "sowmya-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3013,
         clientId: "sowmya1",
@@ -108,6 +115,7 @@ module.exports = {
     {
       name: "sneha-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3015,
         clientId: "sneha1",
@@ -123,6 +131,7 @@ module.exports = {
     {
       name: "ramya-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3017,
         clientId: "ramya1",
@@ -138,6 +147,7 @@ module.exports = {
     {
       name: "nidhi-prom1",
       script: "server.js",
+      node_args: "--expose-gc",
       env: {
         PORT: 3019,
         clientId: "nidhi1",
