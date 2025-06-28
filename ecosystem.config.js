@@ -12,7 +12,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "0 3 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -27,7 +27,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "10 3 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -42,7 +42,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "20 3 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -57,7 +57,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "30 3 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -72,7 +72,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "40 3 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -87,7 +87,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "50 3 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -102,7 +102,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "0 4 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -117,7 +117,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "10 4 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -132,7 +132,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "20 4 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     },
     {
@@ -147,7 +147,7 @@ module.exports = {
       max_memory_restart: "350M",
       cron_restart: "30 4 * * *",
       restart_delay: 5000,
-      kill_timeout: 3000,
+      kill_timeout: 5000,
       namespace: "promotions"
     }
   ]
