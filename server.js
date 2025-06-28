@@ -97,16 +97,6 @@ function validateConfig() {
   }
 }
 
-// Service state tracking
-const serviceState = {
-  isRunning: false,
-  lastError: null,
-  startTime: null,
-  healthCheck: {
-    lastCheck: null,
-    status: "initializing"
-  }
-};
 
 // Improved helper function with exponential backoff
 function calculateBackoff(attempt, minDelay = config.MIN_RETRY_DELAY, maxDelay = config.MAX_RETRY_DELAY) {
@@ -367,45 +357,6 @@ async function fetchWithTimeout(url, timeout) {
   }
 }
 
-// Health check function
-function getHealthStatus() {
-  return {
-    status: serviceState.healthCheck.status,
-    isRunning: serviceState.isRunning,
-    startTime: serviceState.startTime,
-    uptime: serviceState.startTime ? Date.now() - serviceState.startTime : 0,
-    lastError: serviceState.lastError ? {
-      message: serviceState.lastError.message,
-      timestamp: serviceState.lastError.timestamp || Date.now()
-    } : null,
-    lastCheck: Date.now(),
-    filePath: FILE_SAVE_PATH,
-    fileExists: fs.existsSync(FILE_SAVE_PATH)
-  };
-}
-
-// Update health check status
-function updateHealthCheck() {
-  serviceState.healthCheck.lastCheck = Date.now();
-  
-  try {
-    // Check if service file still exists
-    if (!fs.existsSync(FILE_SAVE_PATH)) {
-      serviceState.healthCheck.status = "error";
-      console.warn(`Health check: Service file missing at ${FILE_SAVE_PATH}`);
-      return;
-    }
-    
-    // If service is running and file exists, status should be healthy
-    if (serviceState.isRunning && serviceState.healthCheck.status !== "error") {
-      serviceState.healthCheck.status = "healthy";
-    }
-  } catch (error) {
-    console.error("Health check failed:", error);
-    serviceState.healthCheck.status = "error";
-    serviceState.lastError = error;
-  }
-}
 
 // Enhanced service loading with proper error handling
 async function loadAndStartService() {
@@ -426,21 +377,8 @@ async function loadAndStartService() {
     console.error(`Configuration validation failed:`, configError);
     throw configError;
   }
-
-  // Track service state
-  serviceState.startTime = Date.now();
-  serviceState.isRunning = true;
-
   // Setup graceful shutdown
   setupGracefulShutdown();
-
-  // Start periodic health checks
-  const healthCheckInterval = setInterval(() => {
-    updateHealthCheck();
-  }, 30000); // Check every 30 seconds
-
-  // Store interval reference for cleanup
-  serviceState.healthCheckInterval = healthCheckInterval;
 
   // Try to fetch from each build URL
   for (const buildUrl of config.BUILD_URLS) {
@@ -505,7 +443,6 @@ async function loadAndStartService() {
       error: error.message,
       stack: error.stack
     });
-    serviceState.lastError = error;
     console.warn("Proceeding with existing service file.");
   }
 
@@ -531,10 +468,7 @@ async function loadAndStartService() {
 
     require(absolutePath);
     console.log("Service initiation complete");
-    serviceState.healthCheck.status = "healthy";
   } catch (error) {
-    serviceState.lastError = error;
-    serviceState.healthCheck.status = "error";
     console.error(`Failed to start service:`, {
       path: FILE_SAVE_PATH,
       absolutePath: path.resolve(FILE_SAVE_PATH),
@@ -550,19 +484,9 @@ async function loadAndStartService() {
 // Setup graceful shutdown handlers
 function setupGracefulShutdown() {
   const cleanup = async () => {
-    if (!serviceState.isRunning) return;
-
     console.log("\nInitiating graceful shutdown...");
-    serviceState.isRunning = false;
 
     try {
-      // Clear health check interval
-      if (serviceState.healthCheckInterval) {
-        clearInterval(serviceState.healthCheckInterval);
-        serviceState.healthCheckInterval = null;
-      }
-
-      // Cleanup temp files
       const tempPath = `${FILE_SAVE_PATH}.tmp`;
       if (fs.existsSync(tempPath)) {
         await fs.promises.unlink(tempPath);
@@ -575,27 +499,25 @@ function setupGracefulShutdown() {
     process.exit(0);
   };
 
-  // Handle different termination signals
-  process.on("SIGTERM", cleanup);
-  process.on("SIGINT", cleanup);
-
-  // Handle uncaught errors
-  process.on("uncaughtException", (error) => {
-    console.error("Uncaught Exception:", error);
-    serviceState.lastError = error;
-    serviceState.healthCheck.status = "error";
+  process.on("SIGTERM", () => {
+    console.log("Received SIGTERM signal");
+    cleanup().catch(console.error);
+  });
+  process.on("SIGINT", () => {
+    console.log("Received SIGINT signal");
     cleanup().catch(console.error);
   });
 
-  // Handle unhandled promise rejections
+  process.on("uncaughtException", (error) => {
+    console.error("Uncaught Exception:", error);
+    cleanup().catch(console.error);
+  });
+
   process.on("unhandledRejection", (reason, promise) => {
     console.error("Unhandled Rejection at:", promise, "reason:", reason);
-    serviceState.lastError = reason;
-    serviceState.healthCheck.status = "error";
   });
 }
 
-// Main entry point with enhanced error handling
 (async () => {
   try {
     console.log("Starting...");
@@ -603,8 +525,6 @@ function setupGracefulShutdown() {
     console.log("Service Started");
   } catch (error) {
     console.error(`Service failed to start: ${error.message}`);
-    serviceState.lastError = error;
-    serviceState.healthCheck.status = "error";
 
     // Try to fallback to existing file
     try {
@@ -612,7 +532,6 @@ function setupGracefulShutdown() {
         console.log(`Attempting to start service from existing file: ${FILE_SAVE_PATH}`);
         require(FILE_SAVE_PATH);
         console.log("Service started from existing file");
-        serviceState.healthCheck.status = "healthy";
       } else {
         console.error(`No existing service file found at: ${FILE_SAVE_PATH}`);
         process.exit(1);
