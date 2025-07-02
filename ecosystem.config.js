@@ -1,3 +1,13 @@
+const generateRandomCron = (index, total) => {
+  const intervalMinutes = Math.floor(480 / total); // ~48 minutes apart for 10 apps
+  const offsetMinutes = index * intervalMinutes;
+
+  const minute = offsetMinutes % 60;
+  const hourOffset = Math.floor(offsetMinutes / 60);
+
+  return `${minute} ${hourOffset}/8 * * *`;
+};
+
 module.exports = {
   apps: [
     {
@@ -10,7 +20,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "0 3 * * *",
+      generateRandomCron: generateRandomCron(), //: "0 3 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -25,7 +35,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "10 3 * * *",
+      generateRandomCron: generateRandomCron(), //: "10 3 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -40,7 +50,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "20 3 * * *",
+      generateRandomCron: generateRandomCron(), //: "20 3 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -55,7 +65,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "30 3 * * *",
+      generateRandomCron: generateRandomCron(), //: "30 3 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -70,7 +80,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "40 3 * * *",
+      generateRandomCron: generateRandomCron(), //: "40 3 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -85,7 +95,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "50 3 * * *",
+      generateRandomCron: generateRandomCron(), //: "50 3 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -100,7 +110,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "0 4 * * *",
+      generateRandomCron: generateRandomCron(), //: "0 4 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -115,7 +125,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "10 4 * * *",
+      generateRandomCron: generateRandomCron(), //: "10 4 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -130,7 +140,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "20 4 * * *",
+      generateRandomCron: generateRandomCron(), //: "20 4 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
@@ -145,7 +155,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: "30 4 * * *",
+      generateRandomCron: generateRandomCron(), //: "30 4 * * *",
       restart_delay: 5000,
       kill_timeout: 3000,
       namespace: "promotions"
