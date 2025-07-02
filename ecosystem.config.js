@@ -1,3 +1,8 @@
+const generateRandomCron = (index) => {
+  const minute = Math.floor(Math.random() * 60);
+  const hour = Math.floor(Math.random() * 8) + (8 * (index % 3));
+  return `${minute} ${hour}/12 * * *`;
+};
 module.exports = {
   // Section: All "1" clients
   apps: [
@@ -10,7 +15,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "30 19 * * *", // 1:00 AM IST (UTC 19:30)
+      cron_restart: generateRandomCron(), //"30 19 * * *", // 1:00 AM IST (UTC 19:30)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -27,7 +32,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "40 19 * * *", // 1:10 AM IST (UTC 19:40)
+      cron_restart: generateRandomCron(), //"40 19 * * *", // 1:10 AM IST (UTC 19:40)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -44,7 +49,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "50 19 * * *", // 1:20 AM IST (UTC 19:50)
+      cron_restart: generateRandomCron(), //"50 19 * * *", // 1:20 AM IST (UTC 19:50)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -61,7 +66,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "0 20 * * *", // 1:30 AM IST (UTC 20:00)
+      cron_restart: generateRandomCron(), //"0 20 * * *", // 1:30 AM IST (UTC 20:00)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -78,7 +83,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "10 20 * * *", // 1:40 AM IST (UTC 20:10)
+      cron_restart: generateRandomCron(), //"10 20 * * *", // 1:40 AM IST (UTC 20:10)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -95,7 +100,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "20 20 * * *", // 1:50 AM IST (UTC 20:20)
+      cron_restart: generateRandomCron(), //"20 20 * * *", // 1:50 AM IST (UTC 20:20)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -112,7 +117,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "30 20 * * *", // 2:00 AM IST (UTC 20:30)
+      cron_restart: generateRandomCron(), //"30 20 * * *", // 2:00 AM IST (UTC 20:30)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -129,7 +134,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "40 20 * * *", // 2:10 AM IST (UTC 20:40)
+      cron_restart: generateRandomCron(), //"40 20 * * *", // 2:10 AM IST (UTC 20:40)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -146,7 +151,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "50 20 * * *", // 2:20 AM IST (UTC 20:50)
+      cron_restart: generateRandomCron(), //"50 20 * * *", // 2:20 AM IST (UTC 20:50)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
@@ -163,7 +168,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "300M",
-      cron_restart: "0 21 * * *", // 2:30 AM IST (UTC 21:00)
+      cron_restart: generateRandomCron(), //"0 21 * * *", // 2:30 AM IST (UTC 21:00)
       restart_delay: 5000,
       namespace: "clients",
       kill_timeout: 5000,
