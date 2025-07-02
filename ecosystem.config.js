@@ -1,164 +1,46 @@
-const generateRandomCron = (index, total) => {
-  const intervalMinutes = Math.floor(480 / total); // ~48 minutes apart for 10 apps
-  const offsetMinutes = index * intervalMinutes;
-
-  const minute = offsetMinutes % 60;
-  const hourOffset = Math.floor(offsetMinutes / 60);
-
-  return `${minute} ${hourOffset}/8 * * *`;
+const CONFIG = {
+  BASE_PORT: 3001,
+  PORT_INCREMENT: 2,
+  MAX_MEMORY: "450M",
+  RESTART_DELAY: 5000,
+  KILL_TIMEOUT: 3000,
+  CRON_PERIOD_MINUTES: 480
 };
 
+const generateRandomCron = (index, total) => {
+  const intervalMinutes = Math.floor(CONFIG.CRON_PERIOD_MINUTES / total);
+  const offsetMinutes = index * intervalMinutes;
+  const minute = offsetMinutes % 60;
+  const hour = Math.floor(offsetMinutes / 60);
+  return `${minute} ${hour} * * *`;
+};
+
+const createAppConfig = (clientId, index) => ({
+  name: `${clientId}-prom2`,
+  script: "server.js",
+  env: {
+    PORT: CONFIG.BASE_PORT + (index * CONFIG.PORT_INCREMENT),
+    clientId: `${clientId}2`,
+    serviceName: "promotion-clients-new"
+  },
+  autorestart: true,
+  max_memory_restart: CONFIG.MAX_MEMORY,
+  restart_delay: CONFIG.RESTART_DELAY,
+  kill_timeout: CONFIG.KILL_TIMEOUT,
+  namespace: "promotions",
+  cron_restart: generateRandomCron(index, 10) // Use cron for actual PM2 restart scheduling
+});
+const clientNames = [
+  "arpitha", "shruthi", "kavya", "meghana", "keerthi",
+  "divya", "sowmya", "sneha", "ramya", "nidhi"
+];
+const appsList = clientNames.map((clientId, index) => createAppConfig(clientId, index));
+const ports = appsList.map(app => app.env.PORT);
+const duplicatePorts = ports.filter((port, index) => ports.indexOf(port) !== index);
+if (duplicatePorts.length > 0) {
+  throw new Error(`Duplicate ports detected: ${duplicatePorts.join(', ')}`);
+}
+
 module.exports = {
-  apps: [
-    {
-      name: "arpitha-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3001,
-        clientId: "arpitha2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "0 3 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "shruthi-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3003,
-        clientId: "shruthi2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "10 3 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "kavya-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3005,
-        clientId: "kavya2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "20 3 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "meghana-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3007,
-        clientId: "meghana2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "30 3 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "keerthi-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3009,
-        clientId: "keerthi2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "40 3 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "divya-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3011,
-        clientId: "divya2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "50 3 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "sowmya-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3013,
-        clientId: "sowmya2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "0 4 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "sneha-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3015,
-        clientId: "sneha2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "10 4 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "ramya-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3017,
-        clientId: "ramya2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "20 4 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "nidhi-prom2",
-      script: "server.js",
-      env: {
-        PORT: 3019,
-        clientId: "nidhi2",
-        serviceName: "promotion-clients-new"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "30 4 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    }
-  ]
+  apps: appsList
 };
