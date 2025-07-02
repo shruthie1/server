@@ -96,11 +96,11 @@ module.exports = {
       merge_logs: true
     },
     {
-      name: "ramya-prom1",
+      name: "divya-prom1",
       script: "server.js",
       env: {
         PORT: 3011,
-        clientId: "ramya1",
+        clientId: "divya1",
         serviceName: "promotion-clients-prom-5"
       },
       autorestart: true,
@@ -114,28 +114,10 @@ module.exports = {
       merge_logs: true
     },
     {
-      name: "divya-prom1",
-      script: "server.js",
-      env: {
-        PORT: 3013,
-        clientId: "divya1",
-        serviceName: "promotion-clients-prom-5"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(6), //"30 20 * * *", // 2:00 AM IST (UTC 20:30)
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
-    },
-    {
       name: "sowmya-prom1",
       script: "server.js",
       env: {
-        PORT: 3015,
+        PORT: 3013,
         clientId: "sowmya1",
         serviceName: "promotion-clients-prom-5"
       },
@@ -153,13 +135,28 @@ module.exports = {
       name: "sneha-prom1",
       script: "server.js",
       env: {
-        PORT: 3017,
+        PORT: 3015,
         clientId: "sneha1",
         serviceName: "promotion-clients-prom-5"
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(8), //"50 20 * * *", // 2:20 AM IST (UTC 20:50)
+      generateRandomCron: generateRandomCron(), //: "10 4 * * *",
+      restart_delay: 5000,
+      kill_timeout: 3000,
+      namespace: "promotions"
+    },
+    {
+      name: "ramya-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3017,
+        clientId: "ramya1",
+        serviceName: "promotion-clients-prom-5"
+      },
+      autorestart: true,
+      max_memory_restart: "450M",
+      generateRandomCron: generateRandomCron(), //: "20 4 * * *",
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -177,7 +174,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(9), //"0 21 * * *", // 2:30 AM IST (UTC 21:00)
+      generateRandomCron: generateRandomCron(), //: "30 4 * * *",
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
