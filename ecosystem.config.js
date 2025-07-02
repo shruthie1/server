@@ -3,7 +3,6 @@ const generateRandomCron = (index) => {
   const hour = Math.floor(Math.random() * 8) + (8 * (index % 3));
   return `${minute} ${hour}/8 * * *`;
 };
-
 module.exports = {
   apps: [
     {
@@ -16,10 +15,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "0 3 * * *",
+      cron_restart: generateRandomCron(0), //"30 19 * * *", // 1:00 AM IST (UTC 19:30)
       restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "shruthi-prom1",
@@ -31,10 +33,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "10 3 * * *",
+      cron_restart: generateRandomCron(1), //"40 19 * * *", // 1:10 AM IST (UTC 19:40)
       restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "kavya-prom1",
@@ -46,10 +51,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "20 3 * * *",
+      cron_restart: generateRandomCron(2), //"50 19 * * *", // 1:20 AM IST (UTC 19:50)
       restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "meghana-prom1",
@@ -61,10 +69,13 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "30 3 * * *",
+      cron_restart: generateRandomCron(3), //"0 20 * * *", // 1:30 AM IST (UTC 20:00)
       restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "keerthi-prom1",
@@ -76,70 +87,85 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "40 3 * * *",
+      cron_restart: generateRandomCron(4), //"10 20 * * *", // 1:40 AM IST (UTC 20:10)
       restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "divya-prom1",
-      script: "server.js",
-      env: {
-        PORT: 3011,
-        clientId: "divya1",
-        serviceName: "promotion-clients-prom-5"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "50 3 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "sowmya-prom1",
-      script: "server.js",
-      env: {
-        PORT: 3013,
-        clientId: "sowmya1",
-        serviceName: "promotion-clients-prom-5"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "0 4 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
-    },
-    {
-      name: "sneha-prom1",
-      script: "server.js",
-      env: {
-        PORT: 3015,
-        clientId: "sneha1",
-        serviceName: "promotion-clients-prom-5"
-      },
-      autorestart: true,
-      max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "10 4 * * *",
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "ramya-prom1",
       script: "server.js",
       env: {
-        PORT: 3017,
+        PORT: 3011,
         clientId: "ramya1",
         serviceName: "promotion-clients-prom-5"
       },
       autorestart: true,
       max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "20 4 * * *",
+      cron_restart: generateRandomCron(5), //"20 20 * * *", // 1:50 AM IST (UTC 20:20)
       restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
+    },
+    {
+      name: "divya-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3013,
+        clientId: "divya1",
+        serviceName: "promotion-clients-prom-5"
+      },
+      autorestart: true,
+      max_memory_restart: "450M",
+      cron_restart: generateRandomCron(6), //"30 20 * * *", // 2:00 AM IST (UTC 20:30)
+      restart_delay: 5000,
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
+    },
+    {
+      name: "sowmya-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3015,
+        clientId: "sowmya1",
+        serviceName: "promotion-clients-prom-5"
+      },
+      autorestart: true,
+      max_memory_restart: "450M",
+      cron_restart: generateRandomCron(7), //"40 20 * * *", // 2:10 AM IST (UTC 20:40)
+      restart_delay: 5000,
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
+    },
+    {
+      name: "sneha-prom1",
+      script: "server.js",
+      env: {
+        PORT: 3017,
+        clientId: "sneha1",
+        serviceName: "promotion-clients-prom-5"
+      },
+      autorestart: true,
+      max_memory_restart: "450M",
+      cron_restart: generateRandomCron(8), //"50 20 * * *", // 2:20 AM IST (UTC 20:50)
+      restart_delay: 5000,
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     },
     {
       name: "nidhi-prom1",
@@ -151,10 +177,14 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      generateRandomCron: generateRandomCron(), //: "30 4 * * *",
+      cron_restart: generateRandomCron(9), //"0 21 * * *", // 2:30 AM IST (UTC 21:00)
       restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      namespace: "promotions",
+      kill_timeout: 5000,
+      time: true,
+      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+      merge_logs: true
     }
   ]
 };
+
