@@ -96,11 +96,11 @@ module.exports = {
       merge_logs: true
     },
     {
-      name: "ramya-prom2",
+      name: "divya-prom2",
       script: "server.js",
       env: {
         PORT: 3011,
-        clientId: "ramya2",
+        clientId: "divya2",
         serviceName: "promotion-clients-prom-5"
       },
       autorestart: true,
@@ -114,11 +114,11 @@ module.exports = {
       merge_logs: true
     },
     {
-      name: "divya-prom2",
+      name: "sowmya-prom2",
       script: "server.js",
       env: {
         PORT: 3013,
-        clientId: "divya2",
+        clientId: "sowmya2",
         serviceName: "promotion-clients-prom-5"
       },
       autorestart: true,
@@ -132,11 +132,11 @@ module.exports = {
       merge_logs: true
     },
     {
-      name: "sowmya-prom2",
+      name: "sneha-prom2",
       script: "server.js",
       env: {
         PORT: 3015,
-        clientId: "sowmya2",
+        clientId: "sneha2",
         serviceName: "promotion-clients-prom-5"
       },
       autorestart: true,
@@ -150,11 +150,11 @@ module.exports = {
       merge_logs: true
     },
     {
-      name: "sneha-prom2",
+      name: "ramya-prom2",
       script: "server.js",
       env: {
         PORT: 3017,
-        clientId: "sneha2",
+        clientId: "ramya2",
         serviceName: "promotion-clients-prom-5"
       },
       autorestart: true,
