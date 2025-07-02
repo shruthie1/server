@@ -5,7 +5,7 @@ const CONFIG = {
   RESTART_DELAY: 5000,
   KILL_TIMEOUT: 3000,
   CRON_PERIOD_MINUTES: 480,
-  DEFAULT_SERVICE_NAME: "promotion-clients-new"
+  DEFAULT_SERVICE_NAME: "promotion-clients-prom-5"
 };
 
 const generateRandomCron = (index, total) => {
