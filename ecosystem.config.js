@@ -13,17 +13,15 @@ const generateRandomCron = (index, total) => {
   const offsetMinutes = index * intervalMinutes;
   const minute = offsetMinutes % 60;
   const hour = Math.floor(offsetMinutes / 60);
-  return `${minute} ${hour} * * *`;
+  const hours = [];
+  for (let i = 0; i < 3; i++) {
+    hours.push((hour + (i * 8)) % 24);
+  }
+  hours.sort((a, b) => a - b);
+  return `${minute} ${hours.join(',')} * * *`;
 };
 
-/**
- * Creates an app configuration object
- * @param {string|object} clientConfig - Client identifier string or config object with {id, serviceName}
- * @param {number} index - App index for port calculation
- * @returns {object} PM2 app configuration
- */
 const createAppConfig = (clientConfig, index) => {
-  // Handle both string and object input
   const clientId = typeof clientConfig === 'string' ? clientConfig : clientConfig.id;
   const serviceName = typeof clientConfig === 'object' && clientConfig.serviceName
     ? clientConfig.serviceName
