@@ -15,7 +15,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(0), //"30 19 * * *", // 1:00 AM IST (UTC 19:30)
+      cron_restart: generateRandomCron(0),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -33,7 +33,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(1), //"40 19 * * *", // 1:10 AM IST (UTC 19:40)
+      cron_restart: generateRandomCron(1),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -51,7 +51,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(2), //"50 19 * * *", // 1:20 AM IST (UTC 19:50)
+      cron_restart: generateRandomCron(2),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -69,7 +69,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(3), //"0 20 * * *", // 1:30 AM IST (UTC 20:00)
+      cron_restart: generateRandomCron(3),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -87,7 +87,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(4), //"10 20 * * *", // 1:40 AM IST (UTC 20:10)
+      cron_restart: generateRandomCron(4),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -105,7 +105,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(5), //"20 20 * * *", // 1:50 AM IST (UTC 20:20)
+      cron_restart: generateRandomCron(5),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -123,7 +123,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(6), //"30 20 * * *", // 2:00 AM IST (UTC 20:30)
+      cron_restart: generateRandomCron(6),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -141,7 +141,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(7), //"40 20 * * *", // 2:10 AM IST (UTC 20:40)
+      cron_restart: generateRandomCron(7),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -159,7 +159,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(8), //"50 20 * * *", // 2:20 AM IST (UTC 20:50)
+      cron_restart: generateRandomCron(8),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
@@ -177,7 +177,7 @@ module.exports = {
       },
       autorestart: true,
       max_memory_restart: "450M",
-      cron_restart: generateRandomCron(9), //"0 21 * * *", // 2:30 AM IST (UTC 21:00)
+      cron_restart: generateRandomCron(9),
       restart_delay: 5000,
       namespace: "promotions",
       kill_timeout: 5000,
