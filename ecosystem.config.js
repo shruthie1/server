@@ -1,8 +1,10 @@
-const generateRandomCron = (index) => {
+const generateRandomCron = () => {
   const minute = Math.floor(Math.random() * 60);
-  const hour = Math.floor(Math.random() * 8) + (8 * (index % 3));
-  return `${minute} ${hour}/12 * * *`;
+  const hour1 = Math.floor(Math.random() * 12);
+  const hour2 = (hour1 + 12) % 24;
+  return `${minute} ${hour1},${hour2} * * *`;
 };
+
 module.exports = {
   apps: [
     {
