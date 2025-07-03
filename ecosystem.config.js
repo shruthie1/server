@@ -7,7 +7,6 @@ const generateRandomCron = () => {
   return `${minute} ${startHour},${hour2},${hour3} * * *`;
 };
 
-
 module.exports = {
   apps: [
     {
