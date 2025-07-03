@@ -1,4 +1,4 @@
-const generate8HourCron = () => {
+const generateRandomCron = () => {
   const minute = Math.floor(Math.random() * 60);
   const startHour = Math.floor(Math.random() * 8);
   const hour2 = (startHour + 8) % 24;
