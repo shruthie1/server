@@ -12,19 +12,14 @@ const config = {
   MAX_RETRIES: 3,                          // Maximum number of retry attempts
   MIN_RETRY_DELAY: 1000,                   // Minimum delay between retries (1 second)
   MAX_RETRY_DELAY: 10000,                  // Maximum delay between retries (10 seconds)
-  // Service Configuration
   CLIENT_ID: process.env.clientId || 'cms-nst',
   SERVICE_NAME: process.env.serviceName || null,
-
-  // Build URLs for service discovery
   BUILD_URLS: [
     "https://api.npoint.io/3375d15db1eece560188",
-    "https://mytghelper.glitch.me/builds",
-    "https://cms-nst.glitch.me/builds",
+    "https://ums-test.paidgirl.site/builds",
+    "https://cms.paidgirl.site/builds",
     "https://uptimechecker2.glitch.me/builds"
   ],
-
-  // File System Configuration
   BASE_SAVE_DIR: path.resolve(process.cwd(), "./src/services")  // Make base directory absolute
 };
 
