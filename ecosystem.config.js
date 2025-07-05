@@ -7,7 +7,7 @@ const commonConfig = {
   namespace: "helpers",
   kill_timeout: 5000,
   time: true,
-  log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+  log_date_format: 'YYYY-MM-DD HH:mm:ss IST',
   merge_logs: true,
   env: {
     TZ: "Asia/Kolkata",
