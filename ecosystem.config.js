@@ -7,184 +7,135 @@ const generateRandomCron = () => {
   return `${minute} ${startHour},${hour2},${hour3} * * *`;
 };
 
+// Common configuration for all apps
+const commonConfig = {
+  script: "server.js",
+  autorestart: true,
+  max_memory_restart: "450M",
+  restart_delay: 5000,
+  namespace: "promotions",
+  kill_timeout: 5000,
+  time: true,
+  log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+  merge_logs: true,
+  env: {
+    TZ: "Asia/Kolkata",
+  },
+  // max_restarts: 10,
+  min_uptime: "10s"
+};
+
 module.exports = {
   apps: [
     {
       name: "arpitha-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3001,
         clientId: "arpitha1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(0),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "shruthi-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3003,
         clientId: "shruthi1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(1),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "kavya-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3005,
         clientId: "kavya1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(2),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "meghana-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3007,
         clientId: "meghana1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(3),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "keerthi-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3009,
         clientId: "keerthi1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(4),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "divya-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3011,
         clientId: "divya1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(5),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "sowmya-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3013,
         clientId: "sowmya1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(6),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "sneha-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3015,
         clientId: "sneha1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(7),
-      restart_delay: 5000,
-      kill_timeout: 3000,
-      namespace: "promotions"
+      cron_restart: generateRandomCron()
     },
     {
       name: "ramya-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3017,
         clientId: "ramya1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(8),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "nidhi-prom1",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 3019,
         clientId: "nidhi1",
         serviceName: "promotion-clients-prom-5"
       },
-      autorestart: true,
-      max_memory_restart: "450M",
-      cron_restart: generateRandomCron(9),
-      restart_delay: 5000,
-      namespace: "promotions",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     }
   ]
 };
