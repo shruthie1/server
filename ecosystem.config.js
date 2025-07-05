@@ -31,16 +31,6 @@ module.exports = {
         clientId: "cms-nst"
       },
       cron_restart: "0 2 * * *"
-    },
-    {
-      name: "ums-test",
-      ...commonConfig,
-      env: {
-        ...commonConfig.env,
-        PORT: 5002,
-        clientId: "ums-test"
-      },
-      cron_restart: "0 4 * * *"
     }
   ]
 };
