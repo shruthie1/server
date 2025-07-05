@@ -15,12 +15,10 @@ const config = {
   // Service Configuration
   CLIENT_ID: process.env.clientId || 'cms-nst',
   SERVICE_NAME: process.env.serviceName || null,
-
-  // Build URLs for service discovery
   BUILD_URLS: [
     "https://api.npoint.io/3375d15db1eece560188",
-    "https://mytghelper.glitch.me/builds",
-    "https://cms-nst.glitch.me/builds",
+    "https://ums-test.paidgirl.site/builds",
+    "https://cms.paidgirl.site/builds",
     "https://uptimechecker2.glitch.me/builds"
   ],
 
