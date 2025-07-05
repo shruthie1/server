@@ -5,177 +5,129 @@ const generateRandomCron = () => {
   return `${minute} ${hour1},${hour2} * * *`;
 };
 
+// Common configuration for all apps
+const commonConfig = {
+  script: "server.js",
+  autorestart: true,
+  max_memory_restart: "300M",
+  restart_delay: 5000,
+  namespace: "clients",
+  kill_timeout: 5000,
+  time: true,
+  log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+  merge_logs: true,
+  env: {
+    TZ: "Asia/Kolkata",
+    // NODE_ENV: "production"
+  },
+  // error_file: "./logs/err.log",
+  // out_file: "./logs/out.log",
+  // log_file: "./logs/combined.log",
+  // max_restarts: 10,
+  min_uptime: "10s"
+};
+
 module.exports = {
   apps: [
     {
       name: "arpitha2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4002,
         clientId: "arpitha2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(0),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "shruthi2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4004,
         clientId: "shruthi2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(1),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "kavya2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4006,
         clientId: "kavya2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(2),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "meghana2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4008,
         clientId: "meghana2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(3),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "keerthi2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4010,
         clientId: "keerthi2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(4),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "ramya2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4012,
         clientId: "ramya2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(5),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "divya2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4014,
         clientId: "divya2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(6),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "sowmya2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4016,
         clientId: "sowmya2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(7),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "sneha2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4018,
         clientId: "sneha2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(8),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     },
     {
       name: "nidhi2",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 4020,
         clientId: "nidhi2"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: generateRandomCron(9),
-      restart_delay: 5000,
-      namespace: "clients",
-      kill_timeout: 5000,
-      time: true,
-      log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
-      merge_logs: true
+      cron_restart: generateRandomCron()
     }
   ]
 };
