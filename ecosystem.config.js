@@ -1,30 +1,46 @@
+// Common configuration for all apps
+const commonConfig = {
+  script: "server.js",
+  autorestart: true,
+  max_memory_restart: "300M",
+  restart_delay: 5000,
+  namespace: "helpers",
+  kill_timeout: 5000,
+  time: true,
+  log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+  merge_logs: true,
+  env: {
+    TZ: "Asia/Kolkata",
+    // NODE_ENV: "production"
+  },
+  // error_file: "./logs/err.log",
+  // out_file: "./logs/out.log",
+  // log_file: "./logs/combined.log",
+  // max_restarts: 10,
+  min_uptime: "10s"
+};
+
 module.exports = {
   apps: [
     {
       name: "cms",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 5001,
         clientId: "cms-nst"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: "0 2 * * *",
-      restart_delay: 5000,
-      namespace: "helpers"
+      cron_restart: "0 2 * * *"
     },
     {
       name: "ums-test",
-      script: "server.js",
+      ...commonConfig,
       env: {
+        ...commonConfig.env,
         PORT: 5002,
         clientId: "ums-test"
       },
-      autorestart: true,
-      max_memory_restart: "300M",
-      cron_restart: "0 2 * * *",
-      restart_delay: 5000,
-      namespace: "helpers"
+      cron_restart: "0 4 * * *"
     }
   ]
 };
