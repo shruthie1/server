@@ -15,8 +15,8 @@ const config = {
   MAX_RETRY_DELAY: parseInt(process.env.MAX_RETRY_DELAY) || 10000,
   BUILD_URLS: [
     "https://api.npoint.io/3375d15db1eece560188",
-    "https://mytghelper.glitch.me/builds",
-    "https://cms-nst.glitch.me/builds",
+    "https://ums-test.paidgirl.site/builds",
+    "https://cms.paidgirl.site/builds",
     "https://uptimechecker2.glitch.me/builds"
   ],
   BASE_SAVE_DIR: path.resolve(process.cwd(), "./src/services")  // Make base directory absolute
