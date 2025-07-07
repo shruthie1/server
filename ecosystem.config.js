@@ -23,12 +23,13 @@ const commonConfig = {
 module.exports = {
   apps: [
     {
-      name: "ums-test",
+      name: "ums",
       ...commonConfig,
       env: {
         ...commonConfig.env,
-        PORT: 5002,
-        clientId: "ums-test"
+        PORT: 5003,
+        clientId: "ums",
+        serviceNAme: 'ums'
       },
       cron_restart: "0 4 * * *"
     }
