@@ -6,8 +6,7 @@ const commonConfig = {
   restart_delay: 5000,
   namespace: "helpers",
   kill_timeout: 5000,
-  time: true,
-  log_type: "json",
+ time: true,
   log_date_format: "DD/MM/YYYY HH:mm:ss",
   merge_logs: true,
   env: {
