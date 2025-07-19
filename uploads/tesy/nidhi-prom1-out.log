@@ -1,0 +1,2054 @@
+clientId: nidhi1
+serviceName: promotion-clients-new
+key: 1
+Path Resolution: {
+  cwd: '/root/telegram/promote-clients',
+  baseSaveDir: '/root/telegram/promote-clients/src/services',
+  fileSavePath: '/root/telegram/promote-clients/src/services/promotion-clients-new.js'
+}
+Starting...
+Starting service load operation:
+- Service: promotion-clients-new
+- Save path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+- Current working directory: /root/telegram/promote-clients
+Configuration validation successful
+Loading builds from: https://api.npoint.io/3375d15db1eece560188
+Successfully fetched from: https://api.npoint.io/3375d15db1eece560188 in 322.14ms
+Fetched builds from fastest URL: https://api.npoint.io/3375d15db1eece560188 (322.14ms)
+Available services in response: [
+  '1',
+  '2',
+  'id',
+  'cts',
+  'ums',
+  'new-tg',
+  'cms-nst',
+  'develop',
+  'tg-prom',
+  'ums-test',
+  'updatedAt',
+  'tg-promote',
+  'tg-prom-react',
+  'tg-promote-react',
+  'promotion-clients',
+  'promotion-service',
+  'promotion-clients-new',
+  'promotion-clients-new-2',
+  'promotion-clients-new-3',
+  'promotion-clients-new-32',
+  'promotion-clients-new-3-2',
+  'promotion-clients-new-3-3',
+  'promotion-clients-new-3-4',
+  'promotion-clients-new-main',
+  'promotion-clients-new-main-2'
+]
+Starting file fetch and save operation:
+- URL: https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+- Target file: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service Url:  https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+Resolved file path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Received response buffer size: 293352 bytes
+Writing to temporary file: /root/telegram/promote-clients/src/services/promotion-clients-new.js.tmp
+Successfully wrote temporary file
+Temporary file size verified: 293352 bytes
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Target directory verified before rename
+Successfully renamed temporary file to final path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File successfully saved at: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Starting Service from path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File exists and is accessible: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File size: 293352 bytes
+Attempting to require service using absolute path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service initiation complete
+Service Started
+setting key:  id
+setting key:  apiId
+setting key:  tgcms
+setting key:  API_ID
+setting key:  CL_NAME
+setting key:  apiHash
+setting key:  API_HASH
+setting key:  demolink
+setting key:  tgHelper
+setting key:  CL_APIKEY
+setting key:  GMAIL_ADD
+setting key:  bypassURL
+setting key:  tgmanager
+setting key:  uptimebot
+setting key:  BOT_TOKENS
+setting key:  GMAIL_PASS
+setting key:  logsChatId
+setting key:  mongodburi
+setting key:  CL_APISECRET
+setting key:  NODE_OPTIONS
+setting key:  logsChannel2
+setting key:  notifChannel
+setting key:  SavedMessages
+setting key:  chatgptserver
+setting key:  ramyaredd1bot
+setting key:  uptimeChecker
+setting key:  promoteChecker
+setting key:  unwantedvideos
+setting key:  updatesChannel
+setting key:  accountsChannel
+setting key:  warningsChannel
+setting key:  AUTO_CLIENT_SETUP
+setting key:  httpFailuresChannel
+setting key:  FailedPaymentsChannel
+setting key:  TELEGRAM_CHANNEL_CONFIG_SAVED
+setting key:  TELEGRAM_CHANNEL_CONFIG_USER_WARNINGS
+setting key:  TELEGRAM_CHANNEL_CONFIG_CLIENT_UPDATES
+setting key:  TELEGRAM_CHANNEL_CONFIG_LOGIN_FAILURES
+setting key:  TELEGRAM_CHANNEL_CONFIG_CHANNEL_NOTIFIZ
+Environment variables set successfully!
+setting key:  link
+setting key:  name
+setting key:  qrId
+setting key:  repl
+setting key:  dbcoll
+setting key:  gpayId
+setting key:  mobile
+setting key:  product
+setting key:  session
+setting key:  clientId
+setting key:  password
+setting key:  username
+setting key:  deployKey
+setting key:  channelLink
+setting key:  mainAccount
+setting key:  promoteRepl
+setting key:  promoteMobile
+Environment variables set successfully!
+Env Mobile :  917397511107
+Starting memory monitoring (limit: 100MB, interval: 300000ms)
+🧠 Heap Used: 41.84 MB
+Fetching URL: https://api.ipify.org?format=json with options: {}
+ProcessID:  10
+Server is running on port 3019
+Your public IP address is: 93.127.185.68
+[Connection] Increment retry count to 1/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/10?clientId=nidhi1 with options: {}
+[Connection] Increment retry count to 2/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/10?clientId=nidhi1 with options: {}
+[Connection] Increment retry count to 3/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/10?clientId=nidhi1 with options: {}
+🧠 Heap Used: 32.21 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Creating MongoDb Instance
+parsedErr:  nidhi1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db')
+Fetching URL: https://api.telegram.org/bot7281017483:AAGoeVPH98k8rXUpoR22XomfAL7PzMtJVVk/sendMessage?chat_id=-1001801844217&text=nidhi1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db') with options: {}
+exitOptions:  { cleanup: true }
+clientId: nidhi1
+serviceName: promotion-clients-new
+key: 1
+Path Resolution: {
+  cwd: '/root/telegram/promote-clients',
+  baseSaveDir: '/root/telegram/promote-clients/src/services',
+  fileSavePath: '/root/telegram/promote-clients/src/services/promotion-clients-new.js'
+}
+Starting...
+Starting service load operation:
+- Service: promotion-clients-new
+- Save path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+- Current working directory: /root/telegram/promote-clients
+Configuration validation successful
+Loading builds from: https://api.npoint.io/3375d15db1eece560188
+Successfully fetched from: https://api.npoint.io/3375d15db1eece560188 in 331.81ms
+Fetched builds from fastest URL: https://api.npoint.io/3375d15db1eece560188 (331.81ms)
+Available services in response: [
+  '1',
+  '2',
+  'id',
+  'cts',
+  'ums',
+  'new-tg',
+  'cms-nst',
+  'develop',
+  'tg-prom',
+  'ums-test',
+  'updatedAt',
+  'tg-promote',
+  'tg-prom-react',
+  'tg-promote-react',
+  'promotion-clients',
+  'promotion-service',
+  'promotion-clients-new',
+  'promotion-clients-new-2',
+  'promotion-clients-new-3',
+  'promotion-clients-new-32',
+  'promotion-clients-new-3-2',
+  'promotion-clients-new-3-3',
+  'promotion-clients-new-3-4',
+  'promotion-clients-new-main',
+  'promotion-clients-new-main-2'
+]
+Starting file fetch and save operation:
+- URL: https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+- Target file: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service Url:  https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+Resolved file path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Received response buffer size: 293352 bytes
+Writing to temporary file: /root/telegram/promote-clients/src/services/promotion-clients-new.js.tmp
+Successfully wrote temporary file
+Temporary file size verified: 293352 bytes
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Target directory verified before rename
+Successfully renamed temporary file to final path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File successfully saved at: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Starting Service from path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File exists and is accessible: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File size: 293352 bytes
+Attempting to require service using absolute path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service initiation complete
+Service Started
+setting key:  id
+setting key:  apiId
+setting key:  tgcms
+setting key:  API_ID
+setting key:  CL_NAME
+setting key:  apiHash
+setting key:  API_HASH
+setting key:  demolink
+setting key:  tgHelper
+setting key:  CL_APIKEY
+setting key:  GMAIL_ADD
+setting key:  bypassURL
+setting key:  tgmanager
+setting key:  uptimebot
+setting key:  BOT_TOKENS
+setting key:  GMAIL_PASS
+setting key:  logsChatId
+setting key:  mongodburi
+setting key:  CL_APISECRET
+setting key:  NODE_OPTIONS
+setting key:  logsChannel2
+setting key:  notifChannel
+setting key:  SavedMessages
+setting key:  chatgptserver
+setting key:  ramyaredd1bot
+setting key:  uptimeChecker
+setting key:  promoteChecker
+setting key:  unwantedvideos
+setting key:  updatesChannel
+setting key:  accountsChannel
+setting key:  warningsChannel
+setting key:  AUTO_CLIENT_SETUP
+setting key:  httpFailuresChannel
+setting key:  FailedPaymentsChannel
+setting key:  TELEGRAM_CHANNEL_CONFIG_SAVED
+setting key:  TELEGRAM_CHANNEL_CONFIG_USER_WARNINGS
+setting key:  TELEGRAM_CHANNEL_CONFIG_CLIENT_UPDATES
+setting key:  TELEGRAM_CHANNEL_CONFIG_LOGIN_FAILURES
+setting key:  TELEGRAM_CHANNEL_CONFIG_CHANNEL_NOTIFIZ
+Environment variables set successfully!
+setting key:  link
+setting key:  name
+setting key:  qrId
+setting key:  repl
+setting key:  dbcoll
+setting key:  gpayId
+setting key:  mobile
+setting key:  product
+setting key:  session
+setting key:  clientId
+setting key:  password
+setting key:  username
+setting key:  deployKey
+setting key:  channelLink
+setting key:  mainAccount
+setting key:  promoteRepl
+setting key:  promoteMobile
+Environment variables set successfully!
+Env Mobile :  917397511107
+Starting memory monitoring (limit: 100MB, interval: 300000ms)
+🧠 Heap Used: 41.99 MB
+Fetching URL: https://api.ipify.org?format=json with options: {}
+ProcessID:  58
+Server is running on port 3019
+Your public IP address is: 93.127.185.68
+[Connection] Increment retry count to 1/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/58?clientId=nidhi1 with options: {}
+[Connection] Increment retry count to 2/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/58?clientId=nidhi1 with options: {}
+[Connection] Increment retry count to 3/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/58?clientId=nidhi1 with options: {}
+🧠 Heap Used: 32.53 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Creating MongoDb Instance
+parsedErr:  nidhi1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db')
+Fetching URL: https://api.telegram.org/bot7281017483:AAGoeVPH98k8rXUpoR22XomfAL7PzMtJVVk/sendMessage?chat_id=-1001801844217&text=nidhi1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db') with options: {}
+exitOptions:  { cleanup: true }
+clientId: nidhi1
+serviceName: promotion-clients-new
+key: 1
+Path Resolution: {
+  cwd: '/root/telegram/promote-clients',
+  baseSaveDir: '/root/telegram/promote-clients/src/services',
+  fileSavePath: '/root/telegram/promote-clients/src/services/promotion-clients-new.js'
+}
+Starting...
+Starting service load operation:
+- Service: promotion-clients-new
+- Save path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+- Current working directory: /root/telegram/promote-clients
+Configuration validation successful
+Loading builds from: https://api.npoint.io/3375d15db1eece560188
+Successfully fetched from: https://api.npoint.io/3375d15db1eece560188 in 344.09ms
+Fetched builds from fastest URL: https://api.npoint.io/3375d15db1eece560188 (344.09ms)
+Available services in response: [
+  '1',
+  '2',
+  'id',
+  'cts',
+  'ums',
+  'new-tg',
+  'cms-nst',
+  'develop',
+  'tg-prom',
+  'ums-test',
+  'updatedAt',
+  'tg-promote',
+  'tg-prom-react',
+  'tg-promote-react',
+  'promotion-clients',
+  'promotion-service',
+  'promotion-clients-new',
+  'promotion-clients-new-2',
+  'promotion-clients-new-3',
+  'promotion-clients-new-32',
+  'promotion-clients-new-3-2',
+  'promotion-clients-new-3-3',
+  'promotion-clients-new-3-4',
+  'promotion-clients-new-main',
+  'promotion-clients-new-main-2'
+]
+Starting file fetch and save operation:
+- URL: https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+- Target file: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service Url:  https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+Resolved file path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Received response buffer size: 293352 bytes
+Writing to temporary file: /root/telegram/promote-clients/src/services/promotion-clients-new.js.tmp
+Successfully wrote temporary file
+Temporary file size verified: 293352 bytes
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Target directory verified before rename
+Successfully renamed temporary file to final path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File successfully saved at: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Starting Service from path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File exists and is accessible: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File size: 293352 bytes
+Attempting to require service using absolute path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service initiation complete
+Service Started
+setting key:  id
+setting key:  apiId
+setting key:  tgcms
+setting key:  API_ID
+setting key:  CL_NAME
+setting key:  apiHash
+setting key:  API_HASH
+setting key:  demolink
+setting key:  tgHelper
+setting key:  CL_APIKEY
+setting key:  GMAIL_ADD
+setting key:  bypassURL
+setting key:  tgmanager
+setting key:  uptimebot
+setting key:  BOT_TOKENS
+setting key:  GMAIL_PASS
+setting key:  logsChatId
+setting key:  mongodburi
+setting key:  CL_APISECRET
+setting key:  NODE_OPTIONS
+setting key:  logsChannel2
+setting key:  notifChannel
+setting key:  SavedMessages
+setting key:  chatgptserver
+setting key:  ramyaredd1bot
+setting key:  uptimeChecker
+setting key:  promoteChecker
+setting key:  unwantedvideos
+setting key:  updatesChannel
+setting key:  accountsChannel
+setting key:  warningsChannel
+setting key:  AUTO_CLIENT_SETUP
+setting key:  httpFailuresChannel
+setting key:  FailedPaymentsChannel
+setting key:  TELEGRAM_CHANNEL_CONFIG_SAVED
+setting key:  TELEGRAM_CHANNEL_CONFIG_USER_WARNINGS
+setting key:  TELEGRAM_CHANNEL_CONFIG_CLIENT_UPDATES
+setting key:  TELEGRAM_CHANNEL_CONFIG_LOGIN_FAILURES
+setting key:  TELEGRAM_CHANNEL_CONFIG_CHANNEL_NOTIFIZ
+Environment variables set successfully!
+setting key:  link
+setting key:  name
+setting key:  qrId
+setting key:  repl
+setting key:  dbcoll
+setting key:  gpayId
+setting key:  mobile
+setting key:  product
+setting key:  session
+setting key:  clientId
+setting key:  password
+setting key:  username
+setting key:  deployKey
+setting key:  channelLink
+setting key:  mainAccount
+setting key:  promoteRepl
+setting key:  promoteMobile
+Environment variables set successfully!
+Env Mobile :  917397511107
+Starting memory monitoring (limit: 100MB, interval: 300000ms)
+🧠 Heap Used: 41.99 MB
+Fetching URL: https://api.ipify.org?format=json with options: {}
+ProcessID:  121
+Server is running on port 3019
+Your public IP address is: 93.127.185.68
+[Connection] Increment retry count to 1/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/121?clientId=nidhi1 with options: {}
+[Connection] Increment retry count to 2/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/121?clientId=nidhi1 with options: {}
+121 Connect Req received from:  121
+Trying to Initiate CLIENT
+Creating MongoDb Instance
+trying to connect to DB...... mongodb://sk123:B7lGqaFlMDnKAB1m@ac-oux75kn-shard-00-00.iucpdpe.mongodb.net:27017,ac-oux75kn-shard-00-01.iucpdpe.mongodb.net:27017,ac-oux75kn-shard-00-02.iucpdpe.mongodb.net:27017/tgclients?ssl=true&retryWrites=true&replicaSet=atlas-137i8d-shard-0&readPreference=primary&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1
+Connected to MongoDB
+Fetching URL: https://api.telegram.org/bot7281017483:AAGoeVPH98k8rXUpoR22XomfAL7PzMtJVVk/sendMessage?chat_id=-1001972065816&text=Starting%20nidhi1%20Promotions with options: {}
+Starting connections
+918248068734
+918220724013
+919607418307
+919845715366
+Connecting....!!
+Total clients: 4
+Reaction Instance created :  [ '918248068734', '918220724013', '919607418307', '919845715366' ] 4
+Reactions loaded from file.
+tg manager is undefined: 918248068734
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/918248068734 with options: {}
+[33m[2025-06-28T03:32:23.627] [INFO] - [Running gramJS version 2.26.21][0m
+Connected :  918248068734
+Adding event Handler
+918248068734: Updating top channels...
+918248068734 Found 40 channels to monitor.
+918248068734 Starting random channel reaction...
+918248068734 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+918248068734 Fetching dialogs from clients...
+tg manager is undefined: 918248068734
+Client is undefined: 918248068734
+918248068734 Days Left: -1
+Fetching URL: https://nidhiprom1.glitch.me/getbannedchannels with options: {}
+INFO Fetched 0 banned channels.
+918248068734  Less banned channels retrieved; proceeding with all eligible channels.
+918248068734  Sorted channels by participants count: 281
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@rabotacallcentre ✅
+tempFailCount:  0
+LastMsg:  16.04mins
+DaysLeft:  -1
+ChannelIndex: 0
+Client 918248068734: Message SENT to 1545482977 || channelIndex: 0, messageId: 837579
+tg manager is undefined: 918220724013
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/918220724013 with options: {}
+[33m[2025-06-28T03:32:27.745] [INFO] - [Running gramJS version 2.26.21][0m
+Connected :  918220724013
+Adding event Handler
+918220724013: Updating top channels...
+918220724013 Found 40 channels to monitor.
+918220724013 Starting random channel reaction...
+918220724013 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+918220724013 Fetching dialogs from clients...
+tg manager is undefined: 918220724013
+Client is undefined: 918220724013
+918220724013 Days Left: -1
+Fetching URL: https://nidhiprom1.glitch.me/getbannedchannels with options: {}
+INFO Fetched 0 banned channels.
+918220724013  Less banned channels retrieved; proceeding with all eligible channels.
+918220724013  Sorted channels by participants count: 293
+Healthy mobiles:  [ '918220724013' ]
+918220724013:
+@indiangaychatrooom ❌
+tempFailCount: 1
+LastMsg: 16.04mins
+Sleeping: -29184692.5116mins
+DaysLeft: -1
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 0
+918220724013:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 28 Jun 2025, 06:15 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 28 Jun 2025, 06:15 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  -0
+Retrying with the next token...
+tg manager is undefined: 919607418307
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/919607418307 with options: {}
+[33m[2025-06-28T03:32:31.753] [INFO] - [Running gramJS version 2.26.21][0m
+Retrying with the next token...
+Connected :  919607418307
+Adding event Handler
+919607418307: Updating top channels...
+919607418307 Found 40 channels to monitor.
+919607418307 Starting random channel reaction...
+919607418307 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+919607418307 Fetching dialogs from clients...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Healthy mobiles:  [ '918220724013' ]
+918220724013:
+@Paki_Girls_Chatting_Group ❌
+tempFailCount: 2
+LastMsg: 16.09mins
+Sleeping: -29184692.564483333mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 1
+Retrying with the next token...
+919607418307 Days Left: -1
+Fetching URL: https://nidhiprom1.glitch.me/getbannedchannels with options: {}
+INFO Fetched 2 banned channels.
+919607418307  Less banned channels retrieved; proceeding with all eligible channels.
+919607418307  Sorted channels by participants count: 257
+Healthy mobiles:  [ '919607418307' ]
+Retrying with the next token...
+919607418307:
+@Chatting_with_bhabhi ❌
+tempFailCount: 1
+LastMsg: 16.04mins
+Sleeping: -29184692.584066667mins
+DaysLeft: -1
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 0
+919607418307:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 28 Jun 2025, 06:31 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 28 Jun 2025, 06:31 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  -0
+Retrying with the next token...
+tg manager is undefined: 919845715366
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/919845715366 with options: {}
+[33m[2025-06-28T03:32:36.218] [INFO] - [Running gramJS version 2.26.21][0m
+Connected :  919845715366
+Adding event Handler
+919845715366: Updating top channels...
+Retrying with the next token...
+919845715366 Found 40 channels to monitor.
+919845715366 Starting random channel reaction...
+919845715366 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+919845715366 Fetching dialogs from clients...
+tg manager is undefined: 919845715366
+Client is undefined: 919845715366
+Healthy mobiles:  [ '918220724013' ]
+Channel 2197416057 is banned or unsuitable. Skipping... channelIndex: 2 | Coimbatore GAY GROUP🏳️‍🌈 | Coimbatore_tamil_gay_group
+Retrying with the next token...
+Retrying with the next token...
+Healthy mobiles:  [ '919607418307' ]
+Retrying with the next token...
+919607418307:
+@Girls_AndBoys_Chatting_Group_1 ✅
+tempFailCount:  1
+LastMsg:  16.10mins
+DaysLeft:  0
+ChannelIndex: 1
+Client 919607418307: Message SENT to 1508171809 || channelIndex: 1, messageId: 2853062
+Retrying with the next token...
+919845715366 Days Left: -1
+Fetching URL: https://nidhiprom1.glitch.me/getbannedchannels with options: {}
+INFO Fetched 3 banned channels.
+919845715366  Less banned channels retrieved; proceeding with all eligible channels.
+919845715366  Sorted channels by participants count: 270
+Healthy mobiles:  [ '919845715366' ]
+Retrying with the next token...
+919845715366:
+@Gf_Bf_Chating2024 ❌
+tempFailCount: 1
+LastMsg: 16.04mins
+Sleeping: -29184692.655683335mins
+DaysLeft: -1
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 0
+919845715366:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 28 Jun 2025, 18:51 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 28 Jun 2025, 18:51 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  -0
+Healthy mobiles:  [ '918220724013' ]
+Channel 1676678550 is banned or unsuitable. Skipping... channelIndex: 4 | Girls Chatting Group | GirlsGroupchatting_Group
+Connected....!!
+Healthy mobiles:  [ '919845715366' ]
+919845715366:
+@lovers_chatting ✅
+tempFailCount:  1
+LastMsg:  16.10mins
+DaysLeft:  0
+ChannelIndex: 1
+Client 919845715366: Message SENT to 1680317273 || channelIndex: 1, messageId: 4995321
+Healthy mobiles:  [ '918220724013' ]
+918220724013:
+@MUMBAI_WIFE_SWAPPING ✅
+tempFailCount:  2
+LastMsg:  16.25mins
+DaysLeft:  0
+ChannelIndex: 6
+Client 918220724013: Message SENT to 2242115837 || channelIndex: 6, messageId: 1059619
+Removed Reaction: 🤗 from chat -1002172055246 03:32:43 Before: 46, After: 45
+Message EXISTS for channelId: 1545482977, messageIndex: 0, messageId: 837579
+Removed Reaction: 🥴 from chat -1001517476111 03:32:45 Before: 41, After: 40
+Message EXISTS for channelId: 1508171809, messageIndex: 0, messageId: 2853062
+Already Reacting or invalid state, ignoring trigger  918248068734
+Already Reacting or invalid state, ignoring trigger  918220724013
+Removed Reaction: 🙉 from chat -1001517476111 03:33:01 Before: 40, After: 39
+Already Reacting or invalid state, ignoring trigger  919607418307
+Already Reacting or invalid state, ignoring trigger  919845715366
+Removed Reaction: 🎉 from chat -1001517476111 03:33:48 Before: 39, After: 38
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🥰 from chat -1001517476111 03:34:12 Before: 38, After: 37
+Removed Reaction: 🙏 from chat -1001205020667 03:34:20 Before: 45, After: 44
+Removed Reaction: ❤ from chat -1001517476111 03:34:20 Before: 37, After: 36
+Removed Reaction: 🌚 from chat -1001517476111 03:34:30 Before: 36, After: 35
+🧠 Heap Used: 53.71 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Results saved to mobileStats-919607418307.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 2.39 mins ago DaysLeft: -1
+918220724013 null  : Promotions Working fine -  LastMSg : 2.13 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 2.23 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 2.18 mins ago DaysLeft: 0
+Average Reaction Delay:  10850
+Removed Reaction: 🆒 from chat -1001517476111 03:35:07 Before: 35, After: 34
+Removed Reaction: 🌚 from chat -1001205020667 03:35:20 Before: 44, After: 43
+Removed Reaction: 🕊 from chat -1001517476111 03:35:32 Before: 34, After: 33
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🙉 from chat -1001205020667 03:36:36 Before: 43, After: 42
+Removed Reaction: 🙏 from chat -1001633130923 03:37:14 Before: 46, After: 45
+918248068734: Connection health check passed
+918248068734:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 28 Jun 2025, 06:30 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 28 Jun 2025, 06:30 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  -0
+918248068734:
+@rabotacallcentre ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 1
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+919845715366: Connection health check passed
+919607418307:
+@Girls_AndBoys_Chatting_Group_1 ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 2
+919845715366:
+@lovers_chatting ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 2
+918220724013:
+@MUMBAI_WIFE_SWAPPING ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 7
+Removed Reaction: 🙈 from chat -1001517476111 03:37:43 Before: 33, After: 32
+Removed Reaction: 🏆 from chat -1001633130923 03:38:00 Before: 45, After: 44
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤣 from chat -1002291794481 03:38:37 Before: 46, After: 45
+RPCError: 400: MESSAGE_ID_INVALID (caused by messages.SendReaction)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'MESSAGE_ID_INVALID'
+} 🤗
+918248068734 Reaction failed: MESSAGE_ID_INVALID 03:39:06
+NIDHI1-918248068734 MESSAGE_ID_INVALID
+Removed Reaction: 😴 from chat -1001633130923 03:39:26 Before: 44, After: 43
+Removed Reaction: 👻 from chat -1001944954648 03:39:43 Before: 46, After: 45
+Removed Reaction: 🏆 from chat -1002360448977 03:39:45 Before: 46, After: 45
+🧠 Heap Used: 69.32 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 2.38 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 2.12 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 2.22 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 2.17 mins ago DaysLeft: 0
+Average Reaction Delay:  8536
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: ⚡ from chat -1001633130923 03:40:11 Before: 43, After: 42
+Removed Reaction: 😱 from chat -1002291794481 03:40:17 Before: 45, After: 44
+Removed Reaction: 🤬 from chat -1002172055246 03:40:26 Before: 45, After: 44
+Removed Reaction: 🏆 from chat -1002291794481 03:40:56 Before: 44, After: 43
+Removed Reaction: 😢 from chat -1001676678550 03:41:09 Before: 46, After: 45
+Removed Reaction: 😢 from chat -1001633130923 03:41:11 Before: 42, After: 41
+Removed Reaction: 🏆 from chat -1001205020667 03:41:20 Before: 42, After: 41
+Removed Reaction: 🤝 from chat -1002219060317 03:41:46 Before: 46, After: 45
+Removed Reaction: 🐳 from chat -1002144669085 03:41:55 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤣 from chat -1001944954648 03:42:10 Before: 45, After: 44
+Removed Reaction: 👏 from chat -1001517476111 03:42:20 Before: 32, After: 31
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+919845715366: Connection health check passed
+Removed Reaction: ❤‍🔥 from chat -1001676678550 03:43:09 Before: 45, After: 44
+Removed Reaction: 🤝 from chat -1001517476111 03:43:15 Before: 31, After: 30
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤡 from chat -1002219060317 03:44:13 Before: 45, After: 44
+Removed Reaction: 😴 from chat -1001517476111 03:44:30 Before: 30, After: 29
+🧠 Heap Used: 57.35 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 7.37 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 7.12 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 7.23 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 7.17 mins ago DaysLeft: 0
+Average Reaction Delay:  7364
+Removed Reaction: 🙊 from chat -1001517476111 03:45:04 Before: 29, After: 28
+Removed Reaction: ⚡ from chat -1001517476111 03:45:31 Before: 28, After: 27
+Removed Reaction: 🤔 from chat -1001517476111 03:45:45 Before: 27, After: 26
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+919845715366: Connection health check passed
+Removed Reaction: 👏 from chat -1001906683925 03:47:56 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤷 from chat -1002229558033 03:48:41 Before: 46, After: 45
+Removed Reaction: 😐 from chat -1001517476111 03:48:41 Before: 26, After: 25
+Removed Reaction: 🤯 from chat -1001517476111 03:49:03 Before: 25, After: 24
+Removed Reaction: 🤣 from chat -1001517476111 03:49:06 Before: 24, After: 23
+Healthy mobiles:  [ '918248068734' ]
+Channel 1961716380 is banned or unsuitable. Skipping... channelIndex: 1 | KENYA CONNECT | PRETTY_GIRLS_KENYA
+Healthy mobiles:  [ '918248068734' ]
+Removed Reaction: 😭 from chat -1001676678550 03:49:34 Before: 44, After: 43
+Healthy mobiles:  [ '918248068734' ]
+Channel 1680317273 was recently promoted. Skipping... channelIndex: 4
+Healthy mobiles:  [ '918248068734' ]
+Channel 1403463191 is banned or unsuitable. Skipping... channelIndex: 6 | ⚡️Real Instagram Follow 4 Follow Group | followDx30
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '918248068734' ]
+Healthy mobiles:  [ '919607418307' ]
+Channel 1923135832 was recently promoted. Skipping... channelIndex: 3
+Healthy mobiles:  [ '919845715366' ]
+Channel 2172055246 is banned or unsuitable. Skipping... channelIndex: 2 | Couple Chatting Group | Chatting_couples_group
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@housewifegroup ✅
+tempFailCount:  2
+LastMsg:  12.32mins
+DaysLeft:  0
+ChannelIndex: 9
+Client 918248068734: Message SENT to 1179319575 || channelIndex: 9, messageId: 2251190
+Healthy mobiles:  [ '918220724013' ]
+🧠 Heap Used: 46.46 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+Healthy mobiles:  [ '919607418307' ]
+Channel 1475656900 is banned or unsuitable. Skipping... channelIndex: 5 | Girls Boys Chatting Group | Girls_chatting_Group_Home
+Healthy mobiles:  [ '919845715366' ]
+Channel 1557756869 was recently promoted. Skipping... channelIndex: 4
+918248068734 null  : Promotions Working fine -  LastMSg : 0.06 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918220724013' ]
+Channel 1923129399 was recently promoted. Skipping... channelIndex: 8
+918220724013 null  : Promotions Working fine -  LastMSg : 12.13 mins ago DaysLeft: 0
+Healthy mobiles:  [ '919607418307' ]
+Channel 1161338437 is banned or unsuitable. Skipping... channelIndex: 7 | Chennai City Call Taxi | chennaicitycalltaxi
+Healthy mobiles:  [ '919845715366' ]
+919607418307 null  : Promotions Working fine -  LastMSg : 12.23 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918220724013' ]
+919845715366 null  : Promotions Working fine -  LastMSg : 12.19 mins ago DaysLeft: 0
+Average Reaction Delay:  7554
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '919845715366' ]
+Channel 1563211251 was recently promoted. Skipping... channelIndex: 7
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '919845715366' ]
+Healthy mobiles:  [ '919607418307' ]
+919845715366:
+@ytboosta ✅
+tempFailCount:  1
+LastMsg:  12.28mins
+DaysLeft:  0
+ChannelIndex: 9
+Client 919845715366: Message SENT to 1374162834 || channelIndex: 9, messageId: 298968
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '918220724013' ]
+Channel 1302833885 was recently promoted. Skipping... channelIndex: 11
+918220724013:
+@varuthapadaathavaaliparsangam ✅
+tempFailCount:  4
+LastMsg:  12.41mins
+DaysLeft:  0
+ChannelIndex: 13
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Client 918220724013: Message SENT to 1576284857 || channelIndex: 13, messageId: 359609
+Healthy mobiles:  [ '919607418307' ]
+Message EXISTS for channelId: 1374162834, messageIndex: 0, messageId: 298968
+919607418307:
+@girls_chatting_group_69 ✅
+tempFailCount:  3
+LastMsg:  12.56mins
+DaysLeft:  0
+ChannelIndex: 13
+Client 919607418307: Message SENT to 1658248110 || channelIndex: 13, messageId: 5633603
+Message EXISTS for channelId: 1576284857, messageIndex: 0, messageId: 359609
+Removed Reaction: 🙏 from chat -1002219060317 03:50:31 Before: 44, After: 43
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤩 from chat -1002219060317 03:52:15 Before: 43, After: 42
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366: Connection health check passed
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+Removed Reaction: ❤‍🔥 from chat -1002667650209 03:52:43 Before: 46, After: 45
+Removed Reaction: ❤‍🔥 from chat -1001205020667 03:52:46 Before: 41, After: 40
+Removed Reaction: 🗿 from chat -1002144669085 03:52:47 Before: 45, After: 44
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🙏 from chat -1001906683925 03:54:14 Before: 45, After: 44
+918248068734:
+@housewifegroup ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 10
+🧠 Heap Used: 54.71 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918248068734 null  : Promotions Working fine -  LastMSg : 0.12 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 4.78 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 4.73 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 4.96 mins ago DaysLeft: 0
+Average Reaction Delay:  8074
+919845715366:
+@ytboosta ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 10
+Removed Reaction: 👎 from chat -1001517476111 03:55:03 Before: 23, After: 22
+918220724013:
+@varuthapadaathavaaliparsangam ✅
+tempFailCount:  0
+LastMsg:  5.02mins
+DaysLeft:  0
+ChannelIndex: 14
+919607418307:
+@girls_chatting_group_69 ✅
+tempFailCount:  0
+LastMsg:  5.02mins
+DaysLeft:  0
+ChannelIndex: 14
+Removed Reaction: 🙊 from chat -1002144669085 03:55:19 Before: 44, After: 43
+Removed Reaction: ⚡ from chat -1002144669085 03:55:33 Before: 43, After: 42
+Removed Reaction: 🎉 from chat -1002229558033 03:55:42 Before: 45, After: 44
+Removed Reaction: 🔥 from chat -1002353034344 03:55:54 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤯 from chat -1002667650209 03:56:28 Before: 45, After: 44
+Removed Reaction: 👻 from chat -1002144669085 03:56:53 Before: 42, After: 41
+Removed Reaction: 👻 from chat -1001205020667 03:56:59 Before: 40, After: 39
+Removed Reaction: ❤‍🔥 from chat -1002229558033 03:57:19 Before: 44, After: 43
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+Removed Reaction: 👻 from chat -1001676678550 03:57:31 Before: 43, After: 42
+919607418307: Connection health check passed
+919845715366: Connection health check passed
+Removed Reaction: 👎 from chat -1002144669085 03:57:38 Before: 41, After: 40
+Removed Reaction: 🥱 from chat -1001517476111 03:57:41 Before: 22, After: 21
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 👎 from chat -1001205020667 03:58:20 Before: 39, After: 38
+Removed Reaction: 🤡 from chat -1001517476111 03:58:37 Before: 21, After: 20
+Removed Reaction: 🍌 from chat -1001508171809 03:59:13 Before: 46, After: 45
+Removed Reaction: 💔 from chat -1001517476111 03:59:33 Before: 20, After: 19
+Removed Reaction: 💋 from chat -1002352920490 03:59:36 Before: 46, After: 45
+Removed Reaction: 😍 from chat -1002360448977 03:59:43 Before: 45, After: 44
+🧠 Heap Used: 127.37 MB
+🧹 Memory After Cleanup: {"rss":"236.63","heapUsed":"127.37","heapTotal":"157.55","external":"28.31"}
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918220724013.json
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-919845715366.json
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918248068734 null  : Promotions Working fine -  LastMSg : 5.11 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 4.75 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 4.71 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 4.95 mins ago DaysLeft: 0
+Average Reaction Delay:  9813
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 😱 from chat -1001930751834 04:00:42 Before: 46, After: 45
+Removed Reaction: 🤩 from chat -1002144669085 04:01:01 Before: 40, After: 39
+Removed Reaction: 🙉 from chat -1002229558033 04:01:39 Before: 43, After: 42
+Removed Reaction: 😴 from chat -1001508171809 04:01:54 Before: 45, After: 44
+Removed Reaction: 💔 from chat -1002352920490 04:02:02 Before: 45, After: 44
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 💯 from chat -1001304458754 04:02:17 Before: 46, After: 45
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+Removed Reaction: 🙏 from chat -1001517476111 04:02:30 Before: 19, After: 18
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+919845715366: Connection health check passed
+Removed Reaction: 🤩 from chat -1001205020667 04:02:58 Before: 38, After: 37
+Removed Reaction: 😱 from chat -1001676678550 04:03:39 Before: 42, After: 41
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤷 from chat -1001205020667 04:04:35 Before: 37, After: 36
+Removed Reaction: 🙈 from chat -1001583158814 04:04:44 Before: 46, After: 45
+🧠 Heap Used: 60.45 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 10.05 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 9.69 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 9.65 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 9.89 mins ago DaysLeft: 0
+Average Reaction Delay:  8983
+Removed Reaction: 🤮 from chat -1001205020667 04:05:10 Before: 36, After: 35
+Removed Reaction: 🐳 from chat -1001517476111 04:05:30 Before: 18, After: 17
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 👀 from chat -1001583158814 04:06:39 Before: 45, After: 44
+Removed Reaction: 🆒 from chat -1001205020667 04:06:40 Before: 35, After: 34
+Healthy mobiles:  [ '918248068734' ]
+Channel 2242494932 is banned or unsuitable. Skipping... channelIndex: 10 | NIGHTLIFE 18🪩 PLUS | NIGHT_LIFE_18_PLUS
+Healthy mobiles:  [ '918248068734' ]
+Channel 1165882042 was recently promoted. Skipping... channelIndex: 12
+Healthy mobiles:  [ '918248068734' ]
+Healthy mobiles:  [ '918248068734' ]
+Channel 1302833885 was recently promoted. Skipping... channelIndex: 15
+Healthy mobiles:  [ '918248068734' ]
+Channel 1751232033 is banned or unsuitable. Skipping... channelIndex: 17 | Girls chatting Group 🍁 | Girls_chatting_Group_Best
+Healthy mobiles:  [ '918248068734' ]
+918248068734 Some Error Occured, ALLOW_PAYMENT_REQUIRED
+Healthy mobiles:  [ '919845715366' ]
+919845715366:
+@real_chennai ✅
+tempFailCount:  0
+LastMsg:  12.14mins
+DaysLeft:  0
+ChannelIndex: 10
+Client 919845715366: Message SENT to 1257395921 || channelIndex: 10, messageId: 6382890
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@any_saves_bot3 ✅
+tempFailCount:  2
+LastMsg:  12.41mins
+DaysLeft:  0
+ChannelIndex: 20
+Client 918248068734: Message SENT to 1921834815 || channelIndex: 20, messageId: 944827
+Healthy mobiles:  [ '918220724013' ]
+918220724013:
+@Mommy_loverss ✅
+tempFailCount:  0
+LastMsg:  12.07mins
+DaysLeft:  0
+ChannelIndex: 14
+Client 918220724013: Message SENT to 2049243534 || channelIndex: 14, messageId: 4424269
+Healthy mobiles:  [ '919607418307' ]
+Channel 1335330472 was recently promoted. Skipping... channelIndex: 14
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '919607418307' ]
+919607418307:
+@CollageGirls_ChattingGroup ✅
+tempFailCount:  1
+LastMsg:  12.17mins
+DaysLeft:  0
+ChannelIndex: 17
+Client 919607418307: Message SENT to 2005046060 || channelIndex: 17, messageId: 219278
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+Message EXISTS for channelId: 2005046060, messageIndex: 0, messageId: 219278
+919845715366: Connection health check passed
+Removed Reaction: 🔥 from chat -1001906683925 04:07:41 Before: 44, After: 43
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🐳 from chat -1001676678550 04:08:45 Before: 41, After: 40
+Removed Reaction: 👍 from chat -1001633130923 04:09:12 Before: 41, After: 40
+Removed Reaction: 🤷 from chat -1001906683925 04:09:44 Before: 43, After: 42
+🧠 Heap Used: 51.57 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+Results saved to mobileStats-918220724013.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 2.65 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 2.63 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 2.49 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 2.76 mins ago DaysLeft: 0
+Average Reaction Delay:  6734
+RPCError: 400: MESSAGE_ID_INVALID (caused by messages.SendReaction)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'MESSAGE_ID_INVALID'
+} 🤩
+919607418307 Reaction failed: MESSAGE_ID_INVALID 04:10:09
+NIDHI1-919607418307 MESSAGE_ID_INVALID
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🕊 from chat -1001676678550 04:10:48 Before: 40, After: 39
+Removed Reaction: 👍 from chat -1001676678550 04:11:08 Before: 39, After: 38
+Removed Reaction: 🤷 from chat -1001676678550 04:12:04 Before: 38, After: 37
+919845715366:
+@real_chennai ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 11
+918248068734:
+@any_saves_bot3 ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 21
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918220724013:
+@Mommy_loverss ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 15
+Removed Reaction: 😴 from chat -1001804215127 04:12:23 Before: 46, After: 45
+919607418307:
+@CollageGirls_ChattingGroup ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 18
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366: Connection health check passed
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+Removed Reaction: 🤗 from chat -1001508171809 04:13:09 Before: 44, After: 43
+Removed Reaction: 😐 from chat -1001508171809 04:13:21 Before: 43, After: 42
+Removed Reaction: 🌚 from chat -1002352920490 04:13:34 Before: 44, After: 43
+Removed Reaction: 💩 from chat -1002360448977 04:13:50 Before: 44, After: 43
+Removed Reaction: 👎 from chat -1002360448977 04:14:06 Before: 43, After: 42
+Removed Reaction: 🙉 from chat -1002352920490 04:14:09 Before: 43, After: 42
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤣 from chat -1002360448977 04:14:21 Before: 42, After: 41
+Removed Reaction: 🙊 from chat -1001633130923 04:14:42 Before: 40, After: 39
+🧠 Heap Used: 58.23 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+918248068734 null  : Promotions Working fine -  LastMSg : 2.65 mins ago DaysLeft: 0
+Removed Reaction: 🙈 from chat -1001906683925 04:14:51 Before: 42, After: 41
+918220724013 null  : Promotions Working fine -  LastMSg : 2.62 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 2.49 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 2.76 mins ago DaysLeft: 0
+Average Reaction Delay:  7821
+Removed Reaction: 🤩 from chat -1002360448977 04:14:57 Before: 41, After: 40
+Removed Reaction: 😍 from chat -1001517476111 04:15:49 Before: 17, After: 16
+Removed Reaction: 🗿 from chat -1002360448977 04:15:59 Before: 40, After: 39
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: ⚡ from chat -1002360448977 04:16:55 Before: 39, After: 38
+Removed Reaction: 👏 from chat -1002326564806 04:17:18 Before: 46, After: 45
+Removed Reaction: 🤗 from chat -1001633130923 04:17:22 Before: 39, After: 38
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+Removed Reaction: ❤ from chat -1001508171809 04:17:35 Before: 42, After: 41
+919845715366: Connection health check passed
+Removed Reaction: 😐 from chat -1002360448977 04:17:42 Before: 38, After: 37
+Removed Reaction: 🕊 from chat -1002144669085 04:17:55 Before: 39, After: 38
+Removed Reaction: 🙉 from chat -1001440859013 04:18:05 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: ❤‍🔥 from chat -1002360448977 04:18:19 Before: 37, After: 36
+Removed Reaction: 🤣 from chat -1002326564806 04:18:20 Before: 45, After: 44
+Removed Reaction: 🕊 from chat -1001930751834 04:18:23 Before: 45, After: 44
+Removed Reaction: 🎉 from chat -1001944954648 04:18:25 Before: 44, After: 43
+Removed Reaction: ❤ from chat -1001944954648 04:18:45 Before: 43, After: 42
+Removed Reaction: 😍 from chat -1001440859013 04:19:20 Before: 45, After: 44
+🧠 Heap Used: 154.02 MB
+🧹 Memory After Cleanup: {"rss":"269.21","heapUsed":"154.02","heapTotal":"189.46","external":"30.34"}
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+Results saved to mobileStats-918248068734.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 7.64 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 7.61 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 7.48 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 7.76 mins ago DaysLeft: 0
+Average Reaction Delay:  8759
+Removed Reaction: 🍌 from chat -1001205020667 04:20:06 Before: 34, After: 33
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🥴 from chat -1002172055246 04:20:21 Before: 44, After: 43
+Removed Reaction: 🆒 from chat -1001930751834 04:20:27 Before: 44, After: 43
+Removed Reaction: 😢 from chat -1002360448977 04:21:13 Before: 36, After: 35
+Removed Reaction: 😭 from chat -1001955008762 04:21:20 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366: Connection health check passed
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+RPCError: 400: MESSAGE_ID_INVALID (caused by messages.SendReaction)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'MESSAGE_ID_INVALID'
+} 😭
+918220724013 Reaction failed: MESSAGE_ID_INVALID 04:22:41
+NIDHI1-918220724013 MESSAGE_ID_INVALID
+Removed Reaction: 😱 from chat -1001517476111 04:23:19 Before: 16, After: 15
+Removed Reaction: 😢 from chat -1001205020667 04:23:44 Before: 33, After: 32
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Healthy mobiles:  [ '919845715366' ]
+Healthy mobiles:  [ '918248068734' ]
+Channel 1390432111 is banned or unsuitable. Skipping... channelIndex: 21 | [Dx5] Real & Active Instagram Comments | RelatedComments
+Healthy mobiles:  [ '919845715366' ]
+919845715366 Some Error Occured, CHAT_SEND_PLAIN_FORBIDDEN
+Healthy mobiles:  [ '918220724013' ]
+918220724013 Some Error Occured, CHAT_WRITE_FORBIDDEN
+Healthy mobiles:  [ '918248068734' ]
+Channel 1804215127 is banned or unsuitable. Skipping... channelIndex: 23 | Tamil Voice Chat 💋 | null
+Healthy mobiles:  [ '919845715366' ]
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+Channel 1704908402 is banned or unsuitable. Skipping... channelIndex: 25 | Indian Bhabhi Chatting Group 😋 | Indian_Bhabhi_Chatting_Group_01
+Healthy mobiles:  [ '919845715366' ]
+919845715366:
+@CHEHHAIGAYS ✅
+tempFailCount:  3
+LastMsg:  12.24mins
+DaysLeft:  0
+ChannelIndex: 14
+Client 919845715366: Message SENT to 1641346769 || channelIndex: 14, messageId: 1808324
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+Channel 2560644105 was recently promoted. Skipping... channelIndex: 17
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+Channel 1634196722 is banned or unsuitable. Skipping... channelIndex: 19 | GIRLS BOYS WORLDWIDE CHATTING GROUP™ | GIRLS_BOYS_WORLDWIDE_CHATTING
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+Channel 1238450482 is banned or unsuitable. Skipping... channelIndex: 21 | Chatting with Girls | chattingwithgirlsgroup
+918248068734 Some Error Occured, CHAT_WRITE_FORBIDDEN
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+Channel 1520256132 was recently promoted. Skipping... channelIndex: 30
+Removed Reaction: 👻 from chat -1001517476111 04:24:35 Before: 15, After: 14
+Healthy mobiles:  [ '919607418307' ]
+Channel 1559696504 was recently promoted. Skipping... channelIndex: 21
+Healthy mobiles:  [ '918220724013' ]
+Channel 1374162834 was recently promoted. Skipping... channelIndex: 24
+Healthy mobiles:  [ '918248068734' ]
+Channel 1196724933 was recently promoted. Skipping... channelIndex: 32
+Healthy mobiles:  [ '919607418307' ]
+Channel 1403463191 is banned or unsuitable. Skipping... channelIndex: 23 | ⚡️Real Instagram Follow 4 Follow Group | followDx30
+Healthy mobiles:  [ '918220724013' ]
+Channel 1541729758 was recently promoted. Skipping... channelIndex: 26
+Healthy mobiles:  [ '918248068734' ]
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '918220724013' ]
+918220724013 Some Error Occured, TOPIC_CLOSED
+Healthy mobiles:  [ '918248068734' ]
+Channel 1790080363 was recently promoted. Skipping... channelIndex: 35
+Healthy mobiles:  [ '919607418307' ]
+Channel 1640019854 was recently promoted. Skipping... channelIndex: 26
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+🧠 Heap Used: 184.27 MB
+🧹 Memory After Cleanup: {"rss":"290.39","heapUsed":"184.28","heapTotal":"209.70","external":"32.77"}
+============Checking Health==============
+Channel 1982676159 is banned or unsuitable. Skipping... channelIndex: 37 | Indian chatting bhabhi group | Indianchattingbhabhigroup
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+Healthy mobiles:  [ '919607418307' ]
+918248068734 null  : Promotions Working fine -  LastMSg : 12.64 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+918220724013 null  : Promotions Working fine -  LastMSg : 12.61 mins ago DaysLeft: 0
+918220724013:
+@sex_mbr_msk ✅
+tempFailCount:  5
+LastMsg:  12.62mins
+DaysLeft:  0
+ChannelIndex: 30
+Client 918220724013: Message SENT to 1431796850 || channelIndex: 30, messageId: 34454013
+Healthy mobiles:  [ '919607418307' ]
+919607418307 Some Error Occured, undefined
+parsedErr:  nidhi1:Prom - Error sending message to channel :: No user has "telugu_genuine_girls" as username
+Fetching URL: https://api.telegram.org/bot7499764732:AAH3flZUF7J1zwK1xac8fI50lR24WeQAbNo/sendMessage?chat_id=-1001801844217&text=nidhi1:Prom - Error sending message to channel :: No user has "telugu_genuine_girls" as username with options: {}
+919607418307 null  : Promotions Working fine -  LastMSg : 12.48 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 0.51 mins ago DaysLeft: 0
+Average Reaction Delay:  7246
+Healthy mobiles:  [ '918248068734' ]
+Channel 1601082775 was recently promoted. Skipping... channelIndex: 40
+Healthy mobiles:  [ '919607418307' ]
+919607418307 Some Error Occured, undefined
+parsedErr:  nidhi1:Prom - Error sending message to channel :: No user has "girlfriend_chatting_4u" as username
+Fetching URL: https://api.telegram.org/bot6735591051:AAELwIkSHegcBIVv5pf484Pn09WNQj1Nl54/sendMessage?chat_id=-1001801844217&text=nidhi1:Prom - Error sending message to channel :: No user has "girlfriend_chatting_4u" as username with options: {}
+919607418307:
+@Girlfriend_chatting_4u ❌
+tempFailCount: 7
+LastMsg: 12.53mins
+Sleeping: -29184744.921516668mins
+DaysLeft: 0
+Reason: undefined
+channelIndex: 30
+RPCError: 400: MESSAGE_ID_INVALID (caused by messages.SendReaction)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'MESSAGE_ID_INVALID'
+} 😍
+919607418307 Reaction failed: MESSAGE_ID_INVALID 04:24:56
+NIDHI1-919607418307 MESSAGE_ID_INVALID
+Healthy mobiles:  [ '918248068734' ]
+Healthy mobiles:  [ '919607418307' ]
+919607418307:
+@null ✅
+tempFailCount:  7
+LastMsg:  12.58mins
+DaysLeft:  0
+ChannelIndex: 31
+Client 919607418307: Message SENT to 2439761649 || channelIndex: 31, messageId: 423214
+918220724013:A_gupta07-5965078970 ::  Hloo
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@Girls_love_xxROOM ❌
+tempFailCount: 7
+LastMsg: 12.85mins
+Sleeping: -29184745.040133335mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 43
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@TamilAnutyveriyanahahahah ❌
+tempFailCount: 8
+LastMsg: 12.90mins
+Sleeping: -29184745.098733332mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 44
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@RCSClub ❌
+tempFailCount: 9
+LastMsg: 12.97mins
+Sleeping: -29184745.16mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 45
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@hot_sex_photo ✅
+tempFailCount:  9
+LastMsg:  13.03mins
+DaysLeft:  0
+ChannelIndex: 46
+Client 918248068734: Message SENT to 1396931099 || channelIndex: 46, messageId: 84063564
+Removed Reaction: 😁 from chat -1001517476111 04:25:16 Before: 14, After: 13
+User Not Exist Calling Now 5965078970
+Removed Reaction: 🥰 from chat -1002667650209 04:25:53 Before: 44, After: 43
+RPCError: 400: MESSAGE_ID_INVALID (caused by messages.SendReaction)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'MESSAGE_ID_INVALID'
+} 😁
+919607418307 Reaction failed: MESSAGE_ID_INVALID 04:26:07
+NIDHI1-919607418307 MESSAGE_ID_INVALID
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918220724013:A_gupta07-5965078970 ::  Can you call
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 😢 from chat -1001517476111 04:26:22 Before: 13, After: 12
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 🤩 from chat -1002443984888 04:26:56 Before: 46, After: 45
+User Not Exist Calling Now 5965078970
+parsedErr:  nidhi1:Prom - Failed to Call :: 403: USER_PRIVACY_RESTRICTED (caused by phone.RequestCall)
+NIDHI1-918220724013 USER_PRIVACY_RESTRICTED
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+919845715366: Connection health check passed
+Removed Reaction: 🏆 from chat -1001517476111 04:27:42 Before: 12, After: 11
+918220724013:A_gupta07-5965078970 ::  Not my side your sude
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 🤝 from chat -1001676678550 04:28:10 Before: 37, After: 36
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🙉 from chat -1001629757418 04:29:17 Before: 46, After: 45
+919845715366:
+@CHEHHAIGAYS ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 15
+USer Exist Clearing interval 5965078970 2 undefined
+Removed Reaction: 🙈 from chat -1001629757418 04:29:33 Before: 45, After: 44
+🧠 Heap Used: 111.57 MB
+🧹 Memory After Cleanup: {"rss":"255.66","heapUsed":"111.57","heapTotal":"175.45","external":"26.46"}
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Results saved to mobileStats-919607418307.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 4.61 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 4.99 mins ago DaysLeft: 0
+918220724013:
+@sex_mbr_msk ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 31
+919607418307 null  : Promotions Working fine -  LastMSg : 4.89 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 0.50 mins ago DaysLeft: 0
+Average Reaction Delay:  6673
+919607418307:
+@null ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 32
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918248068734:
+@hot_sex_photo ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 47
+Removed Reaction: 👏 from chat -1001930751834 04:30:30 Before: 43, After: 42
+Removed Reaction: 😁 from chat -1001676678550 04:31:05 Before: 36, After: 35
+Removed Reaction: ❤ from chat -1002443984888 04:31:06 Before: 45, After: 44
+Removed Reaction: 🥰 from chat -1001676678550 04:31:27 Before: 35, After: 34
+Removed Reaction: 💯 from chat -1001205020667 04:31:41 Before: 32, After: 31
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+919845715366: Connection health check passed
+Removed Reaction: 😴 from chat -1001682949860 04:32:46 Before: 46, After: 45
+Removed Reaction: 😭 from chat -1001508171809 04:32:48 Before: 41, After: 40
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 👌 from chat -1002122118869 04:34:17 Before: 46, After: 45
+🧠 Heap Used: 86.64 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+918248068734 null  : Promotions Working fine -  LastMSg : 4.60 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 4.98 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 4.89 mins ago DaysLeft: 0
+Removed Reaction: 🙏 from chat -1001508171809 04:34:52 Before: 40, After: 39
+919845715366 null  : Promotions Working fine -  LastMSg : 5.50 mins ago DaysLeft: 0
+Average Reaction Delay:  6029
+Removed Reaction: 💯 from chat -1001508171809 04:34:54 Before: 39, After: 38
+Removed Reaction: 🤷 from chat -1001517476111 04:35:03 Before: 11, After: 10
+Removed Reaction: 👻 from chat -1002667650209 04:35:15 Before: 43, After: 42
+Removed Reaction: 🤔 from chat -1001682949860 04:35:25 Before: 45, After: 44
+Removed Reaction: 🙏 from chat -1002172055246 04:35:28 Before: 43, After: 42
+Removed Reaction: 🤝 from chat -1001508171809 04:36:03 Before: 38, After: 37
+Removed Reaction: 🥱 from chat -1001804215127 04:36:08 Before: 45, After: 44
+Removed Reaction: 🤗 from chat -1001517476111 04:36:08 Before: 10, After: 9
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 👏 from chat -1002122118869 04:36:44 Before: 45, After: 44
+Removed Reaction: 🤝 from chat -1001944954648 04:37:01 Before: 42, After: 41
+Removed Reaction: 🤩 from chat -1001517476111 04:37:23 Before: 9, After: 8
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+919845715366: Connection health check passed
+Removed Reaction: ❤‍🔥 from chat -1001517476111 04:38:11 Before: 8, After: 7
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🍌 from chat -1001517476111 04:38:28 Before: 7, After: 6
+Removed Reaction: 🌚 from chat -1001804215127 04:38:28 Before: 44, After: 43
+Removed Reaction: 🤬 from chat -1001517476111 04:38:40 Before: 6, After: 5
+Removed Reaction: 😭 from chat -1001517476111 04:38:49 Before: 5, After: 4
+Removed Reaction: 🤯 from chat -1002326564806 04:39:14 Before: 44, After: 43
+Removed Reaction: 😴 from chat -1001440859013 04:39:29 Before: 44, After: 43
+Removed Reaction: ⚡ from chat -1001508171809 04:39:35 Before: 37, After: 36
+🧠 Heap Used: 119.94 MB
+🧹 Memory After Cleanup: {"rss":"229.20","heapUsed":"119.95","heapTotal":"147.70","external":"26.94"}
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+Removed Reaction: 🤣 from chat -1001440859013 04:39:48 Before: 43, After: 42
+918248068734 null  : Promotions Working fine -  LastMSg : 9.61 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 9.98 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 9.89 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 10.50 mins ago DaysLeft: 0
+Average Reaction Delay:  7709
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤬 from chat -1001440859013 04:40:16 Before: 42, After: 41
+Removed Reaction: 🥱 from chat -1002520483591 04:40:32 Before: 46, After: 45
+Removed Reaction: 🔥 from chat -1001517476111 04:40:47 Before: 4, After: 3
+Removed Reaction: 🤗 from chat -1001804215127 04:41:09 Before: 43, After: 42
+Removed Reaction: 😱 from chat -1002229558033 04:41:20 Before: 42, After: 41
+Healthy mobiles:  [ '919845715366' ]
+Channel 1445214697 was recently promoted. Skipping... channelIndex: 15
+Healthy mobiles:  [ '919845715366' ]
+Channel 1147388521 is banned or unsuitable. Skipping... channelIndex: 17 | Hyd Resale Plots & Lands Only | hyderabadrealestateservices
+Healthy mobiles:  [ '919845715366' ]
+919845715366 Some Error Occured, CHAT_SEND_PLAIN_FORBIDDEN
+Healthy mobiles:  [ '919845715366' ]
+Channel 1528695808 was recently promoted. Skipping... channelIndex: 20
+Healthy mobiles:  [ '919845715366' ]
+919845715366:
+@null ✅
+tempFailCount:  1
+LastMsg:  12.27mins
+DaysLeft:  0
+ChannelIndex: 22
+Client 919845715366: Message SENT to 2237386206 || channelIndex: 22, messageId: 4190524
+Removed Reaction: 🙏 from chat -1002229558033 04:41:40 Before: 41, After: 40
+Removed Reaction: 💔 from chat -1001682949860 04:41:50 Before: 44, After: 43
+Healthy mobiles:  [ '918220724013' ]
+Channel 2074103055 is banned or unsuitable. Skipping... channelIndex: 31 | Dubai Gay Arab Gay Egypt Gay Cairo Sudan Algeria Saudi Arabia Riyadh Morocco Yemen Qatar Syria Tunisia Kuwait Iraq UAE Gay Group | Dubaigay
+Healthy mobiles:  [ '918220724013' ]
+Removed Reaction: 👌 from chat -1001517476111 04:42:00 Before: 3, After: 2
+Healthy mobiles:  [ '918220724013' ]
+Channel 2404316034 is banned or unsuitable. Skipping... channelIndex: 34 | Wife Swapping 💋 | SWAPPING_INDIA_WIFE_REA
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '918220724013' ]
+Channel 1750424413 was recently promoted. Skipping... channelIndex: 37
+Healthy mobiles:  [ '919607418307' ]
+Channel 1476492615 is banned or unsuitable. Skipping... channelIndex: 33 | Girls Chatting Group | GirlschattingGroup_Group
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Healthy mobiles:  [ '918220724013' ]
+918220724013:
+@Gay_arabul ✅
+tempFailCount:  2
+LastMsg:  12.35mins
+DaysLeft:  0
+ChannelIndex: 39
+Client 918220724013: Message SENT to 1847027610 || channelIndex: 39, messageId: 4672765
+Healthy mobiles:  [ '919607418307' ]
+Channel 1567236720 is banned or unsuitable. Skipping... channelIndex: 35 | WIFE SWAPPING CHATTING | WIFE_SWAPPING_CHATTING_INDIA_1
+Healthy mobiles:  [ '918248068734' ]
+Healthy mobiles:  [ '919607418307' ]
+Channel 1646222363 is banned or unsuitable. Skipping... channelIndex: 37 | ಕರ್ನಾಟಕ - 𝙁𝙍𝙄𝙀𝙉𝘿𝙎𝙃𝙄𝙋 𝙘𝙡𝙪𝙗 - 𝗟𝗚𝗕𝗧𝗤+🏳️‍🌈 | kannadagay143
+Healthy mobiles:  [ '918248068734' ]
+Healthy mobiles:  [ '919607418307' ]
+918248068734:
+@girlfriend_4u_new ✅
+tempFailCount:  1
+LastMsg:  12.11mins
+DaysLeft:  0
+ChannelIndex: 48
+Channel 1181585681 was recently promoted. Skipping... channelIndex: 39
+Client 918248068734: Message SENT to 1609479138 || channelIndex: 48, messageId: 631288
+Healthy mobiles:  [ '919607418307' ]
+Channel 1966636775 was recently promoted. Skipping... channelIndex: 41
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+Removed Reaction: 🥱 from chat -1001930751834 04:42:25 Before: 42, After: 41
+Healthy mobiles:  [ '919607418307' ]
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+Healthy mobiles:  [ '919607418307' ]
+919607418307:
+@Girlz_chat_Group ✅
+tempFailCount:  2
+LastMsg:  12.53mins
+DaysLeft:  0
+ChannelIndex: 44
+Client 919607418307: Message SENT to 1627383361 || channelIndex: 44, messageId: 2945325
+Message EXISTS for channelId: 1847027610, messageIndex: 0, messageId: 4672765
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+919845715366: Connection health check passed
+Message EXISTS for channelId: 1609479138, messageIndex: 0, messageId: 631288
+Message EXISTS for channelId: 1627383361, messageIndex: 0, messageId: 2945325
+Removed Reaction: 🙏 from chat -1002144669085 04:42:49 Before: 38, After: 37
+Removed Reaction: 🥴 from chat -1001508171809 04:43:06 Before: 36, After: 35
+Removed Reaction: 🤣 from chat -1002144669085 04:43:31 Before: 37, After: 36
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🥴 from chat -1002144669085 04:44:13 Before: 36, After: 35
+Removed Reaction: 👏 from chat -1001676678550 04:44:26 Before: 34, After: 33
+🧠 Heap Used: 59.27 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 2.49 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 2.64 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 2.36 mins ago DaysLeft: 0
+Removed Reaction: 🙉 from chat -1002463350606 04:44:53 Before: 46, After: 45
+919845715366 null  : Promotions Working fine -  LastMSg : 3.23 mins ago DaysLeft: 0
+Average Reaction Delay:  8870
+Removed Reaction: 👌 from chat -1001676678550 04:45:12 Before: 33, After: 32
+Removed Reaction: 🤡 from chat -1001676678550 04:45:25 Before: 32, After: 31
+Removed Reaction: 🙉 from chat -1001508171809 04:45:38 Before: 35, After: 34
+Removed Reaction: 😴 from chat -1002326564806 04:45:54 Before: 43, After: 42
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+919845715366:
+@null ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 23
+918220724013:
+@Gay_arabul ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 40
+918248068734:
+@girlfriend_4u_new ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 49
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+919607418307 Some Error Occured, FLOOD
+919607418307: Connection health check passed
+919845715366: Connection health check passed
+Removed Reaction: 🤮 from chat -1001930751834 04:47:46 Before: 41, After: 40
+Removed Reaction: 🤔 from chat -1002144669085 04:47:55 Before: 35, After: 34
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+🧠 Heap Used: 81.25 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 2.49 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 2.63 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 7.36 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 3.22 mins ago DaysLeft: 0
+Average Reaction Delay:  5759
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🎉 from chat -1002360448977 04:51:19 Before: 35, After: 34
+Removed Reaction: 🤷 from chat -1001508171809 04:51:38 Before: 34, After: 33
+Removed Reaction: 🤯 from chat -1002360448977 04:51:39 Before: 34, After: 33
+Removed Reaction: ⚡ from chat -1001676678550 04:51:41 Before: 31, After: 30
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+Removed Reaction: 👍 from chat -1001567236720 04:52:29 Before: 46, After: 45
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+Removed Reaction: 🤮 from chat -1002172055246 04:52:35 Before: 42, After: 41
+919845715366: Updating top channels...
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+919845715366: Connection health check passed
+Removed Reaction: 🍌 from chat -1001906683925 04:52:54 Before: 41, After: 40
+Removed Reaction: 👀 from chat -1001517476111 04:53:37 Before: 2, After: 1
+Removed Reaction: 😭 from chat -1002172055246 04:54:09 Before: 41, After: 40
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🆒 from chat -1002172055246 04:54:35 Before: 40, After: 39
+Healthy mobiles:  [ '919607418307' ]
+919607418307 Some Error Occured, TOPIC_CLOSED
+Healthy mobiles:  [ '919607418307' ]
+Channel 1418889337 is banned or unsuitable. Skipping... channelIndex: 46 | Gurugram Property Dealers | LOANS & FINANCE Delhi NCR Services | HPFC_Net_India
+Healthy mobiles:  [ '919607418307' ]
+Channel 1334120967 was recently promoted. Skipping... channelIndex: 48
+Healthy mobiles:  [ '919607418307' ]
+Channel 1804215127 is banned or unsuitable. Skipping... channelIndex: 50 | Tamil Voice Chat 💋 | null
+Removed Reaction: 😐 from chat -1001804215127 04:54:46 Before: 42, After: 41
+🧠 Heap Used: 56.47 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Results saved to mobileStats-918248068734.json
+Setting Mobiles in Reaction Instance 4
+Healthy mobiles:  [ '919607418307' ]
+918248068734 null  : Promotions Working fine -  LastMSg : 7.50 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 7.64 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 12.37 mins ago DaysLeft: 0
+Healthy mobiles:  [ '919607418307' ]
+919607418307:
+@girls_chating_group1 ✅
+tempFailCount:  2
+LastMsg:  12.39mins
+DaysLeft:  0
+ChannelIndex: 53
+Client 919607418307: Message SENT to 1525381341 || channelIndex: 53, messageId: 3278678
+919845715366 null  : Promotions Working fine -  LastMSg : 8.24 mins ago DaysLeft: 0
+Average Reaction Delay:  6930
+Removed Reaction: 💔 from chat -1001906683925 04:55:00 Before: 40, After: 39
+Removed Reaction: 🔥 from chat -1001930751834 04:55:28 Before: 40, After: 39
+Removed Reaction: 😱 from chat -1002172055246 04:55:42 Before: 39, After: 38
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🗿 from chat -1001906683925 04:57:03 Before: 39, After: 38
+918248068734: Connection health check passed
+Removed Reaction: 🤗 from chat -1001257575639 04:57:26 Before: 46, After: 45
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+919845715366: Connection health check passed
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Healthy mobiles:  [ '919845715366' ]
+Channel 1547912539 was recently promoted. Skipping... channelIndex: 23
+Healthy mobiles:  [ '919845715366' ]
+Channel 1804215127 is banned or unsuitable. Skipping... channelIndex: 25 | Tamil Voice Chat 💋 | null
+Removed Reaction: 💩 from chat -1001676678550 04:58:48 Before: 30, After: 29
+Healthy mobiles:  [ '919845715366' ]
+Healthy mobiles:  [ '919845715366' ]
+Healthy mobiles:  [ '919845715366' ]
+919845715366:
+@punearealestate ✅
+tempFailCount:  2
+LastMsg:  12.27mins
+DaysLeft:  0
+ChannelIndex: 29
+Client 919845715366: Message SENT to 1270175890 || channelIndex: 29, messageId: 6913801
+Removed Reaction: 🤗 from chat -1002219060317 04:59:16 Before: 42, After: 41
+Healthy mobiles:  [ '918220724013' ]
+Channel 1618599335 was recently promoted. Skipping... channelIndex: 40
+Healthy mobiles:  [ '918220724013' ]
+Channel 1142038434 was recently promoted. Skipping... channelIndex: 42
+Healthy mobiles:  [ '918220724013' ]
+Healthy mobiles:  [ '918248068734' ]
+918248068734:
+@love_chatting_group ✅
+tempFailCount:  0
+LastMsg:  12.07mins
+DaysLeft:  0
+ChannelIndex: 49
+Client 918248068734: Message SENT to 1525462532 || channelIndex: 49, messageId: 5992380
+Healthy mobiles:  [ '918220724013' ]
+918220724013:
+@hot_sex_photo ✅
+tempFailCount:  1
+LastMsg:  12.23mins
+DaysLeft:  0
+ChannelIndex: 45
+Client 918220724013: Message SENT to 1396931099 || channelIndex: 45, messageId: 84064490
+Removed Reaction: 🆒 from chat -1001906683925 04:59:31 Before: 38, After: 37
+🧠 Heap Used: 87.70 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Results saved to mobileStats-919607418307.json
+Setting Mobiles in Reaction Instance 4
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918248068734 null  : Promotions Working fine -  LastMSg : 0.49 mins ago DaysLeft: 0
+919607418307:
+@girls_chating_group1 ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 54
+918220724013 null  : Promotions Working fine -  LastMSg : 0.46 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 0.03 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 1.02 mins ago DaysLeft: 0
+Average Reaction Delay:  6596
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🙊 from chat -1001368590193 05:01:02 Before: 46, After: 45
+Removed Reaction: 🤝 from chat -1002172055246 05:01:22 Before: 38, After: 37
+Removed Reaction: 👀 from chat -1002172055246 05:01:55 Before: 37, After: 36
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+Removed Reaction: ⚡ from chat -1002172055246 05:02:27 Before: 36, After: 35
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+919845715366: Connection health check passed
+Removed Reaction: 🥱 from chat -1001676678550 05:02:50 Before: 29, After: 28
+919845715366:
+@punearealestate ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 30
+Removed Reaction: 💋 from chat -1002229558033 05:03:59 Before: 40, After: 39
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+918248068734:
+@love_chatting_group ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 50
+918220724013:
+@hot_sex_photo ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 46
+Removed Reaction: 🆒 from chat -1002122118869 05:04:31 Before: 44, After: 43
+🧠 Heap Used: 72.38 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918248068734 null  : Promotions Working fine -  LastMSg : 0.48 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 0.46 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 5.03 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 1.01 mins ago DaysLeft: 0
+Average Reaction Delay:  6923
+Removed Reaction: 🏆 from chat -1002144669085 05:05:24 Before: 34, After: 33
+Removed Reaction: 😱 from chat -1001629757418 05:06:12 Before: 44, After: 43
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 👍 from chat -1002122118869 05:06:36 Before: 43, After: 42
+Removed Reaction: 🤔 from chat -1001676678550 05:06:41 Before: 28, After: 27
+918248068734: Connection health check passed
+918220724013: Connection health check passed
+919607418307: Connection health check passed
+Removed Reaction: 👻 from chat -1001368590193 05:07:32 Before: 45, After: 44
+919845715366: Connection health check passed
+Removed Reaction: 👎 from chat -1001676678550 05:07:48 Before: 27, After: 26
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🤗 from chat -1001676678550 05:08:36 Before: 26, After: 25
+Removed Reaction: 🥱 from chat -1001304458754 05:08:57 Before: 45, After: 44
+Removed Reaction: 🙈 from chat -1001304458754 05:09:22 Before: 44, After: 43
+Removed Reaction: 🤣 from chat -1001304458754 05:09:42 Before: 43, After: 42
+🧠 Heap Used: 81.54 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-918248068734.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+Setting Mobiles in Reaction Instance 4
+918248068734 null  : Promotions Working fine -  LastMSg : 5.42 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 5.40 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 9.98 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 5.96 mins ago DaysLeft: 0
+Average Reaction Delay:  7450
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🎉 from chat -1001930751834 05:11:05 Before: 39, After: 38
+Removed Reaction: 👎 from chat -1001930751834 05:11:40 Before: 38, After: 37
+Healthy mobiles:  [ '919607418307' ]
+Channel 1588588864 was recently promoted. Skipping... channelIndex: 54
+Healthy mobiles:  [ '919607418307' ]
+Healthy mobiles:  [ '919607418307' ]
+919607418307:
+@ytboosta ✅
+tempFailCount:  1
+LastMsg:  12.18mins
+DaysLeft:  0
+ChannelIndex: 57
+Client 919607418307: Message SENT to 1374162834 || channelIndex: 57, messageId: 299189
+Removed Reaction: 💔 from chat -1001676678550 05:12:12 Before: 25, After: 24
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Message EXISTS for channelId: 1374162834, messageIndex: 0, messageId: 299189
+918248068734: Updating top channels...
+918248068734: Connection health check passed
+918248068734 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918248068734
+918220724013: Updating top channels...
+918220724013: Connection health check passed
+918220724013 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918220724013
+919607418307: Updating top channels...
+919607418307: Connection health check passed
+919607418307 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919607418307
+919845715366: Updating top channels...
+919845715366 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  919845715366
+919845715366: Connection health check passed
+Removed Reaction: 💔 from chat -1002667650209 05:12:54 Before: 42, After: 41
+Removed Reaction: 🥰 from chat -1001205020667 05:13:10 Before: 31, After: 30
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Removed Reaction: 🏆 from chat -1001257575639 05:14:29 Before: 45, After: 44
+🧠 Heap Used: 63.38 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918220724013.json
+Results saved to mobileStats-919607418307.json
+Results saved to mobileStats-919845715366.json
+Results saved to mobileStats-918248068734.json
+918248068734 null  : Promotions Working fine -  LastMSg : 10.42 mins ago DaysLeft: 0
+918220724013 null  : Promotions Working fine -  LastMSg : 10.39 mins ago DaysLeft: 0
+919607418307 null  : Promotions Working fine -  LastMSg : 2.79 mins ago DaysLeft: 0
+919845715366 null  : Promotions Working fine -  LastMSg : 10.95 mins ago DaysLeft: 0
+Average Reaction Delay:  6778
+Removed Reaction: 👀 from chat -1001906683925 05:15:07 Before: 37, After: 36
+Removed Reaction: 👍 from chat -1001205020667 05:15:26 Before: 30, After: 29
+Healthy mobiles:  [ '919845715366' ]
+Healthy mobiles:  [ '919845715366' ]
+Channel 2074103055 is banned or unsuitable. Skipping... channelIndex: 31 | Dubai Gay Arab Gay Egypt Gay Cairo Sudan Algeria Saudi Arabia Riyadh Morocco Yemen Qatar Syria Tunisia Kuwait Iraq UAE Gay Group | Dubaigay
+Healthy mobiles:  [ '919845715366' ]
+Healthy mobiles:  [ '919845715366' ]
+Channel 2125954579 was recently promoted. Skipping... channelIndex: 34
+Healthy mobiles:  [ '919845715366' ]
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=nidhi1 with options: {}
+Healthy mobiles:  [ '919845715366' ]

@@ -1,0 +1,423 @@
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+(node:73521) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:73521) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+File not found: ./mobileStats-918100492112.json
+File not found: ./mobileStats-919666126011.json
+File not found: ./mobileStats-919908119344.json
+Client 919666126011: Error sending message to SWAPPING_INDIA_P4U: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to SWAPPING_INDIA_P4U: USER_BANNED_IN_CHANNEL
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : Limited :  919666126011 as daysLeft : 0
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : Limited :  919666126011 as daysLeft : 0
+File not found: ./mobileStats-917696106962.json
+Client 917696106962: Error sending message to geniunegirlsclub: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Shilpasree_BEST_LOVER: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to HOUSE_WIFE_CHATTING: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to Matrimony_Dating_Group: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Sweet_Girls_Chatting_Group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Single_Girls_Chatting_Friendship: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to FRIENDS_ARE_LOVE: CHAT_WRITE_FORBIDDEN
+918100492112: CHAT_WRITE_FORBIDDEN
+Client 919666126011: Error sending message to Free_Girls_Chatting_Group: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to FRIENDSHIP_CHAT_GROUP0: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to M21771: TOPIC_CLOSED
+919666126011: TOPIC_CLOSED
+Client 919666126011: Error sending message to Delhi_Gay_Group_no1: USER_BANNED_IN_CHANNEL
+Failed to process messages in channel Pune-Real-Estate - No Brokers: RPCError: 406: AUTH_KEY_DUPLICATED (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 406,
+  errorMessage: 'AUTH_KEY_DUPLICATED'
+}
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+Database instance does not exist.
+(node:73862) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:73862) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+Client 919666126011: Error sending message to g4boysgettingpaid: CHAT_WRITE_FORBIDDEN
+919666126011: CHAT_WRITE_FORBIDDEN
+Client 919666126011: Error sending message to Chattingwithgirls_group: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to And_Girls_Boys_Group_Chatting0: USER_BANNED_IN_CHANNEL
+Database instance does not exist.
+Database instance does not exist.
+(node:73939) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:73939) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+Client 918100492112: Error sending message to girls_Love_chatting_group_07: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to GangOfGiirls: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to Couplessmaping1: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to smart_girls_group: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to shaadi_com: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Lucky_Draw_Master_Service_Group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Anesthesia_PPTs_PDFs_Videos: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to indian_service_girls: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Gf_Bf_Chating2024: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to genuinepaidgroup987: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to american_dating_girls_usa_uk: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Village_GirlsChattingGroup: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to slfriends20: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to BangaloreGirlsAndHotAunt: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Cute_Girls_ChattingGroup: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Sweet_Girls_Chatting_Group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to GirlsBoysXD: USER_BANNED_IN_CHANNEL
+Failed to process messages in channel Delhi NCR Gay Group (GIG) chat: RPCError: 400: CHANNEL_PRIVATE (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'CHANNEL_PRIVATE'
+}
+Client 917696106962: Error sending message to null: USER_BANNED_IN_CHANNEL
+Timeout error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: timeout of 1500ms exceeded message:  @SOWMYA2 : 918100492112
+kalai0305: Demo video call
+Client 917696106962: Error sending message to girls_and_boys_chatting_group5: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to amaloversclub: USER_BANNED_IN_CHANNEL
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: ..
+Message sending failed after 8 retries
+🚨 Heap exceeded 100 MB. Cleaning up...
+⚠️ GC not available. Start Node with --expose-gc
+Failed to process messages in channel Delhi NCR Gay Group (GIG) chat: RPCError: 400: CHANNEL_PRIVATE (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'CHANNEL_PRIVATE'
+}
+Timeout error with token 7958113591:AAG_HKjeSu35Abm4ktqU46FqIhAaprR9KaA: timeout of 1500ms exceeded message:  @SOWMYA2 : 918100492112
+kalai0305: Call now
+Client 917696106962: Error sending message to null: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to tamil_gay_group143: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to WIFE_SWAPPING_BULLS: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to gaychat_gr: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to girls_chatting_group_lovers: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to smart_girls_group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Telugu_Friends_ChattingGroup: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to collage_girl_frand: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to friendwithbenefitbase: CHAT_WRITE_FORBIDDEN
+917696106962: CHAT_WRITE_FORBIDDEN
+Failed to process messages in channel Delhi NCR Gay Group (GIG) chat: RPCError: 400: CHANNEL_PRIVATE (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'CHANNEL_PRIVATE'
+}
+Failed to process messages in channel Delhi NCR Gay Group (GIG) chat: RPCError: 400: CHANNEL_PRIVATE (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'CHANNEL_PRIVATE'
+}
+Failed to process messages in channel Delhi NCR Gay Group (GIG) chat: RPCError: 400: CHANNEL_PRIVATE (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'CHANNEL_PRIVATE'
+}
+Failed to process messages in channel Delhi NCR Gay Group (GIG) chat: RPCError: 400: CHANNEL_PRIVATE (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'CHANNEL_PRIVATE'
+}
+🚨 Heap exceeded 100 MB. Cleaning up...
+⚠️ GC not available. Start Node with --expose-gc
+Error: TIMEOUT
+    at /root/telegram/promote-clients/node_modules/telegram/client/updates.js:250:85
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:538:9)
+    at process.processTimers (node:internal/timers:512:7)
+    at async _updateLoop (/root/telegram/promote-clients/node_modules/telegram/client/updates.js:191:17)
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: I can't send messages
+Message sending failed after 8 retries
+Client 917696106962: Error sending message to mkdphotostudiofamily: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to benaughtycom: CHAT_WRITE_FORBIDDEN
+917696106962: CHAT_WRITE_FORBIDDEN
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Client 917696106962: Error sending message to Bhabhi_Chatting_Group01: USER_BANNED_IN_CHANNEL
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 918100492112
+kalai0305: You call me
+Message sending failed after 8 retries
+Client 917696106962: Error sending message to Girls_Boys_CHATTING_GROUP_007: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to paidstudies: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Couplessmaping1: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to WIFE_SWaping_india_115: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Darazmysteryboxlovers: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to telugu_groups_friends_chatting: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Bengaligaygroup: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Shilpasree_SWAPPING_INDIA: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to callboyservice02: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Friends_Chatting_Group_Haweli: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to top_dating_usa_chat: ALLOW_PAYMENT_REQUIRED
+918100492112: ALLOW_PAYMENT_REQUIRED
+Client 918100492112: Error sending message to Ahmedabadgayboy: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Bangladeshigaygroup: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Girls_Chatting_Group_100K: USER_BANNED_IN_CHANNEL
+Error: TIMEOUT
+    at /root/telegram/promote-clients/node_modules/telegram/client/updates.js:250:85
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processTimers (node:internal/timers:509:9)
+    at async _updateLoop (/root/telegram/promote-clients/node_modules/telegram/client/updates.js:191:17)
+Client 917696106962: Error sending message to indorereal: CHAT_WRITE_FORBIDDEN
+917696106962: CHAT_WRITE_FORBIDDEN
+Client 917696106962: Error sending message to World_friends_chatting_zonee: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to americangaychat: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to FREE_Couple_Showww: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to girls_and_boys6: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to Village_GirlsChattingGroup: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to CHATTING_GIRLS_BOYS_GROUP: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Hindi_Friends_Chattings_Group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to BaByGiRLGaP: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Adults_Chat_fun_Group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to srilankan_boys_and_girls_chat: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Bengaligaygroup: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to CallGirls_And_Playboys: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Paki_bhaabhi_ChattingGroup: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to aapnemoviewalebaba: CHAT_SEND_PLAIN_FORBIDDEN
+917696106962: CHAT_SEND_PLAIN_FORBIDDEN
+Client 918100492112: Error sending message to WIFE_SWAPPING_INDIAN_MEETING: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to virtiklove: ALLOW_PAYMENT_REQUIRED
+918100492112: ALLOW_PAYMENT_REQUIRED
+Client 917696106962: Error sending message to jagruthiimpact: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to And_Girls_Boys_Group_Chatting0: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to indianwife_Swapping: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to SWAPPING_INDIA_P4U: USER_BANNED_IN_CHANNEL
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6517: last:0.06mins
+
+Message sending failed after 8 retries
+Client 917696106962: Error sending message to Ayesha_X_girl: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to girlsandboyschattingroup8: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to humasfar_KI_LOVE: USER_BANNED_IN_CHANNEL
+🚨 Heap exceeded 100 MB. Cleaning up...
+⚠️ GC not available. Start Node with --expose-gc
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6041: last:0.09mins
+
+Message sending failed after 8 retries
+Client 919908119344: Error sending message to Telugu_groups_chatting_friends: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Friends_Community_Life_Time: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to null: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Live_Video_Call_Chating: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to null: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Mumbaigayboys: USER_BANNED_IN_CHANNEL
+🚨 Heap exceeded 100 MB. Cleaning up...
+⚠️ GC not available. Start Node with --expose-gc
+Client 918100492112: Error sending message to Girlschattinggroup_new: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to bchatting9: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to INTERNATIONAL_BHABHI: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to delhi_dating_group1: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to freefireforgirls: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to WIFE_Sowpinge_news: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to girls_chatting_groupsssw: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to thefriendsforever21: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Dasi_Bhabhi_Chatting_Group: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Girls_love_xxROOM: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to realmarwahmedicine: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to american_dating_girls_usa_uk: USER_BANNED_IN_CHANNEL
+🚨 Heap exceeded 100 MB. Cleaning up...
+⚠️ GC not available. Start Node with --expose-gc
+Client 919908119344: Error sending message to Kraj9: FLOOD
+919908119344: FLOOD
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Error with token 7614665094:AAFCUYuiuYHon6FUDtlbE_PBbW_NmIAf3Rw: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 7132: last:0.05mins
+
+Message sending failed after 8 retries
+Client 919908119344: Error sending message to Sweet_Girls_Chatting_Group: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to MaharashtraGayClubOfficial: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Girls_and_boy_love_story: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to jagruthiimpact: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to tamil_gay_group143: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to BhabhiloversChat: USER_BANNED_IN_CHANNEL
+Client 919908119344: Error sending message to Bhaabhi_ChattingGroup_Global: USER_BANNED_IN_CHANNEL
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Error with token 7828340584:AAHAh0HP9vjaMsw42iEzc125NaOsOKrSfAo: Request failed with status code 401 message:  @SOWMYA2 : 
+Average Reaction Delay: 6404: last:0.08mins
+
+Message sending failed after 8 retries
+Failed to process messages in channel FRIENDS🐝: RPCError: 400: CHANNEL_PRIVATE (caused by messages.GetHistory)
+    at RPCMessageToError (/root/telegram/promote-clients/node_modules/telegram/errors/index.js:28:12)
+    at MTProtoSender._handleRPCResult (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:561:58)
+    at MTProtoSender._processMessage (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:492:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MTProtoSender._recvLoop (/root/telegram/promote-clients/node_modules/telegram/network/MTProtoSender.js:439:17) {
+  code: 400,
+  errorMessage: 'CHANNEL_PRIVATE'
+}
+Client 919666126011: Error sending message to Single_Girls_Chatting_Friendship: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to Girlfriendmastigroup: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to M21771: TOPIC_CLOSED
+919666126011: TOPIC_CLOSED
+Client 919666126011: Error sending message to WIFE_SWAPPING_BULLS: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Shilpasree_SWAPPING_INDIA: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to aunty_Girls_Chatting_Group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to international_english_chattingss: USER_BANNED_IN_CHANNEL
+Client 919666126011: Error sending message to Paki_bhaabhi_ChattingGroup: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to paidstudies: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to onlydefencelove: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to virtiklove: ALLOW_PAYMENT_REQUIRED
+917696106962: ALLOW_PAYMENT_REQUIRED
+Client 917696106962: Error sending message to Bhaabhi_ChattingGroup_Global: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to Chattingwithgirls_group: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to coupleswapingz: USER_BANNED_IN_CHANNEL
+Client 917696106962: Error sending message to saigonhub: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Grils_Chatting_group_boy_loves: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to tennisorfootballtips: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to Cute_Girls_Chatting_Group: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to WIFE_SWAPPING_BULLS: USER_BANNED_IN_CHANNEL
+Client 918100492112: Error sending message to TAMILWIFE_SWAPPING: USER_BANNED_IN_CHANNEL

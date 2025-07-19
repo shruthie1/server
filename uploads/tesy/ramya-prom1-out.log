@@ -1,0 +1,2969 @@
+clientId: ramya1
+serviceName: promotion-clients-new
+key: 1
+Path Resolution: {
+  cwd: '/root/telegram/promote-clients',
+  baseSaveDir: '/root/telegram/promote-clients/src/services',
+  fileSavePath: '/root/telegram/promote-clients/src/services/promotion-clients-new.js'
+}
+Starting...
+Starting service load operation:
+- Service: promotion-clients-new
+- Save path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+- Current working directory: /root/telegram/promote-clients
+Configuration validation successful
+Loading builds from: https://api.npoint.io/3375d15db1eece560188
+Successfully fetched from: https://api.npoint.io/3375d15db1eece560188 in 351.77ms
+Fetched builds from fastest URL: https://api.npoint.io/3375d15db1eece560188 (351.77ms)
+Available services in response: [
+  '1',
+  '2',
+  'id',
+  'cts',
+  'ums',
+  'new-tg',
+  'cms-nst',
+  'develop',
+  'tg-prom',
+  'ums-test',
+  'updatedAt',
+  'tg-promote',
+  'tg-prom-react',
+  'tg-promote-react',
+  'promotion-clients',
+  'promotion-service',
+  'promotion-clients-new',
+  'promotion-clients-new-2',
+  'promotion-clients-new-3',
+  'promotion-clients-new-32',
+  'promotion-clients-new-3-2',
+  'promotion-clients-new-3-3',
+  'promotion-clients-new-3-4',
+  'promotion-clients-new-main',
+  'promotion-clients-new-main-2'
+]
+Starting file fetch and save operation:
+- URL: https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+- Target file: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service Url:  https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+Resolved file path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Received response buffer size: 293352 bytes
+Writing to temporary file: /root/telegram/promote-clients/src/services/promotion-clients-new.js.tmp
+Successfully wrote temporary file
+Temporary file size verified: 293352 bytes
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Target directory verified before rename
+Successfully renamed temporary file to final path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File successfully saved at: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Starting Service from path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File exists and is accessible: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File size: 293352 bytes
+Attempting to require service using absolute path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service initiation complete
+Service Started
+setting key:  id
+setting key:  apiId
+setting key:  tgcms
+setting key:  API_ID
+setting key:  CL_NAME
+setting key:  apiHash
+setting key:  API_HASH
+setting key:  demolink
+setting key:  tgHelper
+setting key:  CL_APIKEY
+setting key:  GMAIL_ADD
+setting key:  bypassURL
+setting key:  tgmanager
+setting key:  uptimebot
+setting key:  BOT_TOKENS
+setting key:  GMAIL_PASS
+setting key:  logsChatId
+setting key:  mongodburi
+setting key:  CL_APISECRET
+setting key:  NODE_OPTIONS
+setting key:  logsChannel2
+setting key:  notifChannel
+setting key:  SavedMessages
+setting key:  chatgptserver
+setting key:  ramyaredd1bot
+setting key:  uptimeChecker
+setting key:  promoteChecker
+setting key:  unwantedvideos
+setting key:  updatesChannel
+setting key:  accountsChannel
+setting key:  warningsChannel
+setting key:  AUTO_CLIENT_SETUP
+setting key:  httpFailuresChannel
+setting key:  FailedPaymentsChannel
+setting key:  TELEGRAM_CHANNEL_CONFIG_SAVED
+setting key:  TELEGRAM_CHANNEL_CONFIG_USER_WARNINGS
+setting key:  TELEGRAM_CHANNEL_CONFIG_CLIENT_UPDATES
+setting key:  TELEGRAM_CHANNEL_CONFIG_LOGIN_FAILURES
+setting key:  TELEGRAM_CHANNEL_CONFIG_CHANNEL_NOTIFIZ
+Environment variables set successfully!
+setting key:  link
+setting key:  name
+setting key:  qrId
+setting key:  repl
+setting key:  dbcoll
+setting key:  gpayId
+setting key:  mobile
+setting key:  product
+setting key:  session
+setting key:  clientId
+setting key:  password
+setting key:  username
+setting key:  deployKey
+setting key:  channelLink
+setting key:  mainAccount
+setting key:  promoteRepl
+setting key:  promoteMobile
+Environment variables set successfully!
+Env Mobile :  919499021077
+Starting memory monitoring (limit: 100MB, interval: 300000ms)
+🧠 Heap Used: 41.55 MB
+Fetching URL: https://api.ipify.org?format=json with options: {}
+ProcessID:  4
+Server is running on port 3017
+Your public IP address is: 93.127.185.68
+[Connection] Increment retry count to 1/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/4?clientId=ramya1 with options: {}
+[Connection] Increment retry count to 2/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/4?clientId=ramya1 with options: {}
+[Connection] Increment retry count to 3/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/4?clientId=ramya1 with options: {}
+🧠 Heap Used: 33.38 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Creating MongoDb Instance
+parsedErr:  ramya1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db')
+Fetching URL: https://api.telegram.org/bot7281017483:AAGoeVPH98k8rXUpoR22XomfAL7PzMtJVVk/sendMessage?chat_id=-1001801844217&text=ramya1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db') with options: {}
+exitOptions:  { cleanup: true }
+clientId: ramya1
+serviceName: promotion-clients-new
+key: 1
+Path Resolution: {
+  cwd: '/root/telegram/promote-clients',
+  baseSaveDir: '/root/telegram/promote-clients/src/services',
+  fileSavePath: '/root/telegram/promote-clients/src/services/promotion-clients-new.js'
+}
+Starting...
+Starting service load operation:
+- Service: promotion-clients-new
+- Save path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+- Current working directory: /root/telegram/promote-clients
+Configuration validation successful
+Loading builds from: https://api.npoint.io/3375d15db1eece560188
+Successfully fetched from: https://api.npoint.io/3375d15db1eece560188 in 303.18ms
+Fetched builds from fastest URL: https://api.npoint.io/3375d15db1eece560188 (303.18ms)
+Available services in response: [
+  '1',
+  '2',
+  'id',
+  'cts',
+  'ums',
+  'new-tg',
+  'cms-nst',
+  'develop',
+  'tg-prom',
+  'ums-test',
+  'updatedAt',
+  'tg-promote',
+  'tg-prom-react',
+  'tg-promote-react',
+  'promotion-clients',
+  'promotion-service',
+  'promotion-clients-new',
+  'promotion-clients-new-2',
+  'promotion-clients-new-3',
+  'promotion-clients-new-32',
+  'promotion-clients-new-3-2',
+  'promotion-clients-new-3-3',
+  'promotion-clients-new-3-4',
+  'promotion-clients-new-main',
+  'promotion-clients-new-main-2'
+]
+Starting file fetch and save operation:
+- URL: https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+- Target file: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service Url:  https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+Resolved file path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Received response buffer size: 293352 bytes
+Writing to temporary file: /root/telegram/promote-clients/src/services/promotion-clients-new.js.tmp
+Successfully wrote temporary file
+Temporary file size verified: 293352 bytes
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Target directory verified before rename
+Successfully renamed temporary file to final path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File successfully saved at: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Starting Service from path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File exists and is accessible: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File size: 293352 bytes
+Attempting to require service using absolute path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service initiation complete
+Service Started
+setting key:  id
+setting key:  apiId
+setting key:  tgcms
+setting key:  API_ID
+setting key:  CL_NAME
+setting key:  apiHash
+setting key:  API_HASH
+setting key:  demolink
+setting key:  tgHelper
+setting key:  CL_APIKEY
+setting key:  GMAIL_ADD
+setting key:  bypassURL
+setting key:  tgmanager
+setting key:  uptimebot
+setting key:  BOT_TOKENS
+setting key:  GMAIL_PASS
+setting key:  logsChatId
+setting key:  mongodburi
+setting key:  CL_APISECRET
+setting key:  NODE_OPTIONS
+setting key:  logsChannel2
+setting key:  notifChannel
+setting key:  SavedMessages
+setting key:  chatgptserver
+setting key:  ramyaredd1bot
+setting key:  uptimeChecker
+setting key:  promoteChecker
+setting key:  unwantedvideos
+setting key:  updatesChannel
+setting key:  accountsChannel
+setting key:  warningsChannel
+setting key:  AUTO_CLIENT_SETUP
+setting key:  httpFailuresChannel
+setting key:  FailedPaymentsChannel
+setting key:  TELEGRAM_CHANNEL_CONFIG_SAVED
+setting key:  TELEGRAM_CHANNEL_CONFIG_USER_WARNINGS
+setting key:  TELEGRAM_CHANNEL_CONFIG_CLIENT_UPDATES
+setting key:  TELEGRAM_CHANNEL_CONFIG_LOGIN_FAILURES
+setting key:  TELEGRAM_CHANNEL_CONFIG_CHANNEL_NOTIFIZ
+Environment variables set successfully!
+setting key:  link
+setting key:  name
+setting key:  qrId
+setting key:  repl
+setting key:  dbcoll
+setting key:  gpayId
+setting key:  mobile
+setting key:  product
+setting key:  session
+setting key:  clientId
+setting key:  password
+setting key:  username
+setting key:  deployKey
+setting key:  channelLink
+setting key:  mainAccount
+setting key:  promoteRepl
+setting key:  promoteMobile
+Environment variables set successfully!
+Env Mobile :  919499021077
+Starting memory monitoring (limit: 100MB, interval: 300000ms)
+🧠 Heap Used: 41.93 MB
+Fetching URL: https://api.ipify.org?format=json with options: {}
+ProcessID:  11
+Server is running on port 3017
+Your public IP address is: 93.127.185.68
+[Connection] Increment retry count to 1/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/11?clientId=ramya1 with options: {}
+[Connection] Increment retry count to 2/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/11?clientId=ramya1 with options: {}
+[Connection] Increment retry count to 3/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/11?clientId=ramya1 with options: {}
+🧠 Heap Used: 32.48 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Creating MongoDb Instance
+parsedErr:  ramya1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db')
+Fetching URL: https://api.telegram.org/bot7281017483:AAGoeVPH98k8rXUpoR22XomfAL7PzMtJVVk/sendMessage?chat_id=-1001801844217&text=ramya1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db') with options: {}
+exitOptions:  { cleanup: true }
+clientId: ramya1
+serviceName: promotion-clients-new
+key: 1
+Path Resolution: {
+  cwd: '/root/telegram/promote-clients',
+  baseSaveDir: '/root/telegram/promote-clients/src/services',
+  fileSavePath: '/root/telegram/promote-clients/src/services/promotion-clients-new.js'
+}
+Starting...
+Starting service load operation:
+- Service: promotion-clients-new
+- Save path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+- Current working directory: /root/telegram/promote-clients
+Configuration validation successful
+Loading builds from: https://api.npoint.io/3375d15db1eece560188
+Successfully fetched from: https://api.npoint.io/3375d15db1eece560188 in 987.12ms
+Fetched builds from fastest URL: https://api.npoint.io/3375d15db1eece560188 (987.12ms)
+Available services in response: [
+  '1',
+  '2',
+  'id',
+  'cts',
+  'ums',
+  'new-tg',
+  'cms-nst',
+  'develop',
+  'tg-prom',
+  'ums-test',
+  'updatedAt',
+  'tg-promote',
+  'tg-prom-react',
+  'tg-promote-react',
+  'promotion-clients',
+  'promotion-service',
+  'promotion-clients-new',
+  'promotion-clients-new-2',
+  'promotion-clients-new-3',
+  'promotion-clients-new-32',
+  'promotion-clients-new-3-2',
+  'promotion-clients-new-3-3',
+  'promotion-clients-new-3-4',
+  'promotion-clients-new-main',
+  'promotion-clients-new-main-2'
+]
+Starting file fetch and save operation:
+- URL: https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+- Target file: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service Url:  https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+Resolved file path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Received response buffer size: 293352 bytes
+Writing to temporary file: /root/telegram/promote-clients/src/services/promotion-clients-new.js.tmp
+Successfully wrote temporary file
+Temporary file size verified: 293352 bytes
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Target directory verified before rename
+Successfully renamed temporary file to final path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File successfully saved at: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Starting Service from path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File exists and is accessible: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File size: 293352 bytes
+Attempting to require service using absolute path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service initiation complete
+Service Started
+setting key:  id
+setting key:  apiId
+setting key:  tgcms
+setting key:  API_ID
+setting key:  CL_NAME
+setting key:  apiHash
+setting key:  API_HASH
+setting key:  demolink
+setting key:  tgHelper
+setting key:  CL_APIKEY
+setting key:  GMAIL_ADD
+setting key:  bypassURL
+setting key:  tgmanager
+setting key:  uptimebot
+setting key:  BOT_TOKENS
+setting key:  GMAIL_PASS
+setting key:  logsChatId
+setting key:  mongodburi
+setting key:  CL_APISECRET
+setting key:  NODE_OPTIONS
+setting key:  logsChannel2
+setting key:  notifChannel
+setting key:  SavedMessages
+setting key:  chatgptserver
+setting key:  ramyaredd1bot
+setting key:  uptimeChecker
+setting key:  promoteChecker
+setting key:  unwantedvideos
+setting key:  updatesChannel
+setting key:  accountsChannel
+setting key:  warningsChannel
+setting key:  AUTO_CLIENT_SETUP
+setting key:  httpFailuresChannel
+setting key:  FailedPaymentsChannel
+setting key:  TELEGRAM_CHANNEL_CONFIG_SAVED
+setting key:  TELEGRAM_CHANNEL_CONFIG_USER_WARNINGS
+setting key:  TELEGRAM_CHANNEL_CONFIG_CLIENT_UPDATES
+setting key:  TELEGRAM_CHANNEL_CONFIG_LOGIN_FAILURES
+setting key:  TELEGRAM_CHANNEL_CONFIG_CHANNEL_NOTIFIZ
+Environment variables set successfully!
+setting key:  link
+setting key:  name
+setting key:  qrId
+setting key:  repl
+setting key:  dbcoll
+setting key:  gpayId
+setting key:  mobile
+setting key:  product
+setting key:  session
+setting key:  clientId
+setting key:  password
+setting key:  username
+setting key:  deployKey
+setting key:  channelLink
+setting key:  mainAccount
+setting key:  promoteRepl
+setting key:  promoteMobile
+Environment variables set successfully!
+Env Mobile :  919499021077
+Starting memory monitoring (limit: 100MB, interval: 300000ms)
+🧠 Heap Used: 41.45 MB
+Fetching URL: https://api.ipify.org?format=json with options: {}
+ProcessID:  36
+Server is running on port 3017
+Your public IP address is: 93.127.185.68
+[Connection] Increment retry count to 1/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/36?clientId=ramya1 with options: {}
+[Connection] Increment retry count to 2/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/36?clientId=ramya1 with options: {}
+[Connection] Increment retry count to 3/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/36?clientId=ramya1 with options: {}
+🧠 Heap Used: 32.18 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Creating MongoDb Instance
+parsedErr:  ramya1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db')
+Fetching URL: https://api.telegram.org/bot7281017483:AAGoeVPH98k8rXUpoR22XomfAL7PzMtJVVk/sendMessage?chat_id=-1001801844217&text=ramya1:Prom - Error at Health Check 2 93.127.185.68 :: Cannot read properties of undefined (reading 'db') with options: {}
+exitOptions:  { cleanup: true }
+clientId: ramya1
+serviceName: promotion-clients-new
+key: 1
+Path Resolution: {
+  cwd: '/root/telegram/promote-clients',
+  baseSaveDir: '/root/telegram/promote-clients/src/services',
+  fileSavePath: '/root/telegram/promote-clients/src/services/promotion-clients-new.js'
+}
+Starting...
+Starting service load operation:
+- Service: promotion-clients-new
+- Save path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+- Current working directory: /root/telegram/promote-clients
+Configuration validation successful
+Loading builds from: https://api.npoint.io/3375d15db1eece560188
+Successfully fetched from: https://api.npoint.io/3375d15db1eece560188 in 299.28ms
+Fetched builds from fastest URL: https://api.npoint.io/3375d15db1eece560188 (299.28ms)
+Available services in response: [
+  '1',
+  '2',
+  'id',
+  'cts',
+  'ums',
+  'new-tg',
+  'cms-nst',
+  'develop',
+  'tg-prom',
+  'ums-test',
+  'updatedAt',
+  'tg-promote',
+  'tg-prom-react',
+  'tg-promote-react',
+  'promotion-clients',
+  'promotion-service',
+  'promotion-clients-new',
+  'promotion-clients-new-2',
+  'promotion-clients-new-3',
+  'promotion-clients-new-32',
+  'promotion-clients-new-3-2',
+  'promotion-clients-new-3-3',
+  'promotion-clients-new-3-4',
+  'promotion-clients-new-main',
+  'promotion-clients-new-main-2'
+]
+Starting file fetch and save operation:
+- URL: https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+- Target file: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service Url:  https://res.cloudinary.com/dahqejw7s/raw/upload/v1750854857/index-pmc-new-prom-3.js
+Resolved file path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Received response buffer size: 293352 bytes
+Writing to temporary file: /root/telegram/promote-clients/src/services/promotion-clients-new.js.tmp
+Successfully wrote temporary file
+Temporary file size verified: 293352 bytes
+Ensuring directory exists: /root/telegram/promote-clients/src/services
+Directory created/verified: /root/telegram/promote-clients/src/services
+Directory verified as accessible: /root/telegram/promote-clients/src/services
+Directory /root/telegram/promote-clients/src/services is writable
+Target directory verified before rename
+Successfully renamed temporary file to final path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File successfully saved at: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Starting Service from path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File exists and is accessible: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+File size: 293352 bytes
+Attempting to require service using absolute path: /root/telegram/promote-clients/src/services/promotion-clients-new.js
+Service initiation complete
+Service Started
+setting key:  id
+setting key:  apiId
+setting key:  tgcms
+setting key:  API_ID
+setting key:  CL_NAME
+setting key:  apiHash
+setting key:  API_HASH
+setting key:  demolink
+setting key:  tgHelper
+setting key:  CL_APIKEY
+setting key:  GMAIL_ADD
+setting key:  bypassURL
+setting key:  tgmanager
+setting key:  uptimebot
+setting key:  BOT_TOKENS
+setting key:  GMAIL_PASS
+setting key:  logsChatId
+setting key:  mongodburi
+setting key:  CL_APISECRET
+setting key:  NODE_OPTIONS
+setting key:  logsChannel2
+setting key:  notifChannel
+setting key:  SavedMessages
+setting key:  chatgptserver
+setting key:  ramyaredd1bot
+setting key:  uptimeChecker
+setting key:  promoteChecker
+setting key:  unwantedvideos
+setting key:  updatesChannel
+setting key:  accountsChannel
+setting key:  warningsChannel
+setting key:  AUTO_CLIENT_SETUP
+setting key:  httpFailuresChannel
+setting key:  FailedPaymentsChannel
+setting key:  TELEGRAM_CHANNEL_CONFIG_SAVED
+setting key:  TELEGRAM_CHANNEL_CONFIG_USER_WARNINGS
+setting key:  TELEGRAM_CHANNEL_CONFIG_CLIENT_UPDATES
+setting key:  TELEGRAM_CHANNEL_CONFIG_LOGIN_FAILURES
+setting key:  TELEGRAM_CHANNEL_CONFIG_CHANNEL_NOTIFIZ
+Environment variables set successfully!
+setting key:  link
+setting key:  name
+setting key:  qrId
+setting key:  repl
+setting key:  dbcoll
+setting key:  gpayId
+setting key:  mobile
+setting key:  product
+setting key:  session
+setting key:  clientId
+setting key:  password
+setting key:  username
+setting key:  deployKey
+setting key:  channelLink
+setting key:  mainAccount
+setting key:  promoteRepl
+setting key:  promoteMobile
+Environment variables set successfully!
+Env Mobile :  919499021077
+Starting memory monitoring (limit: 100MB, interval: 300000ms)
+🧠 Heap Used: 41.79 MB
+Fetching URL: https://api.ipify.org?format=json with options: {}
+ProcessID:  87
+Server is running on port 3017
+Your public IP address is: 93.127.185.68
+[Connection] Increment retry count to 1/5
+[Connection] Initiating connection request
+Fetching URL: https://mychatgpt-xk3y.onrender.com/promoteconnect/87?clientId=ramya1 with options: {}
+87 Connect Req received from:  87
+Trying to Initiate CLIENT
+Creating MongoDb Instance
+trying to connect to DB...... mongodb://sk123:B7lGqaFlMDnKAB1m@ac-oux75kn-shard-00-00.iucpdpe.mongodb.net:27017,ac-oux75kn-shard-00-01.iucpdpe.mongodb.net:27017,ac-oux75kn-shard-00-02.iucpdpe.mongodb.net:27017/tgclients?ssl=true&retryWrites=true&replicaSet=atlas-137i8d-shard-0&readPreference=primary&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1
+Connected to MongoDB
+Fetching URL: https://api.telegram.org/bot7281017483:AAGoeVPH98k8rXUpoR22XomfAL7PzMtJVVk/sendMessage?chat_id=-1001972065816&text=Starting%20ramya1%20Promotions with options: {}
+Starting connections
+918197061859
+917259210025
+918726378944
+918428812189
+Connecting....!!
+Total clients: 4
+Reaction Instance created :  [ '918197061859', '917259210025', '918726378944', '918428812189' ] 4
+Reactions loaded from file.
+tg manager is undefined: 918197061859
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/918197061859 with options: {}
+[33m[2025-06-28T03:34:23.742] [INFO] - [Running gramJS version 2.26.21][0m
+Connected :  918197061859
+Adding event Handler
+918197061859: Updating top channels...
+918197061859 Found 40 channels to monitor.
+918197061859 Starting random channel reaction...
+918197061859 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+918197061859 Fetching dialogs from clients...
+918197061859 Days Left: -1
+Fetching URL: https://ramyaprom01.glitch.me/getbannedchannels with options: {}
+INFO Fetched 0 banned channels.
+918197061859  Less banned channels retrieved; proceeding with all eligible channels.
+918197061859  Sorted channels by participants count: 247
+Healthy mobiles:  [ '918197061859' ]
+Channel 2242494932 is banned or unsuitable. Skipping... channelIndex: 0 | NIGHTLIFE 18🪩 PLUS | NIGHT_LIFE_18_PLUS
+tg manager is undefined: 917259210025
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/917259210025 with options: {}
+[33m[2025-06-28T03:34:27.746] [INFO] - [Running gramJS version 2.26.21][0m
+Connected :  917259210025
+Adding event Handler
+917259210025: Updating top channels...
+917259210025 Found 40 channels to monitor.
+917259210025 Starting random channel reaction...
+917259210025 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+917259210025 Fetching dialogs from clients...
+tg manager is undefined: 917259210025
+Client is undefined: 917259210025
+917259210025 Days Left: -1
+Fetching URL: https://ramyaprom01.glitch.me/getbannedchannels with options: {}
+Healthy mobiles:  [ '918197061859' ]
+INFO Fetched 0 banned channels.
+917259210025  Less banned channels retrieved; proceeding with all eligible channels.
+917259210025  Sorted channels by participants count: 206
+Healthy mobiles:  [ '917259210025' ]
+918197061859:
+@null ❌
+tempFailCount: 1
+LastMsg: 16.11mins
+Sleeping: -29184694.51145mins
+DaysLeft: -1
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 2
+917259210025:
+@GirlschattingGroup_Superchatting ❌
+tempFailCount: 1
+LastMsg: 16.04mins
+Sleeping: -29184694.512716666mins
+DaysLeft: -1
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 0
+918197061859:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 28 Jun 2025, 08:21 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 28 Jun 2025, 08:21 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  -0
+917259210025:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 28 Jun 2025, 07:12 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 28 Jun 2025, 07:12 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  -0
+Retrying with the next token...
+Retrying with the next token...
+tg manager is undefined: 918726378944
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/918726378944 with options: {}
+Retrying with the next token...
+[33m[2025-06-28T03:34:31.885] [INFO] - [Running gramJS version 2.26.21][0m
+Retrying with the next token...
+Connected :  918726378944
+Adding event Handler
+918726378944: Updating top channels...
+Retrying with the next token...
+Retrying with the next token...
+918726378944 Found 40 channels to monitor.
+918726378944 Starting random channel reaction...
+918726378944 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+918726378944 Fetching dialogs from clients...
+Retrying with the next token...
+Retrying with the next token...
+Healthy mobiles:  [ '918197061859' ]
+Retrying with the next token...
+Retrying with the next token...
+Healthy mobiles:  [ '917259210025' ]
+Channel 1475656900 is banned or unsuitable. Skipping... channelIndex: 1 | Girls Boys Chatting Group | Girls_chatting_Group_Home
+918197061859:
+@GROWTHBOX3 ✅
+tempFailCount:  1
+LastMsg:  16.16mins
+DaysLeft:  0
+ChannelIndex: 3
+Client 918197061859: Message SENT to 1182726657 || channelIndex: 3, messageId: 3587856
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944 Days Left: -1
+Fetching URL: https://ramyaprom01.glitch.me/getbannedchannels with options: {}
+INFO Fetched 2 banned channels.
+918726378944  Less banned channels retrieved; proceeding with all eligible channels.
+918726378944  Sorted channels by participants count: 285
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@GangOfGiirls ❌
+tempFailCount: 1
+LastMsg: 16.05mins
+Sleeping: -29184694.59781667mins
+DaysLeft: -1
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 0
+918726378944:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 28 Jun 2025, 13:03 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 28 Jun 2025, 13:03 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  -0
+tg manager is undefined: 918428812189
+Fetching URL: https://cms.paidgirl.site/archived-clients/fetchOne/918428812189 with options: {}
+[33m[2025-06-28T03:34:36.565] [INFO] - [Running gramJS version 2.26.21][0m
+Connected :  918428812189
+Adding event Handler
+918428812189: Updating top channels...
+Healthy mobiles:  [ '917259210025' ]
+917259210025:
+@lovechattinggroup ❌
+tempFailCount: 2
+LastMsg: 16.14mins
+Sleeping: -29184694.61435mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 3
+918428812189 Found 40 channels to monitor.
+918428812189 Starting random channel reaction...
+918428812189 : Promotion Instance created
+promotion triggered...............
+Starting Promotion...............
+Starting promoteInBatches...
+918428812189 Fetching dialogs from clients...
+tg manager is undefined: 918428812189
+Client is undefined: 918428812189
+tg manager is undefined: 918428812189
+parsedErr:  ramya1:Prom - :: Fetching Reactions :: Cannot read properties of undefined (reading 'invoke')
+Healthy mobiles:  [ '918726378944' ]
+Channel 1707973128 was recently promoted. Skipping... channelIndex: 1
+918428812189 Days Left: -1
+Fetching URL: https://ramyaprom01.glitch.me/getbannedchannels with options: {}
+INFO Fetched 4 banned channels.
+918428812189  Less banned channels retrieved; proceeding with all eligible channels.
+918428812189  Sorted channels by participants count: 338
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Ayesha_X_girl ❌
+tempFailCount: 1
+LastMsg: 16.04mins
+Sleeping: -29184694.659416668mins
+DaysLeft: -1
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 0
+918428812189:: SpamBot ::  I’m afraid some Telegram users found your messages annoying and forwarded them to our team of moderators for inspection. The moderators have confirmed the report and your account is now limited until 30 Jun 2025, 12:47 UTC.
+
+While the account is limited, you will not be able to do certain things on Telegram, like writing to strangers who haven’t contacted you first or adding them to groups and channels.
+
+Your account will be automatically released on 30 Jun 2025, 12:47 UTC. Please note that if you repeat what got you limited and users report you again, the limitations will last longer next time. Subscribers of Telegram Premium have reduced times for initial limitations.
+Days Left:  2
+Healthy mobiles:  [ '917259210025' ]
+917259210025 Some Error Occured, CHAT_WRITE_FORBIDDEN
+917259210025:
+@FRIENDS_ARE_LOVE ❌
+tempFailCount: 3
+LastMsg: 16.19mins
+Sleeping: -29184694.66605mins
+DaysLeft: 0
+Reason: CHAT_WRITE_FORBIDDEN
+channelIndex: 4
+Connected....!!
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@Grils_Chatting_group_boy_loves ❌
+tempFailCount: 2
+LastMsg: 16.15mins
+Sleeping: -29184694.702916667mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 3
+Healthy mobiles:  [ '918428812189' ]
+Channel 1634196722 is banned or unsuitable. Skipping... channelIndex: 1 | GIRLS BOYS WORLDWIDE CHATTING GROUP™ | GIRLS_BOYS_WORLDWIDE_CHATTING
+Healthy mobiles:  [ '917259210025' ]
+Channel 1545482977 was recently promoted. Skipping... channelIndex: 5
+Healthy mobiles:  [ '918726378944' ]
+Channel 1750424413 was recently promoted. Skipping... channelIndex: 4
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 🥴 from chat -1002185590650 03:34:45 Before: 46, After: 45
+918428812189:
+@WIFE_SWAPPING_INDIAXX ✅
+tempFailCount:  1
+LastMsg:  16.15mins
+DaysLeft:  2
+ChannelIndex: 3
+Client 918428812189: Message SENT to 2064393771 || channelIndex: 3, messageId: 2975482
+Healthy mobiles:  [ '917259210025' ]
+917259210025 Some Error Occured, TOPIC_CLOSED
+917259210025:
+@M21771 ❌
+tempFailCount: 4
+LastMsg: 16.30mins
+Sleeping: -29184694.769583333mins
+DaysLeft: 0
+Reason: TOPIC_CLOSED
+channelIndex: 7
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@IRLFRIEND_COUPLE_WIFE_SWAPPING ❌
+tempFailCount: 3
+LastMsg: 16.26mins
+Sleeping: -29184694.80731667mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 6
+Healthy mobiles:  [ '917259210025' ]
+Channel 1509586681 was recently promoted. Skipping... channelIndex: 8
+Healthy mobiles:  [ '918726378944' ]
+Channel 1882636412 is banned or unsuitable. Skipping... channelIndex: 7 | FRIEND FORVER 🤝 | Ft_rishiiiii
+Healthy mobiles:  [ '917259210025' ]
+Channel 1619268674 was recently promoted. Skipping... channelIndex: 10
+Already Reacting or invalid state, ignoring trigger  918197061859
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@international_friends_besties ❌
+tempFailCount: 4
+LastMsg: 16.37mins
+Sleeping: -29184694.915266667mins
+DaysLeft: 0
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 9
+Healthy mobiles:  [ '917259210025' ]
+917259210025:
+@DesiBhabhiChattingGroup ✅
+tempFailCount:  4
+LastMsg:  16.46mins
+DaysLeft:  0
+ChannelIndex: 12
+Client 917259210025: Message SENT to 1942384583 || channelIndex: 12, messageId: 8197533
+Healthy mobiles:  [ '918726378944' ]
+Channel 1727894070 is banned or unsuitable. Skipping... channelIndex: 10 | Tamil Gay Demo 🏳️‍🌈 | null
+Already Reacting or invalid state, ignoring trigger  917259210025
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@Single_Girls_And_Boys_Chatting ✅
+tempFailCount:  4
+LastMsg:  16.47mins
+DaysLeft:  0
+ChannelIndex: 12
+Client 918726378944: Message SENT to 1802934211 || channelIndex: 12, messageId: 1171959
+Already Reacting or invalid state, ignoring trigger  918726378944
+Already Reacting or invalid state, ignoring trigger  918428812189
+Removed Reaction: ⚡ from chat -1001517476111 03:35:15 Before: 44, After: 43
+Removed Reaction: 🍌 from chat -1001517476111 03:35:25 Before: 43, After: 42
+Removed Reaction: 👎 from chat -1002122118869 03:35:41 Before: 45, After: 44
+Removed Reaction: 🙏 from chat -1002667650209 03:36:01 Before: 45, After: 44
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🐳 from chat -1001371397825 03:36:35 Before: 46, After: 45
+Removed Reaction: 🙈 from chat -1001676678550 03:36:57 Before: 45, After: 44
+Removed Reaction: 💋 from chat -1002122118869 03:37:17 Before: 44, After: 43
+Healthy mobiles:  [ '918428812189' ]
+Channel 1418762607 is banned or unsuitable. Skipping... channelIndex: 4 | 👑 GPSC 👑 | gsssbloverr
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Girls_AndBoys_Chatting_Group_1 ✅
+tempFailCount:  0
+LastMsg:  3.11mins
+DaysLeft:  2
+ChannelIndex: 6
+Client 918428812189: Message SENT to 1508171809 || channelIndex: 6, messageId: 2853078
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🆒 from chat -1002214990186 03:38:17 Before: 46, After: 45
+🧠 Heap Used: 130.19 MB
+🧹 Memory After Cleanup: {"rss":"225.80","heapUsed":"130.19","heapTotal":"153.55","external":"27.58"}
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 4.29 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 3.95 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 3.87 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.04 mins ago DaysLeft: 2
+Average Reaction Delay:  8423
+918197061859: Connection health check passed
+Removed Reaction: 😱 from chat -1001676678550 03:39:26 Before: 44, After: 43
+917259210025: Connection health check passed
+918726378944: Connection health check passed
+918197061859:
+@GROWTHBOX3 ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 4
+918428812189: Connection health check passed
+Removed Reaction: 🥴 from chat -1002214990186 03:39:46 Before: 45, After: 44
+Removed Reaction: 🐳 from chat -1001676678550 03:39:49 Before: 43, After: 42
+917259210025:
+@DesiBhabhiChattingGroup ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 13
+918726378944:
+@Single_Girls_And_Boys_Chatting ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 13
+Removed Reaction: 🤮 from chat -1002667650209 03:40:07 Before: 44, After: 43
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 💋 from chat -1001205020667 03:41:11 Before: 44, After: 43
+Healthy mobiles:  [ '918428812189' ]
+Channel 1567236720 is banned or unsuitable. Skipping... channelIndex: 12 | WIFE SWAPPING CHATTING | WIFE_SWAPPING_CHATTING_INDIA_1
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1637775982 is banned or unsuitable. Skipping... channelIndex: 15 | Kanpur love ❤❤ | Kanpur_Gay_Group
+Removed Reaction: 😐 from chat -1002122118869 03:41:18 Before: 43, After: 42
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Mumbai_Chatting_Groups ✅
+tempFailCount:  6
+LastMsg:  3.49mins
+DaysLeft:  2
+ChannelIndex: 17
+Client 918428812189: Message SENT to 2016890736 || channelIndex: 17, messageId: 616127
+Removed Reaction: 😐 from chat -1002214990186 03:41:29 Before: 44, After: 43
+918428812189:Lucky-8003960013 ::  
+918428812189:Lucky-8003960013 ::  Hi baby
+Message EXISTS for channelId: 2016890736, messageIndex: 0, messageId: 616127
+Removed Reaction: 🤮 from chat -1002185590650 03:42:01 Before: 45, After: 44
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+User Not Exist Calling Now 8003960013
+Removed Reaction: 👏 from chat -1002214990186 03:42:11 Before: 43, After: 42
+918428812189:Lucky-8003960013 ::  I can't msg there
+918428812189:Lucky-8003960013 ::  So here we must be talk okay baby
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 👍 from chat -1002085757163 03:43:09 Before: 46, After: 45
+Removed Reaction: 🕊 from chat -1002122118869 03:43:40 Before: 42, After: 41
+User Not Exist Calling Now 8003960013
+parsedErr:  ramya1:Prom - Failed to Call :: 403: USER_PRIVACY_RESTRICTED (caused by phone.RequestCall)
+RAMYA1-918428812189 USER_PRIVACY_RESTRICTED
+🧠 Heap Used: 41.91 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918197061859 null  : Promotions Working fine -  LastMSg : 4.36 mins ago DaysLeft: 0
+Removed Reaction: 👏 from chat -1001517476111 03:43:56 Before: 42, After: 41
+917259210025 null  : Promotions Working fine -  LastMSg : 4.02 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 3.94 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 2.63 mins ago DaysLeft: 2
+Average Reaction Delay:  8301
+Removed Reaction: 👎 from chat -1001517476111 03:44:05 Before: 41, After: 40
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@VIRTUALTHEBOYSGIRL ✅
+tempFailCount:  0
+LastMsg:  3.05mins
+DaysLeft:  2
+ChannelIndex: 18
+Client 918428812189: Message SENT to 2473233266 || channelIndex: 18, messageId: 333954
+917259210025: Updating top channels...
+917259210025: Connection health check passed
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189:Lucky-8003960013 ::  Hey baby
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Message EXISTS for channelId: 2473233266, messageIndex: 0, messageId: 333954
+918428812189:Lucky-8003960013 ::  I have 9 inch long dick
+918428812189:Lucky-8003960013 ::  If you want to fuck
+Removed Reaction: 🗿 from chat -1001517476111 03:44:51 Before: 40, After: 39
+918428812189:Lucky-8003960013 ::  I will give full satisfaction
+User Not Exist Calling Now 8003960013
+918428812189:Lucky-8003960013 ::  I need meetup baby
+918428812189:Lucky-8003960013 ::  Give me full address
+918197061859:Online_Rider-924191194 ::  
+Retrying with the next token...
+Removed Reaction: 🤮 from chat -1002122118869 03:45:22 Before: 41, After: 40
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918428812189:malvareprovidersystemhackersssss-1678948300 ::  SHARE YOUR LINK 👆👆👆👆
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 😁 from chat -1001517476111 03:45:43 Before: 39, After: 38
+918197061859:Online_Rider-924191194 ::  U from?
+918197061859:Online_Rider-924191194 ::  Ooo😁
+User Not Exist Calling Now 8003960013
+parsedErr:  ramya1:Prom - Failed to Call :: 403: USER_PRIVACY_RESTRICTED (caused by phone.RequestCall)
+RAMYA1-918428812189 USER_PRIVACY_RESTRICTED
+USer Exist Clearing interval2 924191194 1 undefined
+User Not Exist Calling Now 1678948300
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: ❤‍🔥 from chat -1001517476111 03:46:32 Before: 38, After: 37
+User Not Exist Calling Now 8003960013
+parsedErr:  ramya1:Prom - Failed to Call :: 403: USER_PRIVACY_RESTRICTED (caused by phone.RequestCall)
+RAMYA1-918428812189 USER_PRIVACY_RESTRICTED
+918428812189:malvareprovidersystemhackersssss-1678948300 ::  🦶🦶🦶🤛🤛🤛✊✊👊👊👊🫸🫸🫸👋👋👋
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@adult_chatting_group_official ✅
+tempFailCount:  0
+LastMsg:  3.06mins
+DaysLeft:  2
+ChannelIndex: 19
+Client 918428812189: Message SENT to 1862260678 || channelIndex: 19, messageId: 12723445
+Removed Reaction: 🐳 from chat -1002185590650 03:47:33 Before: 44, After: 43
+USer Exist Clearing interval 924191194 1 undefined
+User Not Exist Calling Now 1678948300
+Phone Call Updated, UpdatePhoneCall
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 😢 from chat -1001517476111 03:48:15 Before: 37, After: 36
+User Not Exist Calling Now 8003960013
+918428812189: Cannot initiate call - invalid state or call in progress
+Removed Reaction: 👌 from chat -1001676678550 03:48:37 Before: 42, After: 41
+🧠 Heap Used: 63.81 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Results saved to mobileStats-917259210025.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 9.28 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 8.95 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 8.87 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.44 mins ago DaysLeft: 2
+Average Reaction Delay:  7926
+User Not Exist Calling Now 8003960013
+918428812189: Cannot initiate call - invalid state or call in progress
+Removed Reaction: 🙈 from chat -1001517476111 03:48:56 Before: 36, After: 35
+918197061859: Connection health check passed
+917259210025: Connection health check passed
+Removed Reaction: 😢 from chat -1001804215127 03:49:31 Before: 46, After: 45
+918726378944: Connection health check passed
+Removed Reaction: 🤝 from chat -1001906683925 03:49:34 Before: 46, After: 45
+918428812189: Connection health check passed
+User Not Exist Calling Now 1678948300
+918428812189: Cannot initiate call - invalid state or call in progress
+Removed Reaction: 👏 from chat -1002085757163 03:49:59 Before: 45, After: 44
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+Channel 1838717758 is banned or unsuitable. Skipping... channelIndex: 20 | ​🄲🄰🄼 🄵🅄🄽 | best_friends_chatting_group_0
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@rabotacallcentre ✅
+tempFailCount:  0
+LastMsg:  3.12mins
+DaysLeft:  2
+ChannelIndex: 22
+Client 918428812189: Message SENT to 1545482977 || channelIndex: 22, messageId: 837595
+Removed Reaction: 💔 from chat -1002185590650 03:50:39 Before: 43, After: 42
+Message EXISTS for channelId: 1545482977, messageIndex: 0, messageId: 837595
+User Not Exist Calling Now 8003960013
+918428812189: Cannot initiate call - invalid state or call in progress
+918428812189:Lucky-8003960013 ::  
+Removed Reaction: 🙊 from chat -1002353034344 03:51:32 Before: 44, After: 43
+918428812189:Lucky-8003960013 ::  You msg me baby
+Healthy mobiles:  [ '918197061859' ]
+918197061859:
+@English_girls_chatting_group ✅
+tempFailCount:  0
+LastMsg:  12.07mins
+DaysLeft:  0
+ChannelIndex: 4
+Client 918197061859: Message SENT to 1412508532 || channelIndex: 4, messageId: 1340002
+918428812189:Lucky-8003960013 ::  I can't msg you
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918428812189:Lucky-8003960013 ::  Msg me fast
+Removed Reaction: 💔 from chat -1001930751834 03:51:45 Before: 46, After: 45
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Message EXISTS for channelId: 1412508532, messageIndex: 0, messageId: 1340002
+Healthy mobiles:  [ '917259210025' ]
+Healthy mobiles:  [ '917259210025' ]
+Channel 1705755336 is banned or unsuitable. Skipping... channelIndex: 14 | WIFE SWAPPING IN INDIA | WIFE_SWAPPING_IN_GROUP
+Removed Reaction: 🤡 from chat -1001804215127 03:52:04 Before: 45, After: 44
+Healthy mobiles:  [ '917259210025' ]
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@girlschatgroup2 ✅
+tempFailCount:  0
+LastMsg:  12.11mins
+DaysLeft:  0
+ChannelIndex: 13
+Client 918726378944: Message SENT to 1559696504 || channelIndex: 13, messageId: 1261012
+Healthy mobiles:  [ '917259210025' ]
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '917259210025' ]
+917259210025 Some Error Occured, CHAT_SEND_PLAIN_FORBIDDEN
+User Not Exist Calling Now 1678948300
+918428812189: Cannot initiate call - invalid state or call in progress
+Healthy mobiles:  [ '917259210025' ]
+Channel 1576284857 was recently promoted. Skipping... channelIndex: 19
+Healthy mobiles:  [ '917259210025' ]
+Channel 1280775509 is banned or unsuitable. Skipping... channelIndex: 21 | Masti Group 》Girls chatting | Girlschatting_Group_masti
+Healthy mobiles:  [ '917259210025' ]
+Channel 1293188909 was recently promoted. Skipping... channelIndex: 23
+Removed Reaction: 🙊 from chat -1001517476111 03:52:22 Before: 35, After: 34
+Healthy mobiles:  [ '917259210025' ]
+Removed Reaction: 👌 from chat -1002122118869 03:52:25 Before: 40, After: 39
+Healthy mobiles:  [ '917259210025' ]
+Channel 1197738741 is banned or unsuitable. Skipping... channelIndex: 26 | Romantic friends😍 | romantic_friend
+Message EXISTS for channelId: 1559696504, messageIndex: 0, messageId: 1261012
+Healthy mobiles:  [ '917259210025' ]
+917259210025:
+@sex_mbr_msk ✅
+tempFailCount:  5
+LastMsg:  12.59mins
+DaysLeft:  0
+ChannelIndex: 28
+Client 917259210025: Message SENT to 1431796850 || channelIndex: 28, messageId: 34451967
+Removed Reaction: 🤡 from chat -1002164964642 03:52:41 Before: 43, After: 42
+Removed Reaction: 🆒 from chat -1001804215127 03:52:52 Before: 44, After: 43
+Removed Reaction: 😱 from chat -1001371397825 03:52:55 Before: 45, After: 44
+Removed Reaction: 🆒 from chat -1002185590650 03:53:01 Before: 42, After: 41
+Removed Reaction: 😁 from chat -1001930751834 03:53:18 Before: 45, After: 44
+Removed Reaction: 😴 from chat -1002185590650 03:53:22 Before: 41, After: 40
+Removed Reaction: 😐 from chat -1001517476111 03:53:23 Before: 34, After: 33
+Healthy mobiles:  [ '918428812189' ]
+Channel 2229324785 is banned or unsuitable. Skipping... channelIndex: 23 | Mass Mailing | Gmail API, APP password, Email, SMTP, Call, Blaster, Sender, checker, Bulk mailer, Data, SMS Chat | BulkmailingGuide
+Healthy mobiles:  [ '918428812189' ]
+Channel 2404316034 is banned or unsuitable. Skipping... channelIndex: 25 | Wife Swapping 💋 | SWAPPING_INDIA_WIFE_REA
+Healthy mobiles:  [ '918428812189' ]
+Channel 1540264500 is banned or unsuitable. Skipping... channelIndex: 27 | Delhi NCR Gay Group🏳️‍🌈 | delhi_gaygroup
+Removed Reaction: 💔 from chat -1001517476111 03:53:45 Before: 33, After: 32
+Healthy mobiles:  [ '918428812189' ]
+🧠 Heap Used: 70.07 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 2.21 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918428812189' ]
+Channel 1475669387 was recently promoted. Skipping... channelIndex: 30
+917259210025 null  : Promotions Working fine -  LastMSg : 1.36 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 1.75 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 3.31 mins ago DaysLeft: 2
+Average Reaction Delay:  9853
+Healthy mobiles:  [ '918428812189' ]
+918428812189 Some Error Occured, CHAT_WRITE_FORBIDDEN
+Healthy mobiles:  [ '918428812189' ]
+Channel 1966715495 was recently promoted. Skipping... channelIndex: 33
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@lesbian_squad ✅
+tempFailCount:  2
+LastMsg:  3.45mins
+DaysLeft:  2
+ChannelIndex: 35
+Client 918428812189: Message SENT to 1640958329 || channelIndex: 35, messageId: 909340
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🙉 from chat -1001517476111 03:54:14 Before: 32, After: 31
+Removed Reaction: 🤡 from chat -1002122118869 03:54:22 Before: 39, After: 38
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+Removed Reaction: 🙏 from chat -1001906683925 03:54:24 Before: 45, After: 44
+917259210025: Updating top channels...
+917259210025: Connection health check passed
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Removed Reaction: 🤔 from chat -1002324164438 03:55:05 Before: 46, After: 45
+Removed Reaction: 🗿 from chat -1001371397825 03:55:09 Before: 44, After: 43
+Removed Reaction: 😁 from chat -1002122118869 03:55:28 Before: 38, After: 37
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🤡 from chat -1002291794481 03:56:25 Before: 46, After: 45
+918197061859:
+@English_girls_chatting_group ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 5
+Removed Reaction: 👌 from chat -1001517476111 03:56:42 Before: 31, After: 30
+Removed Reaction: ❤‍🔥 from chat -1002353034344 03:56:52 Before: 43, After: 42
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@i_love_youall00 ✅
+tempFailCount:  0
+LastMsg:  3.06mins
+DaysLeft:  2
+ChannelIndex: 36
+Client 918428812189: Message SENT to 1641006506 || channelIndex: 36, messageId: 1144920
+918726378944 Some Error Occured, FLOOD
+Message EXISTS for channelId: 1641006506, messageIndex: 0, messageId: 1144920
+Removed Reaction: 🏆 from chat -1002443984888 03:57:25 Before: 46, After: 45
+Removed Reaction: 🤔 from chat -1002353034344 03:57:29 Before: 42, After: 41
+917259210025:
+@sex_mbr_msk ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 29
+Removed Reaction: 🙏 from chat -1002443984888 03:57:58 Before: 45, After: 44
+Removed Reaction: 💩 from chat -1001629757418 03:58:08 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+🧠 Heap Used: 50.80 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Results saved to mobileStats-917259210025.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 2.21 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 1.35 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 6.75 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.80 mins ago DaysLeft: 2
+Average Reaction Delay:  7934
+Removed Reaction: 🤡 from chat -1002144669085 03:59:08 Before: 45, After: 44
+Removed Reaction: ❤ from chat -1002144669085 03:59:16 Before: 44, After: 43
+Removed Reaction: ❤ from chat -1001517476111 03:59:18 Before: 30, After: 29
+918197061859: Connection health check passed
+917259210025: Connection health check passed
+918726378944: Connection health check passed
+918428812189: Connection health check passed
+Removed Reaction: 🤡 from chat -1001517476111 03:59:59 Before: 29, After: 28
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+Channel 1976575194 is banned or unsuitable. Skipping... channelIndex: 37 | Hyderabad_Real_Estate | Indian_Real_Estate
+Healthy mobiles:  [ '918428812189' ]
+Channel 1923129399 was recently promoted. Skipping... channelIndex: 39
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Indian_shemales_group ✅
+tempFailCount:  0
+LastMsg:  3.22mins
+DaysLeft:  2
+ChannelIndex: 41
+Client 918428812189: Message SENT to 2217050401 || channelIndex: 41, messageId: 73897
+Removed Reaction: 😭 from chat -1002324164438 04:00:37 Before: 45, After: 44
+Message EXISTS for channelId: 2217050401, messageIndex: 0, messageId: 73897
+Removed Reaction: 🤡 from chat -1001371397825 04:00:55 Before: 43, After: 42
+Removed Reaction: 👏 from chat -1002185590650 04:01:01 Before: 40, After: 39
+Removed Reaction: 👍 from chat -1002291794481 04:01:22 Before: 45, After: 44
+Removed Reaction: 🕊 from chat -1001508171809 04:02:04 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 👏 from chat -1002324164438 04:02:36 Before: 44, After: 43
+Removed Reaction: 👻 from chat -1001676678550 04:03:06 Before: 41, After: 40
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1559696504 was recently promoted. Skipping... channelIndex: 43
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 🕊 from chat -1002353034344 04:03:31 Before: 41, After: 40
+Healthy mobiles:  [ '918428812189' ]
+Channel 1476492615 is banned or unsuitable. Skipping... channelIndex: 46 | Girls Chatting Group | GirlschattingGroup_Group
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1756097021 is banned or unsuitable. Skipping... channelIndex: 50 | TRICHY GAY GROUP | Trichygaygroup
+Removed Reaction: 😁 from chat -1002291794481 04:03:45 Before: 44, After: 43
+Healthy mobiles:  [ '918428812189' ]
+Channel 1750424413 was recently promoted. Skipping... channelIndex: 52
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@love_chatting_group ✅
+tempFailCount:  4
+LastMsg:  3.49mins
+DaysLeft:  2
+ChannelIndex: 54
+Client 918428812189: Message SENT to 1525462532 || channelIndex: 54, messageId: 5992050
+🧠 Heap Used: 44.79 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 7.21 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 6.35 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 11.75 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 0.09 mins ago DaysLeft: 2
+Average Reaction Delay:  6965
+Removed Reaction: 😍 from chat -1002291794481 04:03:55 Before: 43, After: 42
+Removed Reaction: 🤩 from chat -1001906683925 04:04:10 Before: 44, After: 43
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@Tinder_Chat_Dating ✅
+tempFailCount:  0
+LastMsg:  12.08mins
+DaysLeft:  0
+ChannelIndex: 14
+Client 918726378944: Message SENT to 1578369862 || channelIndex: 14, messageId: 3120334
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+917259210025: Updating top channels...
+917259210025: Connection health check passed
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+Removed Reaction: 💔 from chat -1002324164438 04:04:28 Before: 43, After: 42
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Removed Reaction: 💔 from chat -1002667650209 04:04:48 Before: 43, After: 42
+Removed Reaction: 👍 from chat -1001517476111 04:05:14 Before: 28, After: 27
+Removed Reaction: 💯 from chat -1002291794481 04:05:22 Before: 42, After: 41
+Removed Reaction: 🤮 from chat -1001944954648 04:05:39 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 💩 from chat -1001517476111 04:06:16 Before: 27, After: 26
+Removed Reaction: 🆒 from chat -1001676678550 04:06:20 Before: 40, After: 39
+Removed Reaction: 🥱 from chat -1002291794481 04:06:26 Before: 41, After: 40
+Removed Reaction: 💋 from chat -1001930751834 04:06:37 Before: 44, After: 43
+Removed Reaction: 🎉 from chat -1001944954648 04:06:37 Before: 45, After: 44
+Healthy mobiles:  [ '918428812189' ]
+Channel 1250546724 was recently promoted. Skipping... channelIndex: 55
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1495639621 was recently promoted. Skipping... channelIndex: 58
+Removed Reaction: 🏆 from chat -1001517476111 04:06:59 Before: 26, After: 25
+Healthy mobiles:  [ '918428812189' ]
+Channel 2635292202 is banned or unsuitable. Skipping... channelIndex: 60 | 🌈тαмιℓ gαу & вι ѕєχυαℓ ¢нαт нυв🌈 | Tamil_gay_zone001
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@GirlschattingGroup_freeGroup ✅
+tempFailCount:  4
+LastMsg:  3.43mins
+DaysLeft:  2
+ChannelIndex: 65
+Client 918428812189: Message SENT to 2130780605 || channelIndex: 65, messageId: 216936
+Removed Reaction: 🕊 from chat -1001676678550 04:07:23 Before: 39, After: 38
+Message EXISTS for channelId: 2130780605, messageIndex: 0, messageId: 216936
+Removed Reaction: 🤬 from chat -1001676678550 04:07:54 Before: 38, After: 37
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918197061859' ]
+Channel 1982676159 is banned or unsuitable. Skipping... channelIndex: 5 | Indian chatting bhabhi group | Indianchattingbhabhigroup
+Healthy mobiles:  [ '918197061859' ]
+918197061859:
+@GROWTHBOX30 ✅
+tempFailCount:  0
+LastMsg:  12.13mins
+DaysLeft:  0
+ChannelIndex: 7
+Client 918197061859: Message SENT to 1306132962 || channelIndex: 7, messageId: 4321003
+Removed Reaction: 🙏 from chat -1001944954648 04:08:47 Before: 44, After: 43
+🧠 Heap Used: 66.82 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 0.08 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 11.35 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 4.67 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.66 mins ago DaysLeft: 2
+Average Reaction Delay:  8768
+Removed Reaction: 🗿 from chat -1001676678550 04:09:07 Before: 37, After: 36
+918726378944:
+@Tinder_Chat_Dating ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 15
+918197061859: Connection health check passed
+917259210025: Connection health check passed
+918726378944: Connection health check passed
+Healthy mobiles:  [ '917259210025' ]
+918428812189: Connection health check passed
+Healthy mobiles:  [ '917259210025' ]
+917259210025:
+@nudechatting14 ✅
+tempFailCount:  1
+LastMsg:  12.14mins
+DaysLeft:  0
+ChannelIndex: 30
+Client 917259210025: Message SENT to 1976990027 || channelIndex: 30, messageId: 3241780
+Removed Reaction: 😢 from chat -1002463350606 04:09:40 Before: 46, After: 45
+Removed Reaction: 👎 from chat -1002085757163 04:10:05 Before: 44, After: 43
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+Channel 1682949860 is banned or unsuitable. Skipping... channelIndex: 66 | Love Chatting Group #NoUB | Love_Chatting_Group_6
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1197738741 is banned or unsuitable. Skipping... channelIndex: 69 | Romantic friends😍 | romantic_friend
+Removed Reaction: 🤔 from chat -1001676678550 04:10:27 Before: 36, After: 35
+Healthy mobiles:  [ '918428812189' ]
+Channel 1450904507 is banned or unsuitable. Skipping... channelIndex: 71 | Dating Online | dating_chatt
+Healthy mobiles:  [ '918428812189' ]
+Channel 1882636412 is banned or unsuitable. Skipping... channelIndex: 73 | FRIEND FORVER 🤝 | Ft_rishiiiii
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@CHEHHAIGAYS ✅
+tempFailCount:  1
+LastMsg:  3.33mins
+DaysLeft:  2
+ChannelIndex: 75
+Client 918428812189: Message SENT to 1641346769 || channelIndex: 75, messageId: 1808293
+Message EXISTS for channelId: 1641346769, messageIndex: 0, messageId: 1808293
+Removed Reaction: ⚡ from chat -1001676678550 04:10:59 Before: 35, After: 34
+Removed Reaction: 💋 from chat -1001676678550 04:11:14 Before: 34, After: 33
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: ❤ from chat -1002667650209 04:12:12 Before: 42, After: 41
+Removed Reaction: ⚡ from chat -1002144669085 04:12:17 Before: 43, After: 42
+Removed Reaction: 😱 from chat -1002463350606 04:12:33 Before: 45, After: 44
+Removed Reaction: 👀 from chat -1001900640722 04:12:36 Before: 46, After: 45
+Removed Reaction: 🥱 from chat -1002324164438 04:12:43 Before: 42, After: 41
+Removed Reaction: 🥴 from chat -1001205020667 04:12:49 Before: 43, After: 42
+Removed Reaction: ⚡ from chat -1001900640722 04:12:52 Before: 45, After: 44
+Removed Reaction: 🤮 from chat -1002144669085 04:13:13 Before: 42, After: 41
+Removed Reaction: 👀 from chat -1002291794481 04:13:24 Before: 40, After: 39
+Removed Reaction: 👻 from chat -1001517476111 04:13:29 Before: 25, After: 24
+Healthy mobiles:  [ '918428812189' ]
+Channel 1200838316 was recently promoted. Skipping... channelIndex: 76
+Healthy mobiles:  [ '918428812189' ]
+Channel 1142038434 was recently promoted. Skipping... channelIndex: 78
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 🍌 from chat -1001944954648 04:13:44 Before: 43, After: 42
+918197061859:
+@GROWTHBOX30 ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 8
+Healthy mobiles:  [ '918428812189' ]
+🧠 Heap Used: 54.67 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Healthy mobiles:  [ '918428812189' ]
+918197061859 null  : Promotions Working fine -  LastMSg : 0.07 mins ago DaysLeft: 0
+Removed Reaction: 🔥 from chat -1001548820826 04:13:51 Before: 46, After: 45
+917259210025 null  : Promotions Working fine -  LastMSg : 4.21 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 4.66 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918428812189' ]
+Channel 1857593454 is banned or unsuitable. Skipping... channelIndex: 83 | FRIENDS FOREVER ❤️ | Indian_friends_chatting_group_XX
+918428812189 null  : Promotions Working fine -  LastMSg : 3.32 mins ago DaysLeft: 2
+Average Reaction Delay:  9015
+Removed Reaction: 🤯 from chat -1002463350606 04:13:56 Before: 44, After: 43
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@GirlsofJordan ✅
+tempFailCount:  3
+LastMsg:  3.38mins
+DaysLeft:  2
+ChannelIndex: 85
+Client 918428812189: Message SENT to 1327183734 || channelIndex: 85, messageId: 3755650
+Removed Reaction: 😭 from chat -1002291794481 04:14:04 Before: 39, After: 38
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🙈 from chat -1002085757163 04:14:14 Before: 43, After: 42
+Removed Reaction: 🤩 from chat -1002291794481 04:14:19 Before: 38, After: 37
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+Removed Reaction: 😍 from chat -1001944954648 04:14:26 Before: 42, After: 41
+917259210025: Updating top channels...
+917259210025: Connection health check passed
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Removed Reaction: 🎉 from chat -1002185590650 04:14:39 Before: 39, After: 38
+917259210025:
+@nudechatting14 ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 31
+Removed Reaction: 😭 from chat -1001944954648 04:14:43 Before: 41, After: 40
+Removed Reaction: 🤗 from chat -1002164964642 04:14:49 Before: 42, After: 41
+Removed Reaction: 👍 from chat -1001644097735 04:15:04 Before: 46, After: 45
+Removed Reaction: 💯 from chat -1001944954648 04:15:44 Before: 40, After: 39
+Removed Reaction: 😢 from chat -1001157009180 04:15:48 Before: 46, After: 45
+Removed Reaction: 👍 from chat -1001906683925 04:16:07 Before: 43, After: 42
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 😭 from chat -1001517476111 04:16:12 Before: 24, After: 23
+Removed Reaction: 💔 from chat -1001676678550 04:16:27 Before: 33, After: 32
+Removed Reaction: 🏆 from chat -1001944954648 04:16:53 Before: 39, After: 38
+Removed Reaction: 🏆 from chat -1002164964642 04:16:54 Before: 41, After: 40
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1619268674 was recently promoted. Skipping... channelIndex: 87
+Healthy mobiles:  [ '918428812189' ]
+Channel 1302613063 was recently promoted. Skipping... channelIndex: 89
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 💯 from chat -1002185590650 04:17:13 Before: 38, After: 37
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@GirlsAndBoysChattingRoomok ✅
+tempFailCount:  4
+LastMsg:  3.38mins
+DaysLeft:  2
+ChannelIndex: 94
+Client 918428812189: Message SENT to 2066012441 || channelIndex: 94, messageId: 281939
+Message EXISTS for channelId: 2066012441, messageIndex: 0, messageId: 281939
+Removed Reaction: ❤ from chat -1001944954648 04:17:39 Before: 38, After: 37
+Removed Reaction: 💩 from chat -1001682949860 04:17:42 Before: 46, After: 45
+Removed Reaction: 🙏 from chat -1002144669085 04:17:53 Before: 41, After: 40
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🙈 from chat -1002214990186 04:18:24 Before: 42, After: 41
+🧠 Heap Used: 144.55 MB
+🧹 Memory After Cleanup: {"rss":"253.48","heapUsed":"144.55","heapTotal":"175.55","external":"29.40"}
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Results saved to mobileStats-917259210025.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 5.07 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 4.21 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 9.66 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.57 mins ago DaysLeft: 2
+Average Reaction Delay:  8628
+Removed Reaction: 🍌 from chat -1001682949860 04:19:06 Before: 45, After: 44
+Removed Reaction: 🤯 from chat -1001676678550 04:19:12 Before: 32, After: 31
+Removed Reaction: 😐 from chat -1001676678550 04:19:16 Before: 31, After: 30
+918197061859: Connection health check passed
+917259210025: Connection health check passed
+Removed Reaction: 😴 from chat -1001906683925 04:19:29 Before: 42, After: 41
+918726378944: Connection health check passed
+918428812189: Connection health check passed
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 2167561546 was recently promoted. Skipping... channelIndex: 96
+Healthy mobiles:  [ '918428812189' ]
+918428812189 Some Error Occured, CHAT_WRITE_FORBIDDEN
+Healthy mobiles:  [ '918428812189' ]
+Channel 1514843822 is banned or unsuitable. Skipping... channelIndex: 99 | Girls & Boys Chatting Group For love & Relationship 💞 | Girls_Chating_Group_08
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@TamilRealCouplesSwapping ✅
+tempFailCount:  2
+LastMsg:  3.27mins
+DaysLeft:  2
+ChannelIndex: 101
+Client 918428812189: Message SENT to 2212746193 || channelIndex: 101, messageId: 645389
+Removed Reaction: 🔥 from chat -1001517476111 04:20:39 Before: 23, After: 22
+Removed Reaction: 💯 from chat -1002144669085 04:20:59 Before: 40, After: 39
+Healthy mobiles:  [ '918726378944' ]
+Channel 2473233266 was recently promoted. Skipping... channelIndex: 15
+Healthy mobiles:  [ '918726378944' ]
+Healthy mobiles:  [ '918726378944' ]
+Healthy mobiles:  [ '918726378944' ]
+Removed Reaction: 🤗 from chat -1001644097735 04:21:29 Before: 45, After: 44
+Healthy mobiles:  [ '918726378944' ]
+Removed Reaction: 😱 from chat -1001508171809 04:21:32 Before: 45, After: 44
+Healthy mobiles:  [ '918726378944' ]
+Healthy mobiles:  [ '918726378944' ]
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@sexx_chatting ✅
+tempFailCount:  6
+LastMsg:  12.44mins
+DaysLeft:  0
+ChannelIndex: 23
+Client 918726378944: Message SENT to 1498999941 || channelIndex: 23, messageId: 1759676
+Removed Reaction: 🤝 from chat -1001517476111 04:21:51 Before: 22, After: 21
+Removed Reaction: 🥱 from chat -1001682949860 04:22:01 Before: 44, After: 43
+Removed Reaction: 🥱 from chat -1001517476111 04:22:07 Before: 21, After: 20
+Removed Reaction: 🤔 from chat -1001508171809 04:22:08 Before: 44, After: 43
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🥴 from chat -1001508171809 04:22:42 Before: 43, After: 42
+Removed Reaction: 🤗 from chat -1001517476111 04:22:50 Before: 20, After: 19
+Removed Reaction: ⚡ from chat -1002185590650 04:22:59 Before: 37, After: 36
+Removed Reaction: ❤ from chat -1001682949860 04:23:23 Before: 43, After: 42
+Removed Reaction: 🙈 from chat -1002360448977 04:23:35 Before: 46, After: 45
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 🤮 from chat -1002324164438 04:23:45 Before: 41, After: 40
+Healthy mobiles:  [ '918428812189' ]
+🧠 Heap Used: 117.85 MB
+🧹 Memory After Cleanup: {"rss":"229.83","heapUsed":"117.86","heapTotal":"151.71","external":"27.13"}
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+Healthy mobiles:  [ '918428812189' ]
+918197061859 null  : Promotions Working fine -  LastMSg : 10.08 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 9.22 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@girls_chating_group1 ✅
+tempFailCount:  4
+LastMsg:  3.28mins
+DaysLeft:  2
+ChannelIndex: 106
+Client 918428812189: Message SENT to 1525381341 || channelIndex: 106, messageId: 3278550
+918726378944 null  : Promotions Working fine -  LastMSg : 2.23 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 0.03 mins ago DaysLeft: 2
+Average Reaction Delay:  8658
+Removed Reaction: 🤣 from chat -1001508171809 04:23:56 Before: 42, After: 41
+Removed Reaction: ❤ from chat -1001474594446 04:23:59 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 💔 from chat -1001682949860 04:24:22 Before: 42, After: 41
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+Removed Reaction: ❤ from chat -1001906683925 04:24:26 Before: 41, After: 40
+917259210025: Updating top channels...
+917259210025: Connection health check passed
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Removed Reaction: 👎 from chat -1002185590650 04:24:58 Before: 36, After: 35
+Removed Reaction: 🤝 from chat -1001166981243 04:25:23 Before: 46, After: 45
+Healthy mobiles:  [ '918197061859' ]
+Removed Reaction: 🤣 from chat -1001676678550 04:25:50 Before: 30, After: 29
+Healthy mobiles:  [ '918197061859' ]
+Channel 1525381341 was recently promoted. Skipping... channelIndex: 9
+Healthy mobiles:  [ '918197061859' ]
+Healthy mobiles:  [ '918197061859' ]
+918197061859 Some Error Occured, CHAT_WRITE_FORBIDDEN
+Healthy mobiles:  [ '918197061859' ]
+Healthy mobiles:  [ '918197061859' ]
+918197061859 Some Error Occured, undefined
+parsedErr:  ramya1:Prom - Error sending message to channel :: No user has "lottery61earn" as username
+Fetching URL: https://api.telegram.org/bot7499764732:AAH3flZUF7J1zwK1xac8fI50lR24WeQAbNo/sendMessage?chat_id=-1001801844217&text=ramya1:Prom - Error sending message to channel :: No user has "lottery61earn" as username with options: {}
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918197061859' ]
+Channel 1578369862 was recently promoted. Skipping... channelIndex: 15
+Healthy mobiles:  [ '918197061859' ]
+Channel 2241499529 was recently promoted. Skipping... channelIndex: 17
+Healthy mobiles:  [ '918197061859' ]
+Removed Reaction: 🐳 from chat -1001517476111 04:26:20 Before: 19, After: 18
+Healthy mobiles:  [ '918197061859' ]
+Channel 1567236720 is banned or unsuitable. Skipping... channelIndex: 20 | WIFE SWAPPING CHATTING | WIFE_SWAPPING_CHATTING_INDIA_1
+Healthy mobiles:  [ '918197061859' ]
+Channel 2221960591 was recently promoted. Skipping... channelIndex: 22
+Healthy mobiles:  [ '918197061859' ]
+Channel 1637480510 was recently promoted. Skipping... channelIndex: 24
+Healthy mobiles:  [ '918197061859' ]
+918197061859:
+@Dream99gamee ✅
+tempFailCount:  6
+LastMsg:  12.73mins
+DaysLeft:  0
+ChannelIndex: 26
+Client 918197061859: Message SENT to 2073357829 || channelIndex: 26, messageId: 174538
+Removed Reaction: 💔 from chat -1002144669085 04:26:32 Before: 39, After: 38
+918726378944:
+@sexx_chatting ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 24
+Healthy mobiles:  [ '917259210025' ]
+917259210025 Some Error Occured, CHAT_SEND_PLAIN_FORBIDDEN
+Message EXISTS for channelId: 2073357829, messageIndex: 0, messageId: 174538
+Healthy mobiles:  [ '917259210025' ]
+Channel 1415788664 was recently promoted. Skipping... channelIndex: 32
+Healthy mobiles:  [ '917259210025' ]
+Channel 1196724933 was recently promoted. Skipping... channelIndex: 34
+Healthy mobiles:  [ '917259210025' ]
+Channel 1364283697 was recently promoted. Skipping... channelIndex: 36
+Healthy mobiles:  [ '917259210025' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '917259210025' ]
+917259210025:
+@love_chatting_group ✅
+tempFailCount:  2
+LastMsg:  12.33mins
+DaysLeft:  0
+ChannelIndex: 39
+Client 917259210025: Message SENT to 1525462532 || channelIndex: 39, messageId: 5992185
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1332162215 was recently promoted. Skipping... channelIndex: 110
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Message EXISTS for channelId: 1525462532, messageIndex: 0, messageId: 5992185
+Healthy mobiles:  [ '918428812189' ]
+Channel 1806177395 is banned or unsuitable. Skipping... channelIndex: 114 | Tamil Friendship Group ✨ Tamil Chatting Group 💗💗 | Tamil_Friendship_Groupz
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@friendzonegr ✅
+tempFailCount:  6
+LastMsg:  3.49mins
+DaysLeft:  2
+ChannelIndex: 117
+Client 918428812189: Message SENT to 1595504292 || channelIndex: 117, messageId: 674508
+Removed Reaction: 😍 from chat -1001517476111 04:27:30 Before: 18, After: 17
+Removed Reaction: 🙈 from chat -1001900640722 04:27:32 Before: 44, After: 43
+Message EXISTS for channelId: 1595504292, messageIndex: 0, messageId: 674508
+Removed Reaction: 🙏 from chat -1001517476111 04:27:34 Before: 17, After: 16
+Removed Reaction: 🤝 from chat -1002144669085 04:27:53 Before: 38, After: 37
+Removed Reaction: 🤯 from chat -1001517476111 04:27:54 Before: 16, After: 15
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🆒 from chat -1001930751834 04:28:23 Before: 43, After: 42
+Removed Reaction: 🍌 from chat -1001676678550 04:28:46 Before: 29, After: 28
+🧠 Heap Used: 75.87 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+Removed Reaction: ❤ from chat -1002360448977 04:28:49 Before: 45, After: 44
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918197061859 null  : Promotions Working fine -  LastMSg : 2.40 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 1.94 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 2.27 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.59 mins ago DaysLeft: 2
+Average Reaction Delay:  8287
+Removed Reaction: 👎 from chat -1001900640722 04:29:08 Before: 43, After: 42
+Removed Reaction: 😱 from chat -1001517476111 04:29:17 Before: 15, After: 14
+918197061859: Connection health check passed
+917259210025: Connection health check passed
+Removed Reaction: 💯 from chat -1001676678550 04:29:30 Before: 28, After: 27
+918726378944: Connection health check passed
+918428812189: Connection health check passed
+Removed Reaction: 🙉 from chat -1001900640722 04:30:09 Before: 42, After: 41
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🙊 from chat -1001930751834 04:30:15 Before: 42, After: 41
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@adult_chatting18 ✅
+tempFailCount:  2
+LastMsg:  3.18mins
+DaysLeft:  2
+ChannelIndex: 120
+Client 918428812189: Message SENT to 1364283697 || channelIndex: 120, messageId: 828291
+Removed Reaction: 👎 from chat -1002144669085 04:30:47 Before: 37, After: 36
+Removed Reaction: 🤣 from chat -1001205020667 04:30:59 Before: 42, After: 41
+918197061859:
+@Dream99gamee ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 27
+Removed Reaction: 😐 from chat -1002185590650 04:31:42 Before: 35, After: 34
+Removed Reaction: 🙊 from chat -1001205020667 04:31:49 Before: 41, After: 40
+917259210025:
+@love_chatting_group ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 40
+Removed Reaction: 🎉 from chat -1001517476111 04:32:01 Before: 14, After: 13
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 👏 from chat -1001676678550 04:32:56 Before: 27, After: 26
+Removed Reaction: 👏 from chat -1001166981243 04:33:13 Before: 45, After: 44
+Removed Reaction: 💋 from chat -1001517476111 04:33:19 Before: 13, After: 12
+Removed Reaction: 😢 from chat -1002324164438 04:33:34 Before: 40, After: 39
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 😁 from chat -1001676678550 04:33:47 Before: 26, After: 25
+🧠 Heap Used: 68.94 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Healthy mobiles:  [ '918428812189' ]
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+918428812189 Some Error Occured, CHAT_WRITE_FORBIDDEN
+918197061859 null  : Promotions Working fine -  LastMSg : 2.36 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918428812189' ]
+917259210025 null  : Promotions Working fine -  LastMSg : 1.90 mins ago DaysLeft: 0
+Channel 1987741635 is banned or unsuitable. Skipping... channelIndex: 126 | Beauty Girls Chatting Group | Beauty_Girls_Chatting_Group
+918726378944 null  : Promotions Working fine -  LastMSg : 7.24 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 3.37 mins ago DaysLeft: 2
+Average Reaction Delay:  8315
+Healthy mobiles:  [ '918428812189' ]
+918428812189 Some Error Occured, CHAT_SEND_PLAIN_FORBIDDEN
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@FRIENDSHIP_CHAT_GROUP0 ❌
+tempFailCount: 7
+LastMsg: 3.44mins
+Sleeping: -29184754.010466665mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 129
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Dubaistrangers ❌
+tempFailCount: 8
+LastMsg: 3.51mins
+Sleeping: -29184754.08225mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 130
+Healthy mobiles:  [ '918428812189' ]
+Channel 1336881027 was recently promoted. Skipping... channelIndex: 131
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+918428812189 Some Error Occured, CHAT_WRITE_FORBIDDEN
+918428812189:
+@bhabichattinggc ❌
+tempFailCount: 9
+LastMsg: 3.63mins
+Sleeping: -29184754.19845mins
+DaysLeft: 2
+Reason: CHAT_WRITE_FORBIDDEN
+channelIndex: 133
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@GkTw7r7z1Ns5NzRl ✅
+tempFailCount:  9
+LastMsg:  3.69mins
+DaysLeft:  2
+ChannelIndex: 134
+Client 918428812189: Message SENT to 1687496208 || channelIndex: 134, messageId: 1384437
+Removed Reaction: 🤔 from chat -1001205020667 04:34:17 Before: 40, After: 39
+Removed Reaction: 😭 from chat -1002667650209 04:34:20 Before: 41, After: 40
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+917259210025: Updating top channels...
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+917259210025: Connection health check passed
+Removed Reaction: 🍌 from chat -1001900640722 04:34:29 Before: 41, After: 40
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+Removed Reaction: 🏆 from chat -1001682949860 04:34:34 Before: 41, After: 40
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Removed Reaction: 🤯 from chat -1001257575639 04:34:46 Before: 46, After: 45
+Removed Reaction: 😱 from chat -1002324164438 04:34:55 Before: 39, After: 38
+Removed Reaction: 🍌 from chat -1002185590650 04:34:57 Before: 34, After: 33
+Removed Reaction: 💩 from chat -1001676678550 04:35:14 Before: 25, After: 24
+Removed Reaction: 👀 from chat -1001930751834 04:35:16 Before: 41, After: 40
+Removed Reaction: 🔥 from chat -1001682949860 04:35:48 Before: 40, After: 39
+Removed Reaction: 👻 from chat -1002241887388 04:35:48 Before: 46, After: 45
+Removed Reaction: 💯 from chat -1001517476111 04:36:04 Before: 12, After: 11
+Removed Reaction: 🤬 from chat -1001517476111 04:36:09 Before: 11, After: 10
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 😴 from chat -1001676678550 04:36:54 Before: 24, After: 23
+Removed Reaction: 🏆 from chat -1002214990186 04:37:02 Before: 41, After: 40
+Removed Reaction: 🤡 from chat -1001205020667 04:37:03 Before: 39, After: 38
+Removed Reaction: 🙏 from chat -1001676678550 04:37:15 Before: 23, After: 22
+Healthy mobiles:  [ '918428812189' ]
+918428812189 Some Error Occured, CHAT_WRITE_FORBIDDEN
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1704908402 is banned or unsuitable. Skipping... channelIndex: 137 | Indian Bhabhi Chatting Group 😋 | Indian_Bhabhi_Chatting_Group_01
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 🤝 from chat -1001633130923 04:37:30 Before: 46, After: 45
+Healthy mobiles:  [ '918428812189' ]
+Channel 2024359000 was recently promoted. Skipping... channelIndex: 140
+Healthy mobiles:  [ '918428812189' ]
+Channel 2125954579 was recently promoted. Skipping... channelIndex: 142
+Healthy mobiles:  [ '918428812189' ]
+918428812189 Some Error Occured, CHAT_WRITE_FORBIDDEN
+Healthy mobiles:  [ '918428812189' ]
+Channel 1547912539 was recently promoted. Skipping... channelIndex: 145
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 💩 from chat -1002164964642 04:37:47 Before: 40, After: 39
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1630450095 was recently promoted. Skipping... channelIndex: 149
+Healthy mobiles:  [ '918428812189' ]
+Channel 1545936337 is banned or unsuitable. Skipping... channelIndex: 151 | Chennai Real Estates | chennai_realestates
+Healthy mobiles:  [ '918428812189' ]
+Channel 1627947152 is banned or unsuitable. Skipping... channelIndex: 153 | American gay group chatting LGBT | american_gay_group_chatting_hot
+Removed Reaction: 🤡 from chat -1001676678550 04:37:58 Before: 22, After: 21
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Bhabhi_Chatting_Group01 ❌
+tempFailCount: 7
+LastMsg: 3.76mins
+Sleeping: -29184758.01105mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 155
+Healthy mobiles:  [ '918428812189' ]
+918428812189 Some Error Occured, CHAT_WRITE_FORBIDDEN
+918428812189:
+@FRIENDS_ARE_LOVE ❌
+tempFailCount: 8
+LastMsg: 3.83mins
+Sleeping: -29184758.082166668mins
+DaysLeft: 2
+Reason: CHAT_WRITE_FORBIDDEN
+channelIndex: 156
+Healthy mobiles:  [ '918428812189' ]
+Channel 2560644105 was recently promoted. Skipping... channelIndex: 157
+Healthy mobiles:  [ '918428812189' ]
+Channel 1503501267 was recently promoted. Skipping... channelIndex: 159
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🤩 from chat -1002164964642 04:38:13 Before: 39, After: 38
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@WIFE_SWAPPING_INDIA00 ❌
+tempFailCount: 9
+LastMsg: 3.98mins
+Sleeping: -29184758.239433333mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 161
+Healthy mobiles:  [ '918428812189' ]
+Channel 2199662827 is banned or unsuitable. Skipping... channelIndex: 162 | 𝐖𝐎𝐑𝐋𝐃 𝗙𝗥𝗜𝗘𝗡𝗗𝗦 𝗖𝗛𝗔𝗧𝗧𝗜𝗡𝗚 🌎🚩🇮🇳 | World_friends_chatting_group1
+Removed Reaction: 🏆 from chat -1001633130923 04:38:18 Before: 45, After: 44
+Healthy mobiles:  [ '918428812189' ]
+Channel 1751232033 is banned or unsuitable. Skipping... channelIndex: 164 | Girls chatting Group 🍁 | Girls_chatting_Group_Best
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@SrilankanGayClubOfficial ❌
+tempFailCount: 10
+LastMsg: 4.14mins
+Sleeping: -29184758.394766666mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 166
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@null ❌
+tempFailCount: 11
+LastMsg: 4.20mins
+Sleeping: -29184758.451033335mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 167
+Healthy mobiles:  [ '918428812189' ]
+Channel 1925355113 is banned or unsuitable. Skipping... channelIndex: 168 | ༄ᶦᶰᵈ᭄🔥⃝тαмιℓ🍌 υℓℓαѕα υℓαgαм 🔞🍋❤️❥❥═══ | tamil_hot_chat_2
+Healthy mobiles:  [ '918428812189' ]
+Channel 1638464355 was recently promoted. Skipping... channelIndex: 170
+Healthy mobiles:  [ '918428812189' ]
+Channel 1936002593 is banned or unsuitable. Skipping... channelIndex: 172 | 𝗕𝗛𝗔𝗕𝗜 | 𝗖𝗛𝗔𝗧 | 𝗭𝗢𝗡𝗘 |♥️ | BHABI_CHATTING_ZONE
+Healthy mobiles:  [ '918428812189' ]
+Channel 2628908239 is banned or unsuitable. Skipping... channelIndex: 174 | 𝛹𝐺 𝑔𝛼𝘺 𝑓𝜀𝛿𝜀𝙧𝛼𝜏𝑖𝜃𝜂 🌈 | Up_Gay_Group_2011
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Girls_Chatting_Group_100K ❌
+tempFailCount: 12
+LastMsg: 4.45mins
+Sleeping: -29184758.7069mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 176
+Removed Reaction: 🌚 from chat -1002353034344 04:38:43 Before: 40, After: 39
+Healthy mobiles:  [ '918726378944' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 2081332002 is banned or unsuitable. Skipping... channelIndex: 177 | [ 𝐌𝐔𝐒𝐈𝐂] | FRIENDS_POINT_MUSIC
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@i_love_youall00 ✅
+tempFailCount:  1
+LastMsg:  12.11mins
+DaysLeft:  0
+ChannelIndex: 25
+Client 918726378944: Message SENT to 1641006506 || channelIndex: 25, messageId: 1144958
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Punjabgayys ❌
+tempFailCount: 13
+LastMsg: 4.56mins
+Sleeping: -29184758.8102mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 179
+🧠 Heap Used: 70.43 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+Healthy mobiles:  [ '918428812189' ]
+Channel 1302833885 was recently promoted. Skipping... channelIndex: 180
+918197061859 null  : Promotions Working fine -  LastMSg : 7.34 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 6.89 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 0.11 mins ago DaysLeft: 0
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@COIMBATORE_GAY_SQUAD ✅
+tempFailCount:  13
+LastMsg:  4.66mins
+DaysLeft:  2
+ChannelIndex: 182
+Client 918428812189: Message SENT to 1966636775 || channelIndex: 182, messageId: 341422
+918428812189 null  : Promotions Working fine -  LastMSg : 0.00 mins ago DaysLeft: 2
+Average Reaction Delay:  10327
+Message EXISTS for channelId: 1641006506, messageIndex: 0, messageId: 1144958
+Message EXISTS for channelId: 1966636775, messageIndex: 0, messageId: 341422
+Removed Reaction: 🎉 from chat -1002324164438 04:39:20 Before: 38, After: 37
+918197061859: Connection health check passed
+917259210025: Connection health check passed
+918726378944: Connection health check passed
+Removed Reaction: 😢 from chat -1001906683925 04:39:35 Before: 40, After: 39
+918428812189: Connection health check passed
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🐳 from chat -1002241887388 04:40:25 Before: 45, After: 44
+Removed Reaction: 🙊 from chat -1001906683925 04:40:50 Before: 39, After: 38
+Removed Reaction: 👀 from chat -1002214990186 04:40:59 Before: 40, After: 39
+Removed Reaction: 🥱 from chat -1001900640722 04:41:11 Before: 40, After: 39
+Removed Reaction: 🔥 from chat -1001930751834 04:41:27 Before: 40, After: 39
+Removed Reaction: 👀 from chat -1002164964642 04:41:43 Before: 38, After: 37
+Removed Reaction: 🙏 from chat -1002463350606 04:41:45 Before: 43, After: 42
+Removed Reaction: 🍌 from chat -1002353034344 04:41:54 Before: 39, After: 38
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@GIRLS_BHABHI_CHATTING_GROUPZ ✅
+tempFailCount:  0
+LastMsg:  3.06mins
+DaysLeft:  2
+ChannelIndex: 183
+Client 918428812189: Message SENT to 1825148754 || channelIndex: 183, messageId: 1786416
+Removed Reaction: 🎉 from chat -1001257575639 04:41:59 Before: 45, After: 44
+Removed Reaction: ⚡ from chat -1002463350606 04:42:05 Before: 42, After: 41
+Removed Reaction: 🏆 from chat -1001676678550 04:42:09 Before: 21, After: 20
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Message EXISTS for channelId: 1825148754, messageIndex: 0, messageId: 1786416
+Removed Reaction: 🙈 from chat -1002241887388 04:42:34 Before: 44, After: 43
+Removed Reaction: 🍌 from chat -1002085757163 04:42:48 Before: 42, After: 41
+Removed Reaction: 😍 from chat -1001676678550 04:43:11 Before: 20, After: 19
+Removed Reaction: 👌 from chat -1001682949860 04:43:16 Before: 39, After: 38
+Removed Reaction: 🆒 from chat -1002103699187 04:43:30 Before: 46, After: 45
+Healthy mobiles:  [ '918197061859' ]
+Healthy mobiles:  [ '918197061859' ]
+Channel 1798503017 is banned or unsuitable. Skipping... channelIndex: 28 | Girls Chatting Group Boys | Girls_Chating_Group_07
+Healthy mobiles:  [ '918197061859' ]
+Healthy mobiles:  [ '918197061859' ]
+918197061859:
+@socialdx50 ✅
+tempFailCount:  2
+LastMsg:  12.27mins
+DaysLeft:  0
+ChannelIndex: 31
+Client 918197061859: Message SENT to 1244259160 || channelIndex: 31, messageId: 3108006
+918726378944:
+@i_love_youall00 ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 26
+🧠 Heap Used: 72.61 MB
+============Checking Health==============
+Removed Reaction: 🤬 from chat -1002103699187 04:43:49 Before: 45, After: 44
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918428812189.json
+918197061859 null  : Promotions Working fine -  LastMSg : 0.07 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 11.89 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 0.10 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.94 mins ago DaysLeft: 2
+Average Reaction Delay:  9610
+Healthy mobiles:  [ '917259210025' ]
+Removed Reaction: 🤗 from chat -1001633130923 04:44:09 Before: 44, After: 43
+Healthy mobiles:  [ '917259210025' ]
+Channel 1198949639 was recently promoted. Skipping... channelIndex: 41
+Removed Reaction: 🔥 from chat -1001508171809 04:44:11 Before: 41, After: 40
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '917259210025' ]
+Healthy mobiles:  [ '917259210025' ]
+Channel 1334120967 was recently promoted. Skipping... channelIndex: 44
+Healthy mobiles:  [ '917259210025' ]
+Channel 1450904507 is banned or unsuitable. Skipping... channelIndex: 46 | Dating Online | dating_chatt
+Healthy mobiles:  [ '917259210025' ]
+Channel 2212358010 is banned or unsuitable. Skipping... channelIndex: 48 | BOY'S CLUB | BOYSCLUB_CHAT
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+Healthy mobiles:  [ '917259210025' ]
+Channel 1630450095 was recently promoted. Skipping... channelIndex: 50
+917259210025: Updating top channels...
+917259210025: Connection health check passed
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+Healthy mobiles:  [ '917259210025' ]
+917259210025 Some Error Occured, CHAT_WRITE_FORBIDDEN
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+Healthy mobiles:  [ '917259210025' ]
+Healthy mobiles:  [ '917259210025' ]
+Channel 1179319575 was recently promoted. Skipping... channelIndex: 54
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Healthy mobiles:  [ '917259210025' ]
+Channel 1533504890 was recently promoted. Skipping... channelIndex: 56
+Healthy mobiles:  [ '917259210025' ]
+Channel 1627383361 was recently promoted. Skipping... channelIndex: 58
+Removed Reaction: 😁 from chat -1001629757418 04:44:43 Before: 45, After: 44
+Healthy mobiles:  [ '917259210025' ]
+917259210025:
+@meena1254 ✅
+tempFailCount:  4
+LastMsg:  12.77mins
+DaysLeft:  0
+ChannelIndex: 60
+Client 917259210025: Message SENT to 1546110880 || channelIndex: 60, messageId: 2485654
+Healthy mobiles:  [ '918428812189' ]
+Channel 2039663989 is banned or unsuitable. Skipping... channelIndex: 184 | School Girls Chatting Group | School_GirlsChattingGroup
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 😭 from chat -1001644097735 04:45:08 Before: 44, After: 43
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1546110880 was recently promoted. Skipping... channelIndex: 189
+Healthy mobiles:  [ '918428812189' ]
+Channel 2002908697 is banned or unsuitable. Skipping... channelIndex: 191 | 👫🇫𝘈𝘕𝘛𝘈𝘚𝘠 🇨 𝙊𝙐𝙋𝙇𝙀𝙎 🇿 𝙊𝙉𝙀 👫 | TamilCoupleszone1
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@girls_chatting_group_69 ✅
+tempFailCount:  3
+LastMsg:  3.42mins
+DaysLeft:  2
+ChannelIndex: 193
+Client 918428812189: Message SENT to 1658248110 || channelIndex: 193, messageId: 5634028
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🌚 from chat -1002144669085 04:46:20 Before: 36, After: 35
+Removed Reaction: 🤔 from chat -1001517476111 04:46:42 Before: 10, After: 9
+Removed Reaction: 🙏 from chat -1001930751834 04:47:09 Before: 39, After: 38
+Removed Reaction: 😴 from chat -1001517476111 04:48:05 Before: 9, After: 8
+918726378944:qauwski-5210943780 ::  Hh
+Removed Reaction: 🥴 from chat -1001517476111 04:48:10 Before: 8, After: 7
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🤷 from chat -1001517476111 04:48:26 Before: 7, After: 6
+Healthy mobiles:  [ '918428812189' ]
+Channel 2667650209 is banned or unsuitable. Skipping... channelIndex: 194 | FRIENDS 🐝 | HINDI_FRIENDS_CHATTING_GROUP_PR
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1705755336 is banned or unsuitable. Skipping... channelIndex: 197 | WIFE SWAPPING IN INDIA | WIFE_SWAPPING_IN_GROUP
+Healthy mobiles:  [ '918428812189' ]
+Channel 1335330472 was recently promoted. Skipping... channelIndex: 199
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@girlfriend_chatting_group ✅
+tempFailCount:  1
+LastMsg:  3.28mins
+DaysLeft:  2
+ChannelIndex: 201
+Client 918428812189: Message SENT to 1546582368 || channelIndex: 201, messageId: 1642809
+Removed Reaction: 🤮 from chat -1002085757163 04:48:42 Before: 41, After: 40
+User Not Exist Calling Now 5210943780
+918197061859:
+@socialdx50 ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 32
+🧠 Heap Used: 56.22 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Setting Mobiles in Reaction Instance 4
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+918197061859 null  : Promotions Working fine -  LastMSg : 0.06 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 4.11 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 5.10 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 0.24 mins ago DaysLeft: 2
+Average Reaction Delay:  7794
+918726378944:qauwski-5210943780 ::  Ha
+918197061859: Connection health check passed
+917259210025: Connection health check passed
+918726378944: Connection health check passed
+918428812189: Connection health check passed
+917259210025:
+@meena1254 ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 61
+Removed Reaction: 💯 from chat -1002122118869 04:49:49 Before: 37, After: 36
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+User Not Exist Calling Now 5210943780
+Phone Call Updated, UpdatePhoneCall
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 👌 from chat -1001944954648 04:50:59 Before: 37, After: 36
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  यह
+Removed Reaction: 😭 from chat -1001900640722 04:51:28 Before: 39, After: 38
+Removed Reaction: 😭 from chat -1002144669085 04:51:40 Before: 35, After: 34
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1161338437 is banned or unsuitable. Skipping... channelIndex: 204 | Chennai City Call Taxi | chennaicitycalltaxi
+Healthy mobiles:  [ '918428812189' ]
+Channel 1723665612 is banned or unsuitable. Skipping... channelIndex: 206 | WORLDWIDE FRIENDS MUSIC ZONE | Worldwide_friends_music_zonee
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 2284211328 is banned or unsuitable. Skipping... channelIndex: 209 | 𝘾𝘼𝙇𝙇 𝘽𝙊𝙔 𝘿𝘼𝙏𝙄𝙉𝙂 ᴾᴺᴳ | CallboyDating
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+Channel 1261993766 is banned or unsuitable. Skipping... channelIndex: 214 | TOP CAM GIRL ❣️🔥 | TCG98
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@IRLFRIEND_COUPLE_WIFE_SWAPPING ❌
+tempFailCount: 7
+LastMsg: 3.59mins
+Sleeping: -29184772.26955mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 216
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@TELUGU_WIFE_SWAPING ❌
+tempFailCount: 8
+LastMsg: 3.65mins
+Sleeping: -29184772.324883334mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 217
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Couplessmaping1 ❌
+tempFailCount: 9
+LastMsg: 3.70mins
+Sleeping: -29184772.378816668mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 218
+Healthy mobiles:  [ '918428812189' ]
+Channel 1393477734 was recently promoted. Skipping... channelIndex: 219
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@GaysMenVideoChat ❌
+tempFailCount: 10
+LastMsg: 3.81mins
+Sleeping: -29184772.4854mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 221
+Healthy mobiles:  [ '918428812189' ]
+Channel 1805938627 is banned or unsuitable. Skipping... channelIndex: 222 | NorthBengal Gay Assam Gay Guwahati Tripura Agartala Mizoram Meghalaya Aizawal ArunachalPradesh Imphal Manipur Nagaland Gay Group | Northeastgay
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Friends_Chatting_group_6 ❌
+tempFailCount: 11
+LastMsg: 3.91mins
+Sleeping: -29184772.588366665mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 224
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Telugu_Friends_ChattingGroup ❌
+tempFailCount: 12
+LastMsg: 3.97mins
+Sleeping: -29184772.644266665mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 225
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Videohive_templates_chat ❌
+tempFailCount: 13
+LastMsg: 4.02mins
+Sleeping: -29184772.70065mins
+DaysLeft: 2
+Reason: USER_BANNED_IN_CHANNEL
+channelIndex: 226
+Healthy mobiles:  [ '918428812189' ]
+Channel 1280775509 is banned or unsuitable. Skipping... channelIndex: 227 | Masti Group 》Girls chatting | Girlschatting_Group_masti
+Healthy mobiles:  [ '918428812189' ]
+Channel 1618599335 was recently promoted. Skipping... channelIndex: 229
+Healthy mobiles:  [ '918428812189' ]
+Channel 1821605316 was recently promoted. Skipping... channelIndex: 231
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Indiangirlsfundate ✅
+tempFailCount:  13
+LastMsg:  4.23mins
+DaysLeft:  2
+ChannelIndex: 233
+Client 918428812189: Message SENT to 1544990605 || channelIndex: 233, messageId: 326603
+Removed Reaction: 🍌 from chat -1002122118869 04:52:55 Before: 36, After: 35
+Removed Reaction: 🤩 from chat -1001900640722 04:53:09 Before: 38, After: 37
+Removed Reaction: 😭 from chat -1002085757163 04:53:17 Before: 40, After: 39
+Removed Reaction: 🆒 from chat -1002144669085 04:53:32 Before: 34, After: 33
+🧠 Heap Used: 64.14 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918428812189.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918197061859.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 5.06 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 4.11 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 10.10 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.00 mins ago DaysLeft: 2
+Average Reaction Delay:  7093
+Removed Reaction: 😭 from chat -1002326564806 04:53:57 Before: 46, After: 45
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+917259210025: Updating top channels...
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+917259210025: Connection health check passed
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+Removed Reaction: 🤣 from chat -1001517476111 04:54:32 Before: 6, After: 5
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+918726378944:qauwski-5210943780 ::  Ha kya hua
+918726378944:qauwski-5210943780 ::  Bol
+918726378944:qauwski-5210943780 ::  Ha bol aab
+Removed Reaction: 👍 from chat -1001900640722 04:54:52 Before: 37, After: 36
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+User Not Exist Calling Now 5210943780
+Removed Reaction: 🥰 from chat -1001508171809 04:55:15 Before: 40, After: 39
+918726378944:qauwski-5210943780 ::  
+Healthy mobiles:  [ '918726378944' ]
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@Tamil_chat_friends_Forever_kuty ✅
+tempFailCount:  1
+LastMsg:  12.12mins
+DaysLeft:  0
+ChannelIndex: 27
+Client 918726378944: Message SENT to 1683217073 || channelIndex: 27, messageId: 1138009
+Healthy mobiles:  [ '918428812189' ]
+Channel 1583158814 was recently promoted. Skipping... channelIndex: 234
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@callcenterproject ✅
+tempFailCount:  0
+LastMsg:  3.12mins
+DaysLeft:  2
+ChannelIndex: 236
+Client 918428812189: Message SENT to 1320770863 || channelIndex: 236, messageId: 858558
+Message EXISTS for channelId: 1683217073, messageIndex: 0, messageId: 1138009
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🤗 from chat -1001930751834 04:56:11 Before: 38, After: 37
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 🕊 from chat -1001517476111 04:56:18 Before: 5, After: 4
+Message EXISTS for channelId: 1320770863, messageIndex: 0, messageId: 858558
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+918726378944:qauwski-5210943780 ::  
+Removed Reaction: 🤮 from chat -1001517476111 04:56:52 Before: 4, After: 3
+Removed Reaction: ⚡ from chat -1001205020667 04:56:56 Before: 38, After: 37
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: ❤‍🔥 from chat -1001567236720 04:58:19 Before: 46, After: 45
+Removed Reaction: 🆒 from chat -1001517476111 04:58:29 Before: 3, After: 2
+🧠 Heap Used: 64.97 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Results saved to mobileStats-918197061859.json
+Setting Mobiles in Reaction Instance 4
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 👀 from chat -1001517476111 04:58:51 Before: 2, After: 1
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918197061859 null  : Promotions Working fine -  LastMSg : 10.12 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 9.17 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 3.04 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 2.95 mins ago DaysLeft: 2
+Average Reaction Delay:  7121
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+Healthy mobiles:  [ '918428812189' ]
+Channel 1804215127 is banned or unsuitable. Skipping... channelIndex: 237 | Tamil Voice Chat 💋 | null
+Healthy mobiles:  [ '918428812189' ]
+Channel 1249091516 was recently promoted. Skipping... channelIndex: 239
+Removed Reaction: 🍌 from chat -1001567236720 04:59:09 Before: 45, After: 44
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 2005046060 was recently promoted. Skipping... channelIndex: 242
+Healthy mobiles:  [ '918428812189' ]
+Channel 1601082775 was recently promoted. Skipping... channelIndex: 244
+Healthy mobiles:  [ '918428812189' ]
+918197061859: Connection health check passed
+Healthy mobiles:  [ '918428812189' ]
+Channel 1541729758 was recently promoted. Skipping... channelIndex: 247
+Removed Reaction: 🥰 from chat -1001205020667 04:59:25 Before: 37, After: 36
+Healthy mobiles:  [ '918428812189' ]
+917259210025: Connection health check passed
+Healthy mobiles:  [ '918428812189' ]
+Channel 1550261573 is banned or unsuitable. Skipping... channelIndex: 250 | Chat with friends 💦💦 | chatwithfriendss
+918726378944: Connection health check passed
+Healthy mobiles:  [ '918428812189' ]
+Channel 2621220032 is banned or unsuitable. Skipping... channelIndex: 252 | 𝘿𝙀𝙇𝙃𝙄 / 𝙉𝘾𝙍 𝙂𝘼𝙔 𝙂𝙍𝙊𝙐𝙋࿐ | LGBTQ_DELHI_INDIAN_GAY_GROUP
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Mommy_loverss ✅
+tempFailCount:  3
+LastMsg:  3.59mins
+DaysLeft:  2
+ChannelIndex: 254
+Client 918428812189: Message SENT to 2049243534 || channelIndex: 254, messageId: 4424442
+918428812189: Connection health check passed
+Message EXISTS for channelId: 2049243534, messageIndex: 0, messageId: 4424442
+Removed Reaction: 🤗 from chat -1001900640722 05:00:04 Before: 36, After: 35
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🏆 from chat -1001930751834 05:00:40 Before: 37, After: 36
+Healthy mobiles:  [ '918197061859' ]
+918197061859:
+@GROWTHBOX7 ✅
+tempFailCount:  0
+LastMsg:  12.07mins
+DaysLeft:  0
+ChannelIndex: 32
+Client 918197061859: Message SENT to 1386973418 || channelIndex: 32, messageId: 3704718
+918726378944:
+@Tamil_chat_friends_Forever_kuty ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 28
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+Healthy mobiles:  [ '917259210025' ]
+Channel 1498999941 was recently promoted. Skipping... channelIndex: 61
+Healthy mobiles:  [ '917259210025' ]
+Channel 1521847231 is banned or unsuitable. Skipping... channelIndex: 63 | Gujarat Couples and Singles | gujaratcouplelist
+918726378944:qauwski-5210943780 ::  
+Healthy mobiles:  [ '917259210025' ]
+Healthy mobiles:  [ '917259210025' ]
+Channel 1638464355 was recently promoted. Skipping... channelIndex: 66
+Healthy mobiles:  [ '917259210025' ]
+Healthy mobiles:  [ '917259210025' ]
+917259210025:
+@Girls_AndBoys_Chatting_Group_1 ✅
+tempFailCount:  2
+LastMsg:  12.33mins
+DaysLeft:  0
+ChannelIndex: 69
+Client 917259210025: Message SENT to 1508171809 || channelIndex: 69, messageId: 2853444
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Removed Reaction: 👀 from chat -1001205020667 05:02:46 Before: 36, After: 35
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@kaamapasi1 ✅
+tempFailCount:  3
+LastMsg:  3.23mins
+DaysLeft:  2
+ChannelIndex: 258
+Client 918428812189: Message SENT to 2248104251 || channelIndex: 258, messageId: 195033
+Message EXISTS for channelId: 2248104251, messageIndex: 0, messageId: 195033
+🧠 Heap Used: 54.11 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 3.00 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 1.78 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 2.98 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.08 mins ago DaysLeft: 2
+Average Reaction Delay:  5268
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+917259210025: Updating top channels...
+917259210025: Connection health check passed
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+918726378944:qauwski-5210943780 ::  
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944 Found 39 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+Removed Reaction: 🕊 from chat -1001205020667 05:04:40 Before: 35, After: 34
+Removed Reaction: 🤣 from chat -1001930751834 05:04:41 Before: 36, After: 35
+User Not Exist Calling Now 5210943780
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 🌚 from chat -1001567236720 05:05:05 Before: 44, After: 43
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+918197061859:
+@GROWTHBOX7 ✅
+tempFailCount:  0
+LastMsg:  5.01mins
+DaysLeft:  0
+ChannelIndex: 33
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Tamilcouples2 ✅
+tempFailCount:  0
+LastMsg:  3.05mins
+DaysLeft:  2
+ChannelIndex: 259
+Client 918428812189: Message SENT to 2227976046 || channelIndex: 259, messageId: 152045
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Message EXISTS for channelId: 2227976046, messageIndex: 0, messageId: 152045
+Removed Reaction: 🤗 from chat -1001299729724 05:06:19 Before: 46, After: 45
+Removed Reaction: 🤣 from chat -1001644097735 05:06:25 Before: 43, After: 42
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+Removed Reaction: 🥴 from chat -1001676678550 05:06:42 Before: 19, After: 18
+917259210025:
+@Girls_AndBoys_Chatting_Group_1 ✅
+tempFailCount:  0
+LastMsg:  5.00mins
+DaysLeft:  0
+ChannelIndex: 70
+Removed Reaction: 👎 from chat -1001567236720 05:07:17 Before: 43, After: 42
+Removed Reaction: 🌚 from chat -1001930751834 05:07:21 Before: 35, After: 34
+Removed Reaction: 🙉 from chat -1001644097735 05:07:27 Before: 42, After: 41
+Removed Reaction: 🔥 from chat -1001567236720 05:07:34 Before: 42, After: 41
+Removed Reaction: 💯 from chat -1001508171809 05:07:55 Before: 39, After: 38
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+🧠 Heap Used: 77.55 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-918428812189.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Setting Mobiles in Reaction Instance 4
+918197061859 null  : Promotions Working fine -  LastMSg : 2.99 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 1.77 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 7.97 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 3.01 mins ago DaysLeft: 2
+Average Reaction Delay:  7772
+Healthy mobiles:  [ '918428812189' ]
+Channel 1943378804 is banned or unsuitable. Skipping... channelIndex: 260 | ✨🌹 𝕊ⓣᖇα𝓷Ꮆ𝓔Ⓡ ✌т𝔥Ⓘ𝕟Ｇ ⒻⓇ𝔦έᶰᗪ𝕤 🎀👊 | VideOGiveWaySpEciaL
+Healthy mobiles:  [ '918428812189' ]
+Channel 1489942281 was recently promoted. Skipping... channelIndex: 262
+Healthy mobiles:  [ '918428812189' ]
+Channel 2392565870 was recently promoted. Skipping... channelIndex: 264
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+Channel 1403463191 is banned or unsuitable. Skipping... channelIndex: 267 | ⚡️Real Instagram Follow 4 Follow Group | followDx30
+Removed Reaction: 😁 from chat -1002214990186 05:09:14 Before: 39, After: 38
+Healthy mobiles:  [ '918428812189' ]
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+Healthy mobiles:  [ '918428812189' ]
+Channel 1609479138 was recently promoted. Skipping... channelIndex: 270
+Removed Reaction: 😁 from chat -1001644097735 05:09:21 Before: 41, After: 40
+Healthy mobiles:  [ '918428812189' ]
+Channel 1445365203 was recently promoted. Skipping... channelIndex: 272
+918197061859: Connection health check passed
+918726378944:qauwski-5210943780 ::  
+Healthy mobiles:  [ '918428812189' ]
+Channel 1751125886 was recently promoted. Skipping... channelIndex: 274
+917259210025: Connection health check passed
+Healthy mobiles:  [ '918428812189' ]
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+918726378944: Connection health check passed
+Healthy mobiles:  [ '918428812189' ]
+Channel 1528695808 was recently promoted. Skipping... channelIndex: 277
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Healthy mobiles:  [ '918428812189' ]
+918428812189: Connection health check passed
+Healthy mobiles:  [ '918428812189' ]
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@housewifegroup ✅
+tempFailCount:  5
+LastMsg:  3.79mins
+DaysLeft:  2
+ChannelIndex: 281
+Client 918428812189: Message SENT to 1179319575 || channelIndex: 281, messageId: 2251353
+Removed Reaction: 👍 from chat -1001474594446 05:09:43 Before: 45, After: 44
+User Not Exist Calling Now 5210943780
+918726378944:qauwski-5210943780 ::  
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+Removed Reaction: 🥰 from chat -1001900640722 05:10:28 Before: 35, After: 34
+Removed Reaction: 👀 from chat -1001676678550 05:10:49 Before: 18, After: 17
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+Removed Reaction: 🤯 from chat -1001166981243 05:11:28 Before: 44, After: 43
+Removed Reaction: 👏 from chat -1002443984888 05:11:29 Before: 44, After: 43
+Removed Reaction: 😢 from chat -1001299729724 05:11:45 Before: 45, After: 44
+918428812189:malvareprovidersystemhackersssss-1678948300 ::  🦶🦶🦶👊👊👊🫸🫸✊✊✊
+918726378944:qauwski-5210943780 ::  
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+User Not Exist Calling Now 1678948300
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@TANIL_GAY_LOVEE ✅
+tempFailCount:  0
+LastMsg:  3.06mins
+DaysLeft:  2
+ChannelIndex: 282
+Client 918428812189: Message SENT to 1927208614 || channelIndex: 282, messageId: 1126424
+Healthy mobiles:  [ '918726378944' ]
+Channel 1926661300 was recently promoted. Skipping... channelIndex: 28
+Healthy mobiles:  [ '918726378944' ]
+Channel 2125954579 was recently promoted. Skipping... channelIndex: 30
+Healthy mobiles:  [ '918726378944' ]
+Channel 1825148754 was recently promoted. Skipping... channelIndex: 32
+Healthy mobiles:  [ '918726378944' ]
+918726378944:
+@adult_chatting_group_official ✅
+tempFailCount:  0
+LastMsg:  12.23mins
+DaysLeft:  0
+ChannelIndex: 34
+Client 918726378944: Message SENT to 1862260678 || channelIndex: 34, messageId: 12724394
+Removed Reaction: 😴 from chat -1002214990186 05:13:28 Before: 38, After: 37
+Removed Reaction: 😍 from chat -1001166981243 05:13:29 Before: 43, After: 42
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+Removed Reaction: 😢 from chat -1002443984888 05:13:48 Before: 43, After: 42
+🧠 Heap Used: 66.94 MB
+============Checking Health==============
+Reactions saved to file.
+Mobiles with last message time greater than 20 minutes:
+Results saved to mobileStats-918197061859.json
+Results saved to mobileStats-917259210025.json
+Results saved to mobileStats-918726378944.json
+Results saved to mobileStats-918428812189.json
+Setting Mobiles in Reaction Instance 4
+Removed Reaction: 😁 from chat -1001166981243 05:13:51 Before: 42, After: 41
+918197061859 null  : Promotions Working fine -  LastMSg : 7.99 mins ago DaysLeft: 0
+917259210025 null  : Promotions Working fine -  LastMSg : 6.77 mins ago DaysLeft: 0
+918726378944 null  : Promotions Working fine -  LastMSg : 0.74 mins ago DaysLeft: 0
+918428812189 null  : Promotions Working fine -  LastMSg : 1.16 mins ago DaysLeft: 2
+Average Reaction Delay:  7624
+User Not Exist Calling Now 1678948300
+918428812189: Cannot initiate call - invalid state or call in progress
+918726378944:qauwski-5210943780 ::  
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+918197061859: Updating top channels...
+918197061859: Connection health check passed
+918197061859 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918197061859
+Removed Reaction: 🕊 from chat -1001900640722 05:14:26 Before: 34, After: 33
+917259210025: Updating top channels...
+917259210025 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  917259210025
+917259210025: Connection health check passed
+918726378944: Updating top channels...
+918726378944: Connection health check passed
+918726378944:qauwski-5210943780 ::  
+918726378944 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918726378944
+918726378944:qauwski-5210943780 ::  
+918428812189: Updating top channels...
+918428812189: Connection health check passed
+User Not Exist Calling Now 5210943780
+918428812189 Found 40 channels to monitor.
+Already Reacting or invalid state, ignoring trigger  918428812189
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+918726378944:qauwski-5210943780 ::  
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Retrying with the next token...
+Removed Reaction: 🔥 from chat -1002667650209 05:14:51 Before: 40, After: 39
+Removed Reaction: 🤷 from chat -1001676678550 05:15:07 Before: 17, After: 16
+Removed Reaction: 🤡 from chat -1002185590650 05:15:10 Before: 33, After: 32
+Removed Reaction: 💔 from chat -1002122118869 05:15:10 Before: 35, After: 34
+Removed Reaction: 😱 from chat -1002443984888 05:15:26 Before: 42, After: 41
+Removed Reaction: 🤷 from chat -1001508171809 05:15:38 Before: 38, After: 37
+Healthy mobiles:  [ '918428812189' ]
+Channel 1798503017 is banned or unsuitable. Skipping... channelIndex: 283 | Girls Chatting Group Boys | Girls_Chating_Group_07
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+Healthy mobiles:  [ '918428812189' ]
+Channel 1563211251 was recently promoted. Skipping... channelIndex: 285
+Healthy mobiles:  [ '918428812189' ]
+918428812189:
+@Girls_and_boys_chattting_group ✅
+tempFailCount:  0
+LastMsg:  3.17mins
+DaysLeft:  2
+ChannelIndex: 287
+Client 918428812189: Message SENT to 1875318649 || channelIndex: 287, messageId: 313533
+User Not Exist Calling Now 5210943780
+918726378944: Cannot initiate call - invalid state or call in progress
+Fetching URL: https://mychatgpt-xk3y.onrender.com/receive?clientId=ramya1 with options: {}
+User Not Exist Calling Now 1678948300
+918428812189: Cannot initiate call - invalid state or call in progress
+Message EXISTS for channelId: 1875318649, messageIndex: 0, messageId: 313533
+Removed Reaction: 🙈 from chat -1002185590650 05:16:14 Before: 32, After: 31
