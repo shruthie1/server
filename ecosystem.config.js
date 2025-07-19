@@ -7,16 +7,11 @@ const commonConfig = {
   namespace: "helpers",
   kill_timeout: 5000,
   time: true,
-  log_date_format: 'YYYY-MM-DD HH:mm:ss IST',
+  log_date_format: 'DD/MM/YYYY HH:mm:ss IST',
   merge_logs: true,
   env: {
     TZ: "Asia/Kolkata",
-    // NODE_ENV: "production"
   },
-  // error_file: "./logs/err.log",
-  // out_file: "./logs/out.log",
-  // log_file: "./logs/combined.log",
-  // max_restarts: 10,
   min_uptime: "10s"
 };
 
