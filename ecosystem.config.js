@@ -16,12 +16,11 @@ const commonConfig = {
   namespace: "promotions",
   kill_timeout: 5000,
   time: true,
-  log_date_format: "YYYY-MM-DD HH:mm:ss.SSS Z",
+  log_date_format: "DD/MM/YYYY HH:mm:ss",
   merge_logs: true,
   env: {
     TZ: "Asia/Kolkata",
   },
-  // max_restarts: 10,
   min_uptime: "10s"
 };
 
