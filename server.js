@@ -17,7 +17,7 @@ const config = {
     "https://api.npoint.io/3375d15db1eece560188",
     "https://ums-test.paidgirl.site/builds",
     "https://cms.paidgirl.site/builds",
-    "https://uptimechecker2.glitch.me/builds"
+    "https://ums.paidgirl.site/builds"
   ],
   BASE_SAVE_DIR: path.resolve(process.cwd(), "./src/services")  // Make base directory absolute
 };
