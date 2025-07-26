@@ -14,10 +14,11 @@ const commonConfig = {
   namespace: "clients",
   kill_timeout: 5000,
   time: true,
-  log_date_format: "DD/MM/YYYY HH:mm:ss",
+  log_date_format: "DD/MM HH:mm:ss",
   merge_logs: true,
   env: {
     TZ: "Asia/Kolkata",
+    "log-date-format": "DD/MM HH:mm:ss",
   },
   min_uptime: "10s"
 };
