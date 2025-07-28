@@ -21,8 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "ams-ssk": "^1.0.12",
-    "common-tg-service": "^1.0.96",
-    "dotenv": "^16.5.0",
+    "common-tg-service": "^1.1.78",
+    "dotenv": "^17.2.1",
     "node-fetch": "^2.7.0",
     "node-schedule-tz": "^1.2.1-4"
   }
