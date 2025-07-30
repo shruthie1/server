@@ -28,6 +28,6 @@
     "mongodb": "^6.8.0",
     "node-fetch": "^2.7.0",
     "node-schedule-tz": "^1.2.1-4",
-    "telegram": "^2.16.4"
+    "telegram": "2.16.4"
   }
 }
