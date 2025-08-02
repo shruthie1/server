@@ -20,7 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ams-ssk": "^1.0.15",
+    "ams-ssk": "^1.0.18",
     "common-tg-service": "^1.1.80",
     "node-schedule-tz": "^1.2.1-4"
   }
